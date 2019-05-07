@@ -10,6 +10,7 @@ class ReservaDAL
         $res = true;
         // $model->DataDeReserva
         // Conexão à BD
+
         // executar comando INSERT
 
         return($res);

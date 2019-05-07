@@ -14,14 +14,19 @@
 
 <?php
 
-$Reserva = new Reserva();
+/*$Reserva = new Reserva();
 $Reserva->DataDeReserva = 22/11/19;
 $Reserva->DataDeDevolucao = 24/11/19;
 
 $res = $Reserva->create();
 if(!$res){
     print "ERRO";
-}
+}*/
+
+//$conn= new newPDO(dsn: "mysql:host=localhost;dbname=orders;charsset=UTF8","dw","dw");
+$pdo = new PDO("mysql:host=localhost;dbname=rentacar", "username", "password");
+
+
 
 ?>
 
