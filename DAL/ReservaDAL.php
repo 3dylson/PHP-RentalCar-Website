@@ -5,14 +5,47 @@
 
 class ReservaDAL
 {
-    public static function create($model){
+    public static function create($Reserva){
 
-        $res = true;
-        // $model->DataDeReserva
-        // Conexão à BD
+        $db=DB::getInstance();
 
-        // executar comando INSERT
+        $query = "INSERT INTO Reserva (DatadaReserva, DatadeDevolucao, LocalPickUp, LocalDropOff) 
+VALUES (:DatadaReserva, :DatadeDevolucao, :LocalPickUp, :LocalDropOff)";
+        $res=$db->query($query, array(':DatadaReserva'=> $Reserva->DatadaReserva,
+            'DatadeDevolucao'=> $Reserva->DatadeDevolucao, 'LocalPickUp'=> $Reserva->LocalPickUp, 'LocalDropOff'=> $Reserva->LocalDropOff));
 
-        return($res);
+        if($res){
+            $Reserva->idReserva=$db->lastInsertId();
+        }
+        return $res;
     }
+
+    public static function update($Reserva){
+
+        $db=DB::getInstance();
+
+        $query = "UPDATE Reserva SET DatadaReserva = :DatadaReserva, DatadeDevolucao = :DatadeDevolucao, 
+LocalPickUp=:LocalPickUp, LocalDropOff=:LocalDropOff";
+        $res=$db->query($query, array(':DatadaReserva'=> $Reserva->DatadaReserva,
+            'DatadeDevolucao'=> $Reserva->DatadeDevolucao, 'LocalPickUp'=> $Reserva->LocalPickUp, 'LocalDropOff'=> $Reserva->LocalDropOff));
+
+        if($res){
+            $Reserva->idReserva=$db->lastInsertId();
+        }
+        return $res;
+    }
+
+    public static function delete($id){
+
+        $db=DB::getInstance();
+
+        $query = "DELETE FROM Reserva WHERE idReserva = ':idReserva'";
+        $res=$db->query($query, array(':idReserva'=> $id));
+
+        return $res;
+    }
+
+
+
+
 }

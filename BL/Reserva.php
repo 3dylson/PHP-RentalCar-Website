@@ -10,7 +10,7 @@ class Reserva
     public $LocalDropOff;
 
     public $Cliente_idCliente;
-    public $Promoção_idPromoção;
+    public $Promocao_idPromocao;
 
     public function copy($objeto) {
         foreach ($this as $key => $value) {
