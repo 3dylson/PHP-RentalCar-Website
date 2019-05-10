@@ -45,6 +45,16 @@ LocalPickUp=:LocalPickUp, LocalDropOff=:LocalDropOff";
         return $res;
     }
 
+    public static function getAll(){
+
+        $db=DB::getInstance();
+
+        $query = "SELECT * FROM Reserva";
+        $res=$db->query($query);
+        $res->setFetchMode( PDO::FETCH_CLASS, "Reserva");
+        return $res;
+    }
+
 
 
 
