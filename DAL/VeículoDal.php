@@ -57,4 +57,5 @@ VALUES (:NumeroDeRegistro, :Disponibilidade)";
         return $res;
     }
 
+
 }
