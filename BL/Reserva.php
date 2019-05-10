@@ -4,8 +4,8 @@
 class Reserva
 {
     public $idReserva;
-    public $DataDaReserva;
-    public $DataDeDevolucao;
+    public $DatadaReserva;
+    public $DatadeDevolucao;
     public $LocalPickUp;
     public $LocalDropOff;
 
