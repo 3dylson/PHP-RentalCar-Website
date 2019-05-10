@@ -55,7 +55,4 @@ LocalPickUp=:LocalPickUp, LocalDropOff=:LocalDropOff";
         return $res;
     }
 
-
-
-
 }
