@@ -6,7 +6,7 @@
  * Time: 4:06 PM
  */
 
-class PromoçãoDal
+class PromoçãoDAL
 {
     public static function create($Promoção){
 

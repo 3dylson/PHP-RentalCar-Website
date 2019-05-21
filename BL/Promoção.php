@@ -22,27 +22,27 @@ class Promoção
 
     public function create(){
 
-        $res = PromoçãoDal::create($this);
+        $res = PromoçãoDAL::create($this);
         return($res);
     }
 
     public function update() {
-        $res = PromoçãoDal::update($this);
+        $res = PromoçãoDAL::update($this);
         return($res);
     }
 
     public function delete() {
-        $res = PromoçãoDal::delete($this);
+        $res = PromoçãoDAL::delete($this);
         return($res);
     }
 
     public function getAll() {
-        $res = PromoçãoDal::getAll($this);
+        $res = PromoçãoDAL::getAll($this);
         return($res);
     }
 
     public function getByID($idPromocao) {
-        $res = PromoçãoDal::getByID($idPromocao);
+        $res = PromoçãoDAL::getByID($idPromocao);
         return($res);
     }
 

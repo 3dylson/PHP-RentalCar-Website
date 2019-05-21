@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  * Created by PhpStorm.
  * User: ASUS F555B
@@ -6,7 +8,7 @@
  * Time: 4:02 PM
  */
 
-class Utilizador
+class User
 {
     public $idCliente;
     public $nome;
@@ -17,6 +19,11 @@ class Utilizador
     public $nif;
     public $admin;
 
+
+    public function readByLoginAndPassword(){
+        return(UserDAL::readByLoginAndPassword($this));
+    }
+
     public function copy($objeto) {
         foreach ($this as $key => $value) {
             $this->$key=$objeto->$key;
@@ -25,27 +32,27 @@ class Utilizador
 
     public function create(){
 
-        $res = UtilizadorDal::create($this);
+        $res = UserDAL::create($this);
         return($res);
     }
 
     public function update() {
-        $res = UtilizadorDal::update($this);
+        $res = UserDAL::update($this);
         return($res);
     }
 
     public function delete() {
-        $res = UtilizadorDal::delete($this);
+        $res = UserDAL::delete($this);
         return($res);
     }
 
     public function getAll() {
-        $res = UtilizadorDal::getAll($this);
+        $res = UserDAL::getAll($this);
         return($res);
     }
 
     public function getByName($nomeDoUtilizador) {
-        $res = UtilizadorDal::getByName($nomeDoUtilizador);
+        $res = UserDAL::getByName($nomeDoUtilizador);
         return($res);
     }
 }

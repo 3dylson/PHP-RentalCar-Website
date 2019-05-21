@@ -6,7 +6,7 @@
  * Time: 4:06 PM
  */
 
-class Categoria_VeículoDal
+class Categoria_VeículoDAL
 {
     public static function create($Categoria_Veículo){
 

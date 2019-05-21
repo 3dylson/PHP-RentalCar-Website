@@ -23,27 +23,27 @@ class Veículo
 
     public function create(){
 
-        $res = VeículoDal:: create($this);
+        $res = VeículoDAL:: create($this);
         return($res);
     }
 
     public function update() {
-        $res = VeículoDal::update($this);
+        $res = VeículoDAL::update($this);
         return($res);
     }
 
     public function delete() {
-        $res = VeículoDal::delete($this);
+        $res = VeículoDAL::delete($this);
         return($res);
     }
 
     public function getAll() {
-        $res = VeículoDal::getAll($this);
+        $res = VeículoDAL::getAll($this);
         return($res);
     }
 
     public function getByDisponibilidade($Disponibilidade) {
-        $res = VeículoDal::getByDisponibilidade($Disponibilidade);
+        $res = VeículoDAL::getByDisponibilidade($Disponibilidade);
         return($res);
     }
 
