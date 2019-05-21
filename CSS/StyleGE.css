@@ -1,0 +1,512 @@
+/*----------------------Definicao-------------------->*/
+.Definic{
+    background-image: url("../Imagens/BMW-M5.jpg");
+    height: 100%;
+    width: 100%;
+
+    margin: 0%;
+    background-position: 0 -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-------------imagem-------*/
+.divmain{
+    width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+}
+.titile{
+    font-size: 50px;
+    color: white;
+    margin-top: 100px;
+    padding: 10px 450px;
+    font-family: "Arial Black";
+}
+section .divmain div {
+    font-size: 20px;
+    color: #888888;
+    padding: 10px 240px 20px;
+    font-family: "Arial Black";
+}
+input[type=text]{
+    background: white;
+    color: #888888;
+    border: 0;
+    padding: 5px 80px;
+    text-align: center;
+}
+input[type=submit]{
+    background: darkgray;
+    color: black;
+    cursor: pointer;
+    padding: 5px 175px;
+    text-align: center;
+
+
+}
+/*------------------------------Definicao------------------------*/
+
+/*-------Profile------*/
+.Profile{
+    background-image: url("../Imagens/cool-black.png");
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titile1{
+    font-size: 50px;
+    color: white;
+    margin-top: 200px;
+    margin-left: -100px;
+    padding: 10px 660px;
+    font-family: "Arial Black";
+}
+
+.titile2{
+    font-size: 30px;
+    color: white;
+    margin-top: 70px;
+    margin-left: -60px;
+    padding: 10px 500px;
+    font-family: "Arial Black";
+}
+/*-------Perfil--------->*/
+/*----------------------Pagamento-------------------->*/
+.Pagam {
+    background-image: url("../Imagens/hennessey-2017.jpg");
+    height: 100%;
+    width: 100%;
+
+    margin: 0%;
+    background-position: 0 -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Estato{
+
+    background: #888888;
+    width: 960px;
+    margin: auto;
+    text-align: center;
+    height: 600px;
+    padding: 10px 10px 10px;
+    margin-top: 70px
+}
+.Pagam h2{
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    padding: 100px 800px 100px 40px ;
+    font-family: "Arial Black";
+}
+.logopagamento{
+   /* height=115px;
+    width=218px;*/
+    padding: 70px 700px 100px 0px;
+}
+
+
+
+/*----------------------Pagamento-------------------->*/
+
+/*-------------Privacidade-----------*/
+
+.politc{
+    background-image: url("../Imagens/rolls-royce.jpg");
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    background-position: -420px -100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#navfixo{
+    margin-top: 100px}
+.conteudo{
+
+    margin: auto;
+    width: 700px;
+    background: white;
+    font-family: Arial;
+    padding: 0px 40px 80px;
+}
+.conteudo p{
+
+    margin-top: 10px;
+    width: 650px;
+    color: black;
+    font-size: 13px;
+    font-family: Arial;
+    text-align:justify;
+    padding: 0px 40px 10px;
+}
+.conteudo h1{
+
+    color: black;
+    font-family: "Arial Black";
+    text-align: center;
+    padding: 20px 40px 30px;
+    font-size: 30px;
+}
+/*-------------Privacidade-----------*/
+/*--------------sobrenos----------------*/
+.about{
+    background-image: url("../Imagens/Mercedes-Benz-F-800.jpg");
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    background-position: 0 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.maior{
+    color: blue;
+    font-family: Arial ;
+    padding: 0px 40px 10px;
+}
+.maiorm{
+    color: black;
+    font-family: "Arial Black" ;
+    padding: 0px 40px 10px;
+
+}
+/*-------------sobrenos----------*/
+/*----------contactos------------*/
+
+.contc{
+    background-image: url("../Imagens/BMW.jpg");
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.divcontc {
+    background: darkgray;
+    width: 800px;
+    margin: auto;
+    /*text-align: center;*/
+    height: 800px;
+    padding: 0px 40px 80px;
+}
+.divcontc h1{
+    color: black;
+    font-family: "Arial Black";
+    text-align: center;
+    padding: 20px 40px 30px;
+    font-size: 30px;
+    margin-top: 100px;
+}
+.divcontc .card{
+    padding: 30px 20px;
+}
+
+.card-body{
+    width: 400px;
+    height: 220px;
+    background: black;
+
+}
+.card-title{
+    color:white;
+    font-family: "Arial Black";
+    text-align: justify;
+    /*padding: 10px 300px 0px 0px;*/
+
+}
+.card-body p{
+    color:white;
+    font-family: Arial;
+    font-size: 11px;
+    padding: 0px 250px 0px 0px;
+    text-align:center;
+}
+
+#sms{
+    color: #cf7300;
+}
+.card2{
+    background: #555555;
+    width: 400px;
+    height: 100px;
+}
+.divcontc .card2{
+    padding: 1px 30px;
+}
+.card-title2{
+    font-family: "Arial Black";
+    text-align: center;
+    color: white;
+    font-size: 13px;
+
+}
+
+/*---------------Pop up Login------------------*/
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    color: black;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+
+}
+
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+#log{
+    padding: 5px;
+    color: #222222;
+}
+#log2{
+    color: black;
+}
+
+#b1{
+ width: 130px;
+}
+
+#b2{
+    width: 130px;
+}
+
+#b3{
+    width: 130px;
+}
+#b4{
+    width: 130px;
+}
+
+/*---------------Pop up Login------------------*/
+
+/*-------------ScrolBar--------------------------*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+/*-------------ScrolBar--------------------------*/
+/*-------------------- Edy Footer---------------------*/
+
+footer{
+    margin-top: 30px;
+
+}
+
+footer h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    position: relative;
+}
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: grey;
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+}
+.btn-footer {
+    color: grey;
+
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 13px;
+    padding: 7px 30px;
+    line-height: 47px;
+}
+.btn-footer:hover {
+
+    text-decoration: none;
+
+}
+.form-footer input[type="text"] {
+    border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+
+}
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+.form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+    margin-left: -5px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
+}
+.social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+}
+footer ul li {
+    list-style: none;
+    display: block;
+}
+footer ul  {
+    padding-left: 0;
+}
+footer ul  li a{
+    text-decoration: none;
+    color: grey;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: none;
+    color: #3545f5 !important;
+
+}
+.logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+
+}
+
+h6{
+    color: whitesmoke;
+}
+
+/*-------------------- Edy Footer---------------------*/
+/*----------------reserva-----------*/
+.reserva{
+    background-image: url("../Imagens/rolls-royce.jpg");
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    background-position: -110px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.divcontc .card{
+    padding: 30px 20px;
+}
+
+.card-body{
+    width: 400px;
+    height: 220px;
+    background: black;
+
+}
+.card-title{
+    color:white;
+    font-family: "Arial Black";
+    text-align: justify;
+    /*padding: 10px 300px 0px 0px;*/
+
+}
+.card-body p{
+    color:white;
+    font-family: Arial;
+    font-size: 11px;
+    padding: 0px 250px 0px 0px;
+    text-align:center;
+}
+/*---------------------reserva-------------*/
+
+.titilecar{
+    font-family:"Arial Black";
+    color: black;
+    padding: 10px;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.divcar{
+
+    background: #D8D8D8;
+    width: 700px;
+    height: auto;
+    /*text-align: left;*/
+    padding: 20px;
+}
+divcarp{
+    font-family:"Arial Black";
+    color: black;
+   text-align: center;
+
+}
+
+.divcontCar {
+    background: #FBFBEF;
+    width: 800px;
+    margin: auto;
+    margin-top: 80px;
+    /*text-align: center;*/
+    height: auto;
+    padding: 0px 40px 80px;
+}

@@ -1,0 +1,390 @@
+ /* background-image:url("Audi-A7.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: 0 0px;
+    background-size: cover;*/
+
+    /*background-color: black;*/
+ #logosize{
+     margin-top: -30px;
+ }
+
+.bgHome
+ {
+     background-image:url("../Imagens/Audi-A7.jpg");
+     background-repeat: no-repeat;
+     /*width: 100%;*/
+     height: 100%;
+     margin: 0;
+     background-position: 0 0px;
+     background-size: cover;
+ }
+/*Not Used*/
+.header
+{
+    width: 100%;
+    height: 20%;
+    background-color:#FBFBEF;
+}
+/*Not Used*/
+.logo
+{
+    font-family: "Arial Black";
+    font-size: 100px;
+    text-align: left;
+    width: 10%;
+    height: 1%;
+}
+
+.ph
+{
+    color: white;
+    float: top;
+    text-align: center;
+    padding: 2% 2%;
+}
+p{
+   color: white;
+}
+
+.search
+{
+    width: 50%;
+    height: auto;
+    padding: 4.5%;
+    /*background-color: blue;*/
+    /*margin-bottom: 10px;*/
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+form, label
+{
+    color: white;
+}
+
+.data-hora
+{
+    width: 100px;
+    background-color: white;
+    padding: 12px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+.local-levantamento
+{
+    width: 220px;
+    background-color: white;
+    padding: 12px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.submit {
+    background-color: white;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+    width: 430px;
+}
+
+/*Not used*/
+.Estatic-footer
+{
+    width: 100%;
+    height: 300px;
+    padding: 20px 0;
+
+}
+/*Not used*/
+.esq-footer
+{
+    float: left;
+    width: 25%;
+    margin-right: 80px;
+    border-bottom-right-radius: 1px;
+}
+/*Not used*/
+.midle-left-footer
+{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+a
+{
+    color: white;
+}
+
+.section
+{
+    margin: 50px auto;
+    width: 1024px;
+    height: 150px;
+}
+
+.rede
+{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: 20px;
+    transition: all 0.4s ease-out;
+}
+
+.icone
+{
+    margin: 0px auto;
+    padding: 35px;
+    width: 100px;
+}
+
+/*******Car Descriptions starts*******/
+
+.bgCarDescription
+{
+    background-image:url("../Imagens/BMW-M5.jpg");
+    background-repeat: no-repeat;
+    /*width: 100%;*/
+    height: 100%;
+    margin: 0;
+    background-position: 0 0px;
+    background-size: cover;
+}
+
+ /*******Car Descriptions starts*******/
+/*-------------------- Edy Footer---------------------*/
+
+footer{
+    margin-top: 30px;
+
+}
+
+footer h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    position: relative;
+}
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: grey;
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+}
+.btn-footer {
+    color: grey;
+
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 13px;
+    padding: 7px 30px;
+    line-height: 47px;
+}
+.btn-footer:hover {
+
+    text-decoration: none;
+
+}
+.form-footer input[type="text"] {
+    border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+
+}
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+.form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+    margin-left: -5px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
+}
+.social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+}
+footer ul li {
+    list-style: none;
+    display: block;
+}
+footer ul  {
+    padding-left: 0;
+}
+footer ul  li a{
+    text-decoration: none;
+    color: grey;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: none;
+    color: #3545f5 !important;
+
+}
+.logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+
+}
+
+h6{
+    color: whitesmoke;
+}
+
+/*-------------------- Edy Footer---------------------*/
+ /*-------------ScrolBar--------------------------*/
+ ::-webkit-scrollbar-track
+ {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     background-color: #F5F5F5;
+ }
+
+ ::-webkit-scrollbar
+ {
+     width: 12px;
+     background-color: #F5F5F5;
+ }
+
+ ::-webkit-scrollbar-thumb
+ {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+     background-color: #555;
+ }
+ /*-------------ScrolBar--------------------------*/
+
+ .open-button{
+     color: black;
+ }
+
+ /*---------------Pop up Login------------------*/
+ * {box-sizing: border-box;}
+
+ /* Button used to open the contact form - fixed at the bottom of the page */
+ .open-button {
+     color: black;
+ }
+
+ /* The popup form - hidden by default */
+ .form-popup {
+     display: none;
+     position: fixed;
+
+ }
+
+
+ /* Add styles to the form container */
+ .form-container {
+     max-width: 300px;
+     padding: 10px;
+     background-color: transparent;
+ }
+
+ /* Full-width input fields */
+ .form-container input[type=text], .form-container input[type=password] {
+     width: 100%;
+     padding: 15px;
+     margin: 5px 0 22px 0;
+     border: none;
+     background: #f1f1f1;
+ }
+
+ /* When the inputs get focus, do something */
+ .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+     background-color: #ddd;
+     outline: none;
+ }
+
+ /* Set a style for the submit/login button */
+ .form-container .btn {
+     background-color: black;
+     color: white;
+     padding: 16px 20px;
+     border: none;
+     cursor: pointer;
+     width: 100%;
+     margin-bottom:10px;
+     opacity: 0.8;
+ }
+
+ /* Add a red background color to the cancel button */
+ .form-container .cancel {
+     background-color: red;
+ }
+
+ /* Add some hover effects to buttons */
+ .form-container .btn:hover, .open-button:hover {
+     opacity: 1;
+ }
+ #log{
+     padding: 5px;
+     color: #222222;
+ }
+ #log2{
+     color: black;
+ }
+
+ /*---------------Pop up Login------------------*/
+ /*---------------UserData-BeforePay------------*/
+ .tamanho-inputXL
+ {
+     width: 700px;
+     background-color: white;
+     padding: 12px 12px;
+     border-radius: 5px;
+     cursor: auto;
+     color: black;
+     border: none;
+     outline: none;
+     margin: 0;
+     font-weight: bold;
+ }
+
+ #jasoucliente
+ {
+     margin-left: 780px;
+ }
+
+ .confirma
+ {
+     color: white;
+ }
+
+ .dadosReserva
+ {
+     width: 100%;
+     height: 20%;
+     background-color: white;
+     padding: 25px;
+ }
+
+ /*---------------UserData-BeforePay------------*/

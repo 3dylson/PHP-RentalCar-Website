@@ -1,0 +1,569 @@
+/*-------Admin Style CSS----------------*/
+/*----------------------------------- Nav Bar -------------------------------------*/
+#2nav{
+    margin-top: 50px;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+ .row.content {height: 100%}
+
+/* Set gray background color and 100% height */
+.sidenav {
+
+
+    padding: 20px 0px 440px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+#gestao{
+    padding: 20px 0px 700px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+.sidenav p {
+    margin-left: 15px;
+}
+
+.sidenav h4 {
+    margin-left: 15px;
+}
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
+}
+
+
+/* ------------------------------------Nav Bar -------------------------------------*/
+/*------- BreadCrump----------------*/
+.navfixo{
+    width: fit-content;
+    padding: 5px;
+    height: 10px;
+
+}
+
+.breadnav{
+    width: fit-content;
+    padding: 5px;
+}
+
+#searchb{
+    padding: 10px 0px 10px;
+}
+/*------- BreadCrump----------------*/
+/*---------------------------------- Insurance Table ------------------------------------*/
+
+#tabela-responsiva{
+    width: 120%;
+}
+
+.table-responsive{
+
+
+}
+
+.membership-pricing-table {
+    width: 920px
+}
+
+.membership-pricing-table table .icon-no,.membership-pricing-table table .icon-yes {
+    font-size: 22px
+}
+
+.membership-pricing-table table .icon-no {
+    color: #a93717
+}
+
+.membership-pricing-table table .icon-yes {
+    color: #209e61
+}
+
+.membership-pricing-table table .plan-header {
+    text-align: center;
+    font-size: 48px;
+    border: 1px solid #e2e2e2;
+    padding: 25px 0
+}
+
+.membership-pricing-table table .plan-header-free {
+    background-color: #eee;
+    color: #555
+}
+
+.membership-pricing-table table .plan-header-blue {
+    color: #fff;
+    background-color: #61a1d1;
+    border-color: #3989c6
+}
+
+.membership-pricing-table table .plan-header-standard {
+    color: #fff;
+    background-color: #ff9317;
+    border-color: #e37900
+}
+
+.membership-pricing-table table td {
+    text-align: center;
+    width: 15%;
+    padding: 7px 10px;
+    background-color: #fafafa;
+    font-size: 14px;
+    -webkit-box-shadow: 0 1px 0 #fff inset;
+    box-shadow: 0 1px 0 #fff inset
+}
+
+.membership-pricing-table table,.membership-pricing-table table td {
+    border: 1px solid #ebebeb
+}
+
+.membership-pricing-table table tr td:first-child {
+    background-color: transparent;
+    text-align: right;
+    width: 24%
+}
+
+.membership-pricing-table table tr td:nth-child(5) {
+    background-color: #FFF
+}
+
+.membership-pricing-table table tr:first-child td,.membership-pricing-table table tr:nth-child(2) td {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.membership-pricing-table table tr:first-child th:first-child {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: #e2e2e2
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-name {
+    font-size: 22px
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-price {
+    line-height: 35px
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-price>sup {
+    font-size: 45%
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-price>span {
+    font-size: 30%
+}
+
+.membership-pricing-table table tr:first-child th .pricing-plan-period {
+    margin-top: -7px;
+    font-size: 25%
+}
+
+.membership-pricing-table table .header-plan-inner {
+    position: relative
+}
+
+.membership-pricing-table table .recommended-plan-ribbon {
+    box-sizing: content-box;
+    background-color: #dc3b5d;
+    color: #FFF;
+    position: absolute;
+    padding: 3px 6px;
+    font-size: 11px!important;
+    font-weight: 500;
+    left: -6px;
+    top: -22px;
+    z-index: 99;
+    width: 100%;
+    -webkit-box-shadow: 0 -1px #c2284c inset;
+    box-shadow: 0 -1px #c2284c inset;
+    text-shadow: 0 -1px #c2284c
+}
+
+.membership-pricing-table table .recommended-plan-ribbon:before {
+    border: solid;
+    border-color: #c2284c transparent;
+    border-width: 6px 0 0 6px;
+    bottom: -5px;
+    content: "";
+    left: 0;
+    position: absolute;
+    z-index: 90
+}
+
+.membership-pricing-table table .recommended-plan-ribbon:after {
+    border: solid;
+    border-color: #c2284c transparent;
+    border-width: 6px 6px 0 0;
+    bottom: -5px;
+    content: "";
+    right: 0;
+    position: absolute;
+    z-index: 90
+}
+
+.membership-pricing-table table .plan-head {
+    box-sizing: content-box;
+    background-color: #ff9c00;
+    border: 1px solid #cf7300;
+    position: absolute;
+    top: -33px;
+    left: -1px;
+    height: 30px;
+    width: 100%;
+    border-bottom: none
+}
+
+
+
+/* ------------------------------------------Insurance Table ---------------------------*/
+/*---------------Category form----------------------*/
+.form-horizontal{
+    margin-top: 50px;
+}
+
+
+/*---------------Category form----------------------*/
+/*---------------Chat----------------------------*/
+.chat
+{
+    list-style: none;
+    margin : 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body
+{
+    margin-right: 60px;
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: #777777;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+
+    overflow-y: scroll;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+#chatcontent{
+    margin-top: 30px;
+}
+
+#Chatnprofile{
+    margin-top: 20px;
+}
+
+
+
+/*--------------------Chat-------------------*/
+/*-------------------Cars----------------------*/
+#cars{
+    margin-top: 30px;
+}
+
+
+
+/*-------------------Cars-------------------------*/
+/*-------------------- Edy Footer---------------------*/
+
+footer{
+
+    background-color: #222;
+
+}
+
+footer h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    position: relative;
+}
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: grey;
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+}
+.btn-footer {
+    color: grey;
+
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 43px;
+    font-size: 13px;
+    padding: 7px 30px;
+    line-height: 47px;
+}
+.btn-footer:hover {
+
+    text-decoration: none;
+
+}
+.form-footer input[type="text"] {
+    border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+
+}
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+.form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+    margin-left: -5px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
+}
+.social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+}
+footer ul li {
+    list-style: none;
+    display: block;
+}
+footer ul  {
+    padding-left: 0;
+}
+footer ul  li a{
+    text-decoration: none;
+    color: grey;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: #3545f5 !important;
+
+}
+.logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+}
+
+#footeradmin{
+    margin-top: -20px;
+}
+/*-------------------- Edy Footer---------------------*/
+/*---------------Pop up Login------------------*/
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    color: black;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+
+}
+
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: black;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+#log{
+    padding: 5px;
+    color: #222222;
+}
+#log2{
+    color: black;
+}
+
+#b1{
+    width: 130px;
+}
+
+#b2{
+    width: 130px;
+}
+
+#b3{
+    width: 130px;
+}
+#b4{
+    width: 130px;
+}
+
+/*---------------Pop up Login------------------*/
+/*----------------Select car-------------------*/
+h4{
+    font-weight: 600;
+}
+p{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.price{
+    font-size: 30px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.thumbnail{
+    opacity:0.70;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.thumbnail:hover{
+    opacity:1.00;
+    box-shadow: 0px 0px 10px #4bc6ff;
+}
+.line{
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 770px) {
+    .right{
+        float:left;
+        width: 100%;
+    }
+}
+span.thumbnail {
+    border: 1px solid #00c4ff !important;
+    border-radius: 0px !important;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.16);
+    padding: 10px;
+}
+.container h4{margin-top:70px; margin-bottom:30px;}
+button {    margin-top: 6px;
+}
+.right {
+    float: right;
+    border-bottom: 2px solid #0a5971;
+}
+.btn-info {
+    color: #fff;
+    background-color: #19b4e2;
+    border-color: #19b4e2;
+    font-size:13px;
+    font-weight:600;
+}
+
+/*----------------Select car-------------------*/
+/*---------------Geral----------------------*/
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.sectionnavbarfixo {
+    margin-top: 100px;
+}
+
+.sectionnavbar {
+    margin-top: -25px;
+    width: auto;
+
+}
+/*---------------Geral----------------------*/
+/*-------Admin Style CSS----------------*/
