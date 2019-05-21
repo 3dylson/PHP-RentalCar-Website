@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__FILE__).'/../DAL/VeículoDAL.php';
 /**
  * Created by PhpStorm.
  * User: ASUS F555B
@@ -15,6 +16,13 @@ class Veículo
     public $Categoria_Veiculo_idCategoria_Veiculo;
     public $Reserva_idReserva;
 
+    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5){
+        $this->idVeiculo=$dado1;
+        $this->NumeroDeRegistro=$dado2;
+        $this->Disponibilidede=$dado3;
+        $this->Categoria_Veiculo_idCategoria_Veiculo=$dado4;
+        $this->Reserva_idReserva=$dado5;
+    }
     public function copy($objeto) {
         foreach ($this as $key => $value) {
             $this->$key=$objeto->$key;
