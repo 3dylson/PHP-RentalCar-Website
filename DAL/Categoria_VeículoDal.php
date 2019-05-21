@@ -13,7 +13,7 @@ class Categoria_VeículoDal
         $db=DB::getInstance();
 
         $query = "INSERT INTO Categoria_Veículo (marca, modelo, combustivel, transmicao, capacidade, numeroPorta, precoDia, descricao, foto) 
-VALUES (:marca, :modelo, :combustivel, :transmicao, :capacidade, :numeroPorta, :precoDia, :descricao, :foto)";
+        VALUES (:marca, :modelo, :combustivel, :transmicao, :capacidade, :numeroPorta, :precoDia, :descricao, :foto)";
         $res=$db->query($query, array(':marca'=> $Categoria_Veículo->marca,
             'modelo'=> $Categoria_Veículo->modelo, 'combustivel'=> $Categoria_Veículo->combustivel, 'transmicao'=> $Categoria_Veículo->transmicao, 'capacidade'=> $Categoria_Veículo->capacidade, 'numeroPorta'=> $Categoria_Veículo->numeroPorta, 'precoDia'=> $Categoria_Veículo->precoDia, 'descricao'=> $Categoria_Veículo->descricao, 'foto'=> $Categoria_Veículo->foto));
 
@@ -53,6 +53,15 @@ VALUES (:marca, :modelo, :combustivel, :transmicao, :capacidade, :numeroPorta, :
 
         $query = "SELECT * FROM Categoria_Veículo";
         $res=$db->query($query);
+        $res->setFetchMode( PDO::FETCH_CLASS, "Categoria_Veículo");
+        return $res;
+    }
+
+    public static function getByMarca($marcaDoVeiculo) {
+        $db=DB::getInstance();
+
+        $query = "SELECT * FROM Categoria_Veículo WHERE marca=:marcaVeiculo";
+        $res=$db->query($query, array(':marcaVeiculo' => $marcaDoVeiculo));
         $res->setFetchMode( PDO::FETCH_CLASS, "Categoria_Veículo");
         return $res;
     }
