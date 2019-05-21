@@ -22,27 +22,27 @@ class Promoção
 
     public function create(){
 
-        $res = ReservaDAL::create($this);
+        $res = PromoçãoDAL::create($this);
         return($res);
     }
 
     public function update() {
-        $res = ReservaDAL::update($this);
+        $res = PromoçãoDAL::update($this);
         return($res);
     }
 
     public function delete() {
-        $res = ReservaDAL::delete($this);
+        $res = PromoçãoDAL::delete($this);
         return($res);
     }
 
     public function getAll() {
-        $res = ReservaDAL::getAll($this);
+        $res = PromoçãoDAL::getAll($this);
         return($res);
     }
 
     public function getByID($idPromocao) {
-        $res = ReservaDAL::getByData($idPromocao);
+        $res = PromoçãoDAL::getByID($idPromocao);
         return($res);
     }
 

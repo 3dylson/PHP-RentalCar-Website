@@ -25,22 +25,22 @@ class Seguro
 
     public function create(){
 
-        $res = SeguroDal::create($this);
+        $res = SeguroDAL::create($this);
         return($res);
     }
 
     public function update() {
-        $res = SeguroDal::update($this);
+        $res = SeguroDAL::update($this);
         return($res);
     }
 
     public function delete() {
-        $res = SeguroDal::delete($this);
+        $res = SeguroDAL::delete($this);
         return($res);
     }
 
     public function getAll() {
-        $res = SeguroDal::getAll($this);
+        $res = SeguroDAL::getAll($this);
         return($res);
     }
 

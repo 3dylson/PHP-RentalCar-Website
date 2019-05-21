@@ -6,7 +6,7 @@
  * Time: 4:07 PM
  */
 
-class SeguroDal
+class SeguroDAL
 {
     public static function create($Seguro){
 
