@@ -41,8 +41,8 @@ class User
     public function delete(){
         UserDAL::delete($this);
     }
-    static public function mostrarClientes(){
-        UserDAL::mostrarClientes();
+    static public function mostrarUsers(){
+        UserDAL::mostrarUsers();
     }
 
     public function update(){
@@ -59,8 +59,8 @@ class User
     public function verificarlogin(){
         return UserDAL::verificarlogin($this);
     }
-    static public function getInformCliente(){
-        return UserDAL::getInformCliente();
+    static public function getInformUser(){
+        return UserDAL::getInformUser();
     }
     public function verificarlogin1(){
         return UserDAL::verificarlogin1($this);
