@@ -2,12 +2,12 @@
 if(session_status()==PHP_SESSION_NONE){
     session_start();
 }
-require_once 'Controllers/MainController.php';
+require_once 'Controllers/MainControllers.php';
 $msg=[
     "estado"=>[],
     "user"=>[]
 ];
-$msg= MainController::process();
+//$msg= MainController::process();
 if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
 ?>
 
@@ -15,7 +15,7 @@ if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Rental Car - <?php echo MainController::title();?></title>
+    <title>Rental Car - </title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,6 +23,10 @@ if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./CSS/StyleAri.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
 </head>
 <body>
 <body class="bgHome">
@@ -30,7 +34,7 @@ if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
     <div class="row">
         <div class="col-sm-6">
             <a href="index.html">
-                <img id="logosize" src="../Imagens/Logo.png" height="115" width="218"/></a>
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -82,7 +86,7 @@ class DB{
             $host = 'localhost';
             $dbname = 'mydb';
             $username = 'root';
-            $password = '';
+            $password = 'admin';
             $dsn = "mysql:host=$host;dbname=$dbname; charset=utf8";
 
             $this->conn = new PDO($dsn, $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND=> "SET NAMES utf8"));
@@ -141,7 +145,61 @@ if(!$res){
 
 
 ?>
+<!---Footer------->
+<footer class="container-fluid bg-grey py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="logo-part">
+                            <img src="./Imagens/Logo-footer.png" height="119" width="218"/>
+                            <p>Reserve um carro com a MELITOUR</p>
+                            <p>Melitour tem o veículo para satisfazer todas as necessidades de
+                                aluguer de automóveis.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 px-4">
+                        <h6>Company</h6>
+                        <p>"-Satisfação do cliente é a nossa motivação!"</p>
+                        <a href="../User/Sobre%20nós.html" class="btn-footer"> About Us </a><br>
+                        <a href="../User/Contactos.html" class="btn-footer"> Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 px-4">
+                        <h6> ALLOW LIVE TO THRIVE,<br>DON'T DRINK & DRIVE</h6>
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li> <a href="../User/Política%20de%20Privacidade.html">
+                                            Política de Privacidade</a> </li>
 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <h6> Newsletter</h6>
+                        <div class="social">
+                            <a href="#">
+                                <img src="./Imagens/insta.png" height="30" width="30"/></a>
+                            <a href="#">
+                                <img src="./Imagens/fcbook.png" height="30" width="30"/></a>
+                            <a href="#">
+                                <img src="./Imagens/Twiter.png" height="30" width="30"/></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!---Footer------->
+</footer>
 
 </body>
 </html>

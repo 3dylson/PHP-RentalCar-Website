@@ -22,14 +22,15 @@ class User
 
     public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6,$dado7,$dado8,$dado9){
         $this->idCliente=$dado1;
-        $this->nome=$dado2;
-        $this->email=$dado3;
-        $this->dataNascimento=$dado4;
-        $this->password=$dado5;
-        $this->passwordConfirmated=$dado6;
-        $this->nif=$dado7;
-        $this->admin=$dado8;
-        $this->nome_login=$dado9;
+        $this->nome_login=$dado2;
+        $this->nome=$dado3;
+        $this->email=$dado4;
+        $this->dataNascimento=$dado5;
+        $this->password=$dado6;
+        $this->passwordConfirmated=$dado7;
+        $this->nif=$dado8;
+        $this->admin=$dado9;
+
 
 
     }
@@ -66,8 +67,8 @@ class User
         return($res);
     }
 
-    public function getByName($nomeDoUtilizador) {
-        $res = UserDAL::getByName($nomeDoUtilizador);
+    public function getByName($nome) {
+        $res = UserDAL::getByName($nome);
         return($res);
     }
 }
