@@ -6,7 +6,7 @@
  * Time: 4:05 PM
  */
 
-require_once dirname(__FILE__).'/../DAL/Categoria_Veículo.php';
+require_once dirname(__FILE__).'/../DAL/Categoria_VeículoDAL.php';
 
 class Categoria_Veículo
 {
@@ -54,20 +54,6 @@ class Categoria_Veículo
 
     public function delete()
     {
-        Categoria_VeículoDal::delete($this);
-    }
-
-    //not updated
-    public function getAll()
-    {
-        $res = Categoria_Veículo::getAll($this);
-        return($res);
-    }
-
-    //not updated
-    public function getByMarca($marcaDoVeiculo)
-    {
-        $res = Categoria_VeículoDal::getByMarca($marcaDoVeiculo);
-        return($res);
+        Categoria_VeículoDal::delete();
     }
 }

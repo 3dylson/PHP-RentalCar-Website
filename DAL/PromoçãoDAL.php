@@ -10,42 +10,36 @@ class PromoçãoDAL
 {
     public static function create($Promoção){
 
-        $db=DB::getInstance();
+        $conn= DBConnection::connect();
 
-        $query = "INSERT INTO Promoção (Nome, DataDeValidade, PercentagemDeDesconto) 
-VALUES (:Nome, :DataDeValidade, :PercentagemDeDesconto)";
-        $res=$db->query($query, array(':Nome'=> $Promoção->Nome,
-            'DataDeValidade'=> $Promoção->DataDeValidade, 'PercentagemDeDesconto'=> $Promoção->PercentagemDeDesconto));
-
-        if($res){
-            $Promoção->idPromoção=$db->lastInsertId();
-        }
-        return $res;
+        $sql = "INSERT INTO Promoção (Nome, DataDeValidade, PercentagemDeDesconto) 
+                  VALUES (?,?,?,?)";
+        $q=$conn->prepare($sql);
+        $q->execute(array($Promoção->Nome, $Promoção->DataDeValidade, $Promoção->PercentagemDeDesconto));
+        DBConnection::disconnect();
     }
 
     public static function update($Promoção){
 
-        $db=DB::getInstance();
+        $conn= DBConnection::connect();
 
-        $query = "UPDATE Promoção SET Nome = :Nome, DataDeValidade = :DataDeValidade, 
-PercentagemDeDesconto=:PercentagemDeDesconto";
-        $res=$db->query($query, array(':Nome'=> $Promoção->Nome,
-            'DataDeValidade'=> $Promoção->DataDeValidade, 'PercentagemDeDesconto'=> $Promoção->PercentagemDeDesconto));
+        $sql = 'UPDATE Promoção SET PercentagemDeDesconto = ? WHERE idPromocao = ?';
+        $res=$conn->prepare($sql);
+        $res->execute(array($Promoção->PercentagemDeDesconto, $Promoção->idPromocao));
 
-        if($res){
-            $Promoção->idPromoção=$db->lastInsertId();
-        }
-        return $res;
+        if($res->rowCount()>0)
+            echo "Alteracao feita com sucesso!". "<br>";
+        else
+            echo "Erro" . "<br>";
+        DBConnection::disconnect();
     }
 
     public static function delete($id){
-
-        $db=DB::getInstance();
-
-        $query = "DELETE FROM Promoção WHERE idPromoção = ':idPromoção'";
-        $res=$db->query($query, array(':idPromoção'=> $id));
-
-        return $res;
+        $conn= DBConnection::connect();
+        $sql="DELETE FROM Promoção WHERE idPromocao = ?";
+        $q=$conn->prepare($sql);
+        $q->execute(Array($id->idPromocao));
+        DBConnection::disconnect();
     }
 
     public static function getAll(){
