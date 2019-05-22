@@ -34,9 +34,48 @@ class User
 
 
     }
+    public function create(){
+        UserDAL::create($this);
 
+    }
+    public function delete(){
+        UserDAL::delete($this);
+    }
+    static public function mostrarClientes(){
+        UserDAL::mostrarClientes();
+    }
 
-    public function readByLoginAndPassword(){
+    public function update(){
+        UserDAL::update($this);
+    }
+
+    public function verificarnif(){
+        return UserDAL::verificarnif($this);
+    }
+    public function typeofuser(){
+        return UserDAL::typeofuser($this);
+    }
+
+    public function verificarlogin(){
+        return UserDAL::verificarlogin($this);
+    }
+    static public function getInformCliente(){
+        return UserDAL::getInformCliente();
+    }
+    public function verificarlogin1(){
+        return UserDAL::verificarlogin1($this);
+    }
+    public static function verificarPrimeiroUtilizador(){
+        return UserDAL::verificarPrimeiroUtilizador();
+    }
+    static public function verificarPass(){
+        return UserDAL::verificarPass();
+    }
+    static public function alterarPass(){
+        UserDAL::alterarPass();
+    }
+
+   /* public function readByLoginAndPassword(){
         return(UserDAL::readByLoginAndPassword($this));
     }
 
@@ -70,5 +109,5 @@ class User
     public function getByName($nome) {
         $res = UserDAL::getByName($nome);
         return($res);
-    }
+    }*/
 }
