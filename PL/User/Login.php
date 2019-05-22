@@ -1,6 +1,6 @@
-<?php
 
-class UserController{
+
+/*class UserController{
 
     public static function process(){
         if(isset($_POST['user-register'])){
@@ -70,4 +70,4 @@ class UserController{
         }
         return($res);
     }
-}
+}*/
