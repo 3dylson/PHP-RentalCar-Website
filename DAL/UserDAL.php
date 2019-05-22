@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'/DBConnection.php';
+//require_once dirname(__FILE__).'/DBConnection.php';
 require_once dirname(__FILE__).'/../BL/User.php';
 
 /**
@@ -13,8 +13,8 @@ class UserDAL
 {
     public static function create($User){
         $db=DB::getInstance();
-        $query = "INSERT INTO User (nome, nome_login, email, dataNascimento, password, passwordConfirmed, nif, admin) 
-        VALUES (:nome, :email, :dataNascimento, :password, :passwordConfirmed, :nif, :admin)";
+        $query = "INSERT INTO USER (nome, nome_login, email, dataNascimento, password, passwordConfirmed, nif, admin) 
+        VALUES (:nome, :nome_login, :email, :dataNascimento, :password, :passwordConfirmed, :nif, :admin)";
         $res=$db->query($query, array(':nome'=> $User->nome, 'nome_login'=> $User->nome_login,
             'email'=> $User->email, 'dataNascimento'=> $User->dataNascimento,
             'password'=> $User->password, 'passwordConfirmed'=> $User->passwordConfirmed,

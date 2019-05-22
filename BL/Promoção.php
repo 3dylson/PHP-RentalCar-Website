@@ -14,36 +14,28 @@ class Promoção
     public $PercentagemDeDesconto;
 
 
-    public function copy($objeto) {
-        foreach ($this as $key => $value) {
-            $this->$key=$objeto->$key;
-        }
+    public function __construct($dado1,$dado2,$dado3,$dado4) {
+        $this->idPromocao=$dado1;
+        $this->Nome=$dado2;
+        $this->DataDeValidade=$dado3;
+        $this->PercentagemDeDesconto=$dado4;
+
     }
 
     public function create(){
 
-        $res = PromoçãoDAL::create($this);
-        return($res);
+        PromoçãoDAL::create($this);
     }
 
     public function update() {
-        $res = PromoçãoDAL::update($this);
-        return($res);
+        PromoçãoDAL::update($this);
     }
 
     public function delete() {
-        $res = PromoçãoDAL::delete($this);
-        return($res);
+        PromoçãoDAL::delete($this);
     }
 
     public function getAll() {
-        $res = PromoçãoDAL::getAll($this);
-        return($res);
+        PromoçãoDAL::getAll($this);
     }
-
-    public function getByID($idPromocao) {
-        $res = PromoçãoDAL::getByID($idPromocao);
-        return($res);
-    }
-
 }
