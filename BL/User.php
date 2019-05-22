@@ -30,44 +30,59 @@ class User
         $this->nif=$dado7;
         $this->admin=$dado8;
         $this->nome_login=$dado9;
-
-
     }
-
-
-    public function readByLoginAndPassword(){
-        return(UserDAL::readByLoginAndPassword($this));
-    }
-
-    public function copy($objeto) {
-        foreach ($this as $key => $value) {
-            $this->$key=$objeto->$key;
-        }
-    }
-
     public function create(){
 
         $res = UserDAL::create($this);
         return($res);
     }
-
     public function update() {
         $res = UserDAL::update($this);
         return($res);
     }
-
     public function delete() {
         $res = UserDAL::delete($this);
         return($res);
     }
-
     public function getAll() {
         $res = UserDAL::getAll($this);
         return($res);
     }
-
-    public function getByName($nomeDoUtilizador) {
-        $res = UserDAL::getByName($nomeDoUtilizador);
+    public function verificarnif(){
+       $res=UserDAL:: verificarnif($this);
         return($res);
+    }
+    public function readByLogin1(){
+        $res=UserDAL::readByLogin1($this);
+        return($res);
+    }
+    public function typeofuser(){
+        $res=UserDAL::typeofuser($this);
+        return($res);
+    }
+    public function readByLogin(){
+        $res=UserDAL::readByLogin($this);
+        return($res);
+    }
+    public function getInformUser(){
+        $res=UserDAL::getInformUser($this);
+        return($res);
+    }
+    public function readyByfirstname(){
+        $res=UserDAL::readyByfirstname($this);
+        return($res);
+    }
+    public function readByPass(){
+        $res=UserDAL::readyByPass($this);
+        return($res);
+    }
+    public function changedPass(){
+        $res=UserDAL::changedPass($this);
+        return($res);
+    }
+    public function copy($objeto) {
+        foreach ($this as $key => $value) {
+            $this->$key=$objeto->$key;
+        }
     }
 }

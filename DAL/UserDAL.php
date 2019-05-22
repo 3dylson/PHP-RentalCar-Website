@@ -39,7 +39,6 @@ class UserDAL
         }
         return $res;
     }
-
     public static function delete($id){
 
         $db=DB::getInstance();
@@ -59,7 +58,7 @@ class UserDAL
         $res->setFetchMode( PDO::FETCH_CLASS, "User");
         return $res;
     }
-    public static function verificarnif($e){
+    public static function verificar($e){
         $conn= DBConnection::connect();
         $sql='SELECT id FROM user WHERE nif=?';
         $result=$conn->prepare($sql);
