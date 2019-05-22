@@ -33,7 +33,7 @@ if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <a href="index.html">
+            <a href="./index.php?page=Home.php">
                 <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
@@ -65,7 +65,7 @@ if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
                             }
                         </script>
                     </div>
-                    <a href="UserData-BeforePay.html">
+                    <a href="./index.php?page=SignUp.php">
                         <button class="open-button"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
                 </ul>
             </div>
@@ -73,6 +73,37 @@ if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
 
     </div>
 </div>
+
+<!--Main Quote Starts-->
+<div class="ph">
+
+    <h5>THE ROYAL ESSENCE OF JORNEY</h5>
+    <h2>RELAXED JORNEY EVER</h2>
+</div>
+<!--Main Quote Ends-->
+<!--Search Menu starts-->
+<div class="search">
+    <form>
+        <input class="local-levantamento" type="text" name="local_levantamento"
+               value="" placeholder="Local de levantamento" autocomplete="off">
+        &#160 &#160
+
+        <input class="local-levantamento" type="text" name="local_devolução" value=""
+               placeholder="Local de devolução" autocomplete="on"><br/><br/>
+        <input class="data-hora" type="date" name="data_levantamento"
+               value placeholder="Data" autocomplete="off">&#160 &#160
+        <input class="data-hora" type="number" name="hora_levantamento"
+               value placeholder="Hora" autocomplete="off">&#160 &#160 &#160
+        <input class="data-hora" type="date" name="data_devolução"
+               value placeholder="Data" autocomplete="off">&#160 &#160
+        <input class="data-hora" type="number" name="hora_devolução"
+               value placeholder="Hora" autocomplete="off"><br/><br/>
+        <a href="./index.php?page=EscolherVeículo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
+        <!---------<input  type="submit" value="PESQUISAR" class="submit"/>---->
+
+    </form>
+</div>
+<!--Search Menu Ends-->
 
 <?php
 
@@ -162,8 +193,8 @@ if(!$res){
                     <div class="col-md-6 px-4">
                         <h6>Company</h6>
                         <p>"-Satisfação do cliente é a nossa motivação!"</p>
-                        <a href="../User/Sobre%20nós.html" class="btn-footer"> About Us </a><br>
-                        <a href="../User/Contactos.html" class="btn-footer"> Contact Us</a>
+                        <a href="./index.php?page=SobreNós.php" class="btn-footer"> About Us </a><br>
+                        <a href="./index.php?page=Contactos.php" class="btn-footer"> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -174,7 +205,7 @@ if(!$res){
                         <div class="row ">
                             <div class="col-md-6">
                                 <ul>
-                                    <li> <a href="../User/Política%20de%20Privacidade.html">
+                                    <li> <a href="./index.php?page=PolíticaDePrivacidade.php">
                                             Política de Privacidade</a> </li>
 
                                 </ul>
