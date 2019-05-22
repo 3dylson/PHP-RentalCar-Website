@@ -1,38 +1,31 @@
 <html lang="en">
 <head>
-    <title>Seguros - Aluguer</title>
+    <title>Gerenciar Seguros - Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/StyleGE.css">
     <link rel="stylesheet" href="../css/Style.css">
 </head>
 <body>
+<!----Side Bar links----->
+<section class="sectionnavbarfixo">
+    <div class="container-fluid text-lefth">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <h4>ADMIN</h4>
+                <p><a href="Assistência%20ao%20Cliente.html">Assistência ao Cliente</a></p>
+                <p><a href="Gerenciar%20Categorias.html">Gerenciar Categorias</a></p>
+                <p><a href="Gerenciar%20Promoções.html">Gerenciar Promoções</a></p>
+                <p><a href="Gerenciar%20Reserva.html">Gerenciar Reservas</a></p>
+                <p><a href="Gestão%20de%20Veículos%20(Admin).html">Gestão de Veículos</a></p>
+            </div>
+            <!----Side Bar links----->
 
-<!------Content--------->
-<div class="container" style="margin-top:60px">
-    <div class="row">
-        <div class="col-sm-4">
-            <h2>BMW X5</h2>
-            <img src="../Imagens/BMW-X5-Rent.png" height="170" width="238"/>
-            <p>SUV | Diesel | Manual | 5 Lugares | 5 Portas</p>
-            <a class="nav-link active" href="UserData-BeforePay.html">
-                <button class="btn btn-success"><span class="glyphicon glyphicon-euro"></span> Pagamento</button></a>
-            <strong style="margin-left: 10px"> Preço: 220.50€</strong>
-            <br>
-            <a class="nav-link active" href="Select-Car.html">
-                <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Escolher outro Veículo.</button></a>
-            <hr class="d-sm-none">
-        </div>
-        <div class="col-sm-8">
-            <h2>Escolha o seu plano de seguro:</h2>
             <!------ Insurance Table----->
-            <div id="tabela-responsiva" class="table-responsive">
+            <div class="table-responsive">
                 <div class="membership-pricing-table">
                     <table>
+                        <h2>Tabela de Seguros:</h2>
                         <tbody>
                         <tr>
                             <th></th>
@@ -139,12 +132,13 @@
                         </tbody>
                     </table>
                     <hr>
+                    <button type="button" class="btn btn-dark">Editar</button>
+                    <button type="button" class="btn btn-outline-success">Guardar</button>
                 </div>
             </div>
             <!------ Insurance Table----->
         </div>
     </div>
-</div>
-<!----Content---------->
+</section>
 </body>
 </html>
