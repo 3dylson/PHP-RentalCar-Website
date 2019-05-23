@@ -1,17 +1,6 @@
 <?php
-if(session_status()==PHP_SESSION_NONE){
-    session_start();
-}
-require_once 'Controllers/MainControllers.php';
-$msg=[
-    "estado"=>[],
-    "user"=>[]
-];
-//$msg= MainController::process();
-if(isset($_SESSION['ID'])) $userinfo= MainController::getUserInformation();
+require_once 'DAL/DBconnection.php'
 ?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
