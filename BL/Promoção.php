@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ASUS F555B
- * Date: 5/10/2019
- * Time: 4:04 PM
- */
+require_once dirname(__FILE__).'../DAL/PromoçãoDAL.php';
+
 
 class Promoção
 {
@@ -23,7 +19,6 @@ class Promoção
     }
 
     public function create(){
-
         PromoçãoDAL::create($this);
     }
 
@@ -35,7 +30,10 @@ class Promoção
         PromoçãoDAL::delete($this);
     }
 
-    public function getAll() {
-        PromoçãoDAL::getAll($this);
+    static public function mostrarPromocoes(){
+        PromoçãoDAL::mostrarPromocoes();
+    }
+    static public function mostrarPromocoesAdmin(){
+        PromoçãoDAL::mostrarPromocoesAdmin();
     }
 }

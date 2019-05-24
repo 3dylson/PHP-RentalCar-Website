@@ -53,7 +53,8 @@ class UserController
 
 
     public static function createUser(){
-        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],$_POST['password'], "",$_POST['nif'],'');
+        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],
+            $_POST['password'], "",$_POST['nif'],'');
         if(isset($_SESSION['idCliente']) && UserController::typeofuser()){$user->usertype=1;}
         else {$user->usertype=0;}
         $user->create();
@@ -61,7 +62,8 @@ class UserController
 
 
     public static function createAdmin(){
-        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],$_POST['password'], "",$_POST['nif'],'');
+        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],
+            $_POST['password'], "",$_POST['nif'],'');
         $user->usertype='1';
         $user->create();
     }
