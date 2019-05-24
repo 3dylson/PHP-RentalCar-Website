@@ -16,11 +16,11 @@ class Categoria_VeículoDAL
 
         $conn= DBconnection::connect();
         $sql= "INSERT INTO Categoria_Veículo (idCategoria_Veiculo, marca, modelo, combustivel, transmissao, capacidade,
-                numeroPorta, precoDia, descricao)
-               values (?,?,?,?,?,?,?,?,?)";
+                numeroPorta, precoDia)
+               values (?,?,?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
         $q->execute(array($e->idCategoria_Veiculo,$e->marca,$e->modelo,$e->combustivel,$e->transmissao,$e->capacidade,
-            $e-> numeroPorta, $e-> precoDia, $e-> descricao, $e-> foto));
+            $e-> numeroPorta, $e-> precoDia));
         if($q->rowCount()>0){
             $sql= "Select * FROM Categoria_Veículo WHERE idCategoria_Veiculo=(SELECT MAX(idCategoria_Veiculo) FROM Categoria_Veículo)";
             $q=$conn->prepare($sql);
@@ -34,12 +34,11 @@ class Categoria_VeículoDAL
     }
 
     public static function update($e){
-
         $conn= DBConnection::connect();
         $sql='UPDATE Categoria_Veículo SET marca = :marca, modelo = :modelo, combustivel = :combustivel,
                 transmissao = :transmissao, capacidade = :capacidade, numeroPorta = :numeroPorta, precoDia = :precoDia, descricao = :descricao WHERE idCategoria_Veiculo= ?';
         $result=$conn->prepare($sql);
-        $result->execute(Array($e->marca,$e->modelo, $e->combustivel, $e->transmissao, $e->capacidade, $e->numeroPorta, $e->precoDia, $e->descricao));
+        $result->execute(Array($e->marca,$e->modelo, $e->combustivel, $e->transmissao, $e->capacidade, $e->numeroPorta, $e->precoDia));
         if($result->rowCount()>0)
             echo "Alteracao feita com sucesso!". "<br>";
         else
@@ -47,7 +46,6 @@ class Categoria_VeículoDAL
     }
 
     public static function delete($e){
-
         $conn= DBConnection::connect();
         $sql="DELETE FROM Categoria_Veículo WHERE idCategoria_Veiculo = ?";
         $q=$conn->prepare($sql);

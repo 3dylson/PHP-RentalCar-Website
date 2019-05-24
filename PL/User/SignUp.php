@@ -4,7 +4,7 @@
         <title>MELITOUR-Sign Up</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/StyleGE.css">
+        <link rel="stylesheet" href=".././../CSS/StyleGE.css">
     </head>
     <body class="Definic">
         <section>

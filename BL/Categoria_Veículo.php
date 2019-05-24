@@ -18,7 +18,7 @@ class Categoria_Veículo
     public $capacidade;
     public $numeroPortas;
     public $precoDia;
-    public $descricao;
+
 
 
 
@@ -28,7 +28,7 @@ class Categoria_Veículo
         }
     }*/
 
-    public function __construct($dado1=null,$dado2=null,$dado3=null,$dado4=null,$dado5=null,$dado6=null,$dado7=null, $dado8=null, $dado9=null)
+    public function __construct($dado1=null,$dado2=null,$dado3=null,$dado4=null,$dado5=null,$dado6=null,$dado7=null, $dado8=null)
     {
         $this->idCategoria_Veiculo=$dado1;
         $this->marca=$dado2;
@@ -38,7 +38,7 @@ class Categoria_Veículo
         $this->capacidade=$dado6;
         $this->numeroPortas=$dado7;
         $this->precoDia=$dado8;
-        $this->descricao=$dado9;
+
 
     }
 

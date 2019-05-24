@@ -39,9 +39,9 @@ class MainControllers
     }
     public static function logout(){
         if(UserController::typeofuser())
-            return '<a href="../index.php?terminarSessao">Logout</a>' ;
+            return '<a href="../index.php?Logout">Logout</a>' ;
         else
-            return '<a href="../index.php?terminarSessao">Logout</a>';
+            return '<a href="../index.php?Logout">Logout</a>';
     }
 
 

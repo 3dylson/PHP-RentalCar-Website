@@ -91,7 +91,7 @@ class UserController
     }
 
     public static function ProcessLogout(){
-        if(isset($_GET['terminarSessao'])){
+        if(isset($_GET['Logout'])){
             $_SESSION = array();
             if (ini_get("session.use_cookies")) {
                 $params = session_get_cookie_params();
@@ -107,7 +107,7 @@ class UserController
             if(!$_POST['new_password']){
                 $msg["estado"]='Insira uma nova password.';
             }elseif(self::verificarPass()!=$_POST['password_antigo']){
-                $msg["estado"]='Password antigo não coincide!';
+                $msg["estado"]='Password antiga não coincide!';
             }elseif($_POST['repeatNewPass']!=$_POST['new_password']){
                 $msg["estado"]='Os Passwords não coincidem';
             }else{
