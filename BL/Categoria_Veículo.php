@@ -18,8 +18,8 @@ class Categoria_Veículo
     public $capacidade;
     public $numeroPortas;
     public $precoDia;
-    public $descricao;
-    public $foto;
+
+
 
 
    /* public function copy($objeto) {
@@ -28,7 +28,7 @@ class Categoria_Veículo
         }
     }*/
 
-    public function __construct($dado1=null,$dado2=null,$dado3=null,$dado4=null,$dado5=null,$dado6=null,$dado7=null, $dado8=null, $dado9=null, $dado10=null)
+    public function __construct($dado1=null,$dado2=null,$dado3=null,$dado4=null,$dado5=null,$dado6=null,$dado7=null, $dado8=null)
     {
         $this->idCategoria_Veiculo=$dado1;
         $this->marca=$dado2;
@@ -38,22 +38,22 @@ class Categoria_Veículo
         $this->capacidade=$dado6;
         $this->numeroPortas=$dado7;
         $this->precoDia=$dado8;
-        $this->descricao=$dado9;
-        $this->foto=$dado10;
+
+
     }
 
     public function create()
     {
-        Categoria_VeículoDal::create($this);
+        Categoria_VeículoDAL::create($this);
     }
 
     public function update()
     {
-        Categoria_VeículoDal::update($this);
+        Categoria_VeículoDAL::update($this);
     }
 
     public function delete()
     {
-        Categoria_VeículoDal::delete();
+        Categoria_VeículoDAL::delete($this);
     }
 }

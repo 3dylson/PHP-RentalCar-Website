@@ -1,4 +1,6 @@
 <?php
+require_once dirname(__FILE__).'DBconnection.php';
+require_once dirname(__FILE__).'/../BL/Promoção.php';
 /**
  * Created by PhpStorm.
  * User: ASUS F555B
@@ -8,48 +10,63 @@
 
 class PromoçãoDAL
 {
-    public static function create($Promoção){
 
+    static public function create($e){
+            $conn= DBConnection::connect();
+            $sql= "INSERT INTO Promoção (idPromocao,Nome,DataDeValidade,PercentagemDeDesconto) values (?,?,?,?)";
+            $q=$conn->prepare($sql);
+            $q->execute(array($e->idPromocao,$e->Nome,$e->DataDeValidade,$e->PercentagemDeDesconto));
+            DBConnection::disconnect();
+    }
+
+    static public function delete($e){
         $conn= DBConnection::connect();
-
-        $sql = "INSERT INTO Promoção (Nome, DataDeValidade, PercentagemDeDesconto) 
-                  VALUES (?,?,?,?)";
+        $sql="DELETE FROM Promoção WHERE idPromocao = ?";
         $q=$conn->prepare($sql);
-        $q->execute(array($Promoção->Nome, $Promoção->DataDeValidade, $Promoção->PercentagemDeDesconto));
+        $q->execute(Array($e->idPromocao));
         DBConnection::disconnect();
     }
 
-    public static function update($Promoção){
-
+    static public function mostrarPromocoes(){
         $conn= DBConnection::connect();
+        $sql="Select * FROM Promoção";
+        $result=$conn->prepare($sql);
+        $result->execute();
+        if($result->rowCount()>0)
+            while($row=$result->fetch()){
+                $DataDeValidade=new DateTime($row["DataDeValidade"]);
+                echo "Nome: " . $row["Nome"]. "  Data De Validade: " . $DataDeValidade->format('d-M-Y') . "Percentagem: " . $row["Percentagem"]. "<br>";
+            }
+        else
+            echo '0 results'. "<br>";
+        DBConnection::disconnect();
+    }
+    static public function mostrarPromocoesAdmin(){
+        $conn= DBConnection::connect();
+        $sql="Select * FROM PROMOÇÃOATUAL";
+        $result=$conn->prepare($sql);
+        $result->execute();
+        if($result->rowCount()>0)
+            while($row=$result->fetch()){
+                $DataDeValidade=new DateTime($row["DataDeValidade"]);
+                echo "Nome: " . $row["Nome"]. "  Data De Validade: " . $DataDeValidade->format('d-M-Y') .  "<br>";
+            }
+        else
+            echo '0 results'. "<br>";
+        DBConnection::disconnect();
+    }
 
-        $sql = 'UPDATE Promoção SET PercentagemDeDesconto = ? WHERE idPromocao = ?';
-        $res=$conn->prepare($sql);
-        $res->execute(array($Promoção->PercentagemDeDesconto, $Promoção->idPromocao));
-
-        if($res->rowCount()>0)
+    public function update($e){
+        $conn= DBConnection::connect();
+        $sql='UPDATE Promoção SET Nome = ? WHERE idPromocao= ?';
+        $result=$conn->prepare($sql);
+        $result->execute(Array($e->Nome,$e->idPromocao));
+        if($result->rowCount()>0)
             echo "Alteracao feita com sucesso!". "<br>";
         else
             echo "Erro" . "<br>";
         DBConnection::disconnect();
-    }
 
-    public static function delete($id){
-        $conn= DBConnection::connect();
-        $sql="DELETE FROM Promoção WHERE idPromocao = ?";
-        $q=$conn->prepare($sql);
-        $q->execute(Array($id->idPromocao));
-        DBConnection::disconnect();
-    }
-
-    public static function getAll(){
-
-        $db=DB::getInstance();
-
-        $query = "SELECT * FROM Promoção";
-        $res=$db->query($query);
-        $res->setFetchMode( PDO::FETCH_CLASS, "Promoção");
-        return $res;
     }
 
 }

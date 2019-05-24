@@ -41,7 +41,7 @@ class UserController
 
         if(isset($_POST['log'])){
             self::verificarlogin();
-            if(isset($_SESSION['ID']) && $_SESSION['ID']>0){
+            if(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0){
                 header('Location: ./Home.php');
                 //unset($_GET['page']);
             }
@@ -53,14 +53,17 @@ class UserController
 
 
     public static function createUser(){
-        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],$_POST['password'],$_POST['nif'],'');
-        if(isset($_SESSION['ID']) && UserController::typeofuser()){$user->usertype=1;}
+        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],
+            $_POST['password'], "",$_POST['nif'],'');
+        if(isset($_SESSION['idCliente']) && UserController::typeofuser()){$user->usertype=1;}
         else {$user->usertype=0;}
         $user->create();
     }
 
+
     public static function createAdmin(){
-        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],$_POST['password'],$_POST['nif'],'');
+        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],
+            $_POST['password'], "",$_POST['nif'],'');
         $user->usertype='1';
         $user->create();
     }
@@ -71,26 +74,26 @@ class UserController
         return $user->verificarnif();
     }
     public static function verificarlogin(){
-        $user1=new User();
-        $user1->login=$_POST['login1'];
+        $user1= new User();
+        $user1->login=$_POST['nome_login1'];
         $user1->password=$_POST['palavra_passe'];
         if(($aux=$user1->verificarlogin())>0 || $aux==-1)
-            $_SESSION['ID']=$aux;
+            $_SESSION['idCliente']=$aux;
     }
     public static function verificarlogin1($logaux){
         $user=new User();
-        $user->login=$logaux;
+        $user->nome_login=$logaux;
         return $user->verificarlogin1();
     }
     public static function verificarPrimeiroUtilizador(){
         return User::verificarPrimeiroUtilizador();
     }
-    public static function getInformaCliente(){
-        return User::getInfofromUser();
+    public static function getInformUser(){
+        return User::getInformUser();
     }
 
     public static function ProcessLogout(){
-        if(isset($_GET['terminarSessao'])){
+        if(isset($_GET['Logout'])){
             $_SESSION = array();
             if (ini_get("session.use_cookies")) {
                 $params = session_get_cookie_params();
@@ -106,7 +109,7 @@ class UserController
             if(!$_POST['new_password']){
                 $msg["estado"]='Insira uma nova password.';
             }elseif(self::verificarPass()!=$_POST['password_antigo']){
-                $msg["estado"]='Password antigo não coincide!';
+                $msg["estado"]='Password antiga não coincide!';
             }elseif($_POST['repeatNewPass']!=$_POST['new_password']){
                 $msg["estado"]='Os Passwords não coincidem';
             }else{
@@ -118,7 +121,7 @@ class UserController
     }
 
     public static function loginverification(){
-        if(isset($_SESSION['ID']))
+        if(isset($_SESSION['idCliente']))
             return true;
         else
             return false;
@@ -126,7 +129,7 @@ class UserController
 
     public static function typeofuser(){
         if(self::loginverification()){
-            $user= new User($_SESSION['ID']);
+            $user= new User($_SESSION['idCliente']);
             return $user->typeofuser();
         }
     }
