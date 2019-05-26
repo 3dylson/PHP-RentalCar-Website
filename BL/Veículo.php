@@ -12,7 +12,6 @@ class Veículo
     public $idVeiculo;
     public $NumeroDeRegistro;
     public $Disponibilidede;
-
     public $Categoria_Veiculo_idCategoria_Veiculo;
     public $Reserva_idReserva;
 
