@@ -10,7 +10,7 @@ class ReservaDAL
         $db=DB::getInstance();
 
         $query = "INSERT INTO Reserva (DatadaReserva, DatadeDevolucao, LocalPickUp, LocalDropOff) 
-VALUES (:DatadaReserva, :DatadeDevolucao, :LocalPickUp, :LocalDropOff)";
+        VALUES (:DatadaReserva, :DatadeDevolucao, :LocalPickUp, :LocalDropOff)";
         $res=$db->query($query, array(':DatadaReserva'=> $Reserva->DatadaReserva,
             'DatadeDevolucao'=> $Reserva->DatadeDevolucao, 'LocalPickUp'=> $Reserva->LocalPickUp, 'LocalDropOff'=> $Reserva->LocalDropOff));
 
