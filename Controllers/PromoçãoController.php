@@ -31,8 +31,6 @@ class PromoçãoController
     $promo->create();
     unset($_POST['Nome']); unset($_POST['DataDeValidade']); unset($_POST['PercentagemDeDesconto']);
     }
-
-
     static public function deletepromocao(){
      $promo = new Promoção();
      $promo->delete();
