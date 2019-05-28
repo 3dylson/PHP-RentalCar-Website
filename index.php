@@ -1,5 +1,14 @@
 <?php
+
+/*index.php?page=home
+§home = $_GET['index']
+§page = "PL/".$Home".php"
+
+require_once $page*/
+
+
 require_once 'DAL/DBconnection.php';
+require_once 'Controllers/MainControllers.php';
 
 MainControllers::process();
 ?>
