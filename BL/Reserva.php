@@ -12,36 +12,30 @@ class Reserva
     public $Cliente_idCliente;
     public $Promocao_idPromocao;
 
-    public function copy($objeto) {
-        foreach ($this as $key => $value) {
-            $this->$key=$objeto->$key;
-        }
+    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6,$dado7){
+        $this->idReserva=$dado1;
+        $this->DatadaReserva=$dado2;
+        $this->DatadeDevolucao=$dado3;
+        $this->LocalPickUp=$dado4;
+        $this->LocalDropOff=$dado5;
+        $this->Cliente_idCliente=$dado6;
+        $this->Promocao_idPromocao=$dado7;
+
     }
+
 
     public function create(){
-
-        $res = ReservaDAL::create($this);
-        return($res);
+        return ReservaDal::create($this);
+    }
+    public function delete(){
+        ReservaDal::delete($this);
+    }
+    static public function mostrarReservas(){
+        ReservaDal::mostrarReservas();
     }
 
-    public function update() {
-        $res = ReservaDAL::update($this);
-        return($res);
-    }
-
-    public function delete() {
-        $res = ReservaDAL::delete($this);
-        return($res);
-    }
-
-    public function getAll() {
-        $res = ReservaDAL::getAll($this);
-        return($res);
-    }
-
-    public function getByData($DataDaReserva) {
-        $res = ReservaDAL::getByData($DataDaReserva);
-        return($res);
+    public function update(){
+        ReservaDal::update($this);
     }
 
 }

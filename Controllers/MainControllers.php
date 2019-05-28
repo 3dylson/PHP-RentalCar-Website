@@ -11,18 +11,18 @@ class MainControllers
 {
     public static function getNavAdmin(){
         $aux=[
-            'logo'=>'<li><a href="../Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
+            'logo'=> '<li><a href="../PL/Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
             'admin'=>'<li><a href="../index.php?page=Área_Admin">Admin&nbsp;&nbsp;&nbsp;</a></li>',
             'reserva'=>'<li><a href="../index.php?page=Reservas">Reservas&nbsp;&nbsp;&nbsp;</a></li>',
             'definições'=>'<li><a href="../index.php?page=Definições_da_Conta">Definições&nbsp;&nbsp;&nbsp;</a></li>',
-            'logout'=>'<li><a href="../Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+            'logout'=> '<li><a href="../PL/Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
 
         ];
         return $aux;
     }
     public static function getNavSemRegisto(){
         $aux=[
-            'logo'=>'<li><a href="../Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
+            'logo'=> '<li><a href="../PL/Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
             'login'=>'<li><a href="">Login&nbsp;&nbsp;&nbsp;</a></li>',
             'SignUp'=>'<li><a href="">Logout&nbsp;&nbsp;&nbsp;</a></li>',
         ];
@@ -30,10 +30,10 @@ class MainControllers
     }
     public static function getNavUser(){
         $aux=[
-            'logo'=>'<li><a href="../Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
+            'logo'=> '<li><a href="../PL/Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
             'reserva'=>'<li><a href="../index.php?page=Reservas">Reservas&nbsp;&nbsp;&nbsp;</a></li>',
             'definições'=>'<li><a href="../index.php?page=Definições_da_Conta">Definições&nbsp;&nbsp;&nbsp;</a></li>',
-            'logout'=>'<li><a href="../Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+            'logout'=> '<li><a href="../PL/Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
         ];
         return $aux;
     }

@@ -1,5 +1,16 @@
 <?php
-require_once 'DAL/DBconnection.php'
+
+/*index.php?page=home
+§home = $_GET['index']
+§page = "PL/".$Home".php"
+
+require_once $page*/
+
+
+require_once 'DAL/DBconnection.php';
+require_once 'Controllers/MainControllers.php';
+
+MainControllers::process();
 ?>
 <!doctype html>
 <html lang="en">
@@ -55,7 +66,7 @@ require_once 'DAL/DBconnection.php'
                             }
                         </script>
                     </div>
-                    <a href="./index.php?page=SignUp.php">
+                    <a href="./index.php?page=User/SignUp">
                         <button class="open-button"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
                 </ul>
             </div>
@@ -153,5 +164,12 @@ require_once 'DAL/DBconnection.php'
 
 </body>
 </html>
+
+// index.php?page=paginax
+
+§option = $_GET['page']
+§page = "PL/".$option".php"
+
+require_once $page
 
 
