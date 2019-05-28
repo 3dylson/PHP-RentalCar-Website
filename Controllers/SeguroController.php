@@ -24,7 +24,7 @@ class SeguroController
         }
     }
     static public function mostrarSeguros(){
-        Promoção::mostrarSeguros();
+        Seguro::mostrarSeguros();
     }
 
     static public function criarSeguros(){

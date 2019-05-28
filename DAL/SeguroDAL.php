@@ -1,4 +1,7 @@
 <?php
+
+require_once dirname(__FILE__).'DBconnection.php';
+require_once dirname(__FILE__).'../BL/Seguro.php';
 /**
  * Created by PhpStorm.
  * User: ASUS F555B
@@ -8,53 +11,39 @@
 
 class SeguroDAL
 {
-    public static function create($Seguro){
+    static public function create($e){
+        $conn= DBConnection::connect();
+        $sql= "INSERT INTO Seguro (idSeguro,Nome,TipoDeCobertura,Descricao,Custo,Reserva_idReserva) values (?,?,?,?,?,?)";
+        $q=$conn->prepare($sql);
+        $q->execute(array($e->idSeguro,$e->Nome,$e->TipoDeCobertura,$e->Descricao,$e->Custo,$e->Reserva_idReserva));
+        DBConnection::disconnect();
 
-        $db=DB::getInstance();
-
-        $query = "INSERT INTO Seguro (Nome, TipoDeCobertura, Descricao, Custo) 
-VALUES (:Nome, :TipoDeCobertura, :Descricao, :Custo)";
-        $res=$db->query($query, array(':idSeguro'=> $Seguro->idSeguro,
-            'Nome'=> $Seguro->Nome, 'Descricao'=> $Seguro->Descricao, 'Custo'=> $Seguro->Custo));
-
-        if($res){
-            $Seguro->idSeguro=$db->lastInsertId();
-        }
-        return $res;
+    }
+    static public function delete($e){
+        $conn= DBConnection::connect();
+        $sql="DELETE FROM Seguro WHERE idSeguro = ?";
+        $q=$conn->prepare($sql);
+        $q->execute(Array($e->id));
+        DBConnection::disconnect();
+    }
+    static public function mostrarSeguros(){
+        $conn= DBConnection::connect();
+        $sql="Select * FROM Seguro";
+        $result=$conn->prepare($sql);
+        $result->execute();
+        DBConnection::disconnect();
     }
 
-    public static function update($Seguro){
+    public function update($e){
+        $conn= DBConnection::connect();
+        $sql='UPDATE Seguro SET Nome = ? WHERE idSeguro= ?';
+        $result=$conn->prepare($sql);
+        $result->execute(Array($e->Nome,$e->idSeguro));
+        DBConnection::disconnect();
+        if($result->rowCount()>0)
+            echo "Alteracao feita com sucesso!". "<br>";
+        else
+            echo "Erro" . "<br>";
 
-        $db=DB::getInstance();
-
-        $query = "UPDATE Seguro SET Nome = :Nome, 
-TipoDeCobertura=:TipoDeCobertura, Descricao=:Descricao, Custo=:Custo";
-        $res=$db->query($query, array(':idSeguro'=> $Seguro->idSeguro,
-            'Nome'=> $Seguro->Nome, 'Descricao'=> $Seguro->Descricao, 'Custo'=> $Seguro->Custo));
-
-        if($res){
-            $Seguro->idSeguro=$db->lastInsertId();
-        }
-        return $res;
-    }
-
-    public static function delete($id){
-
-        $db=DB::getInstance();
-
-        $query = "DELETE FROM Seguro WHERE idSeguro = ':idSeguro'";
-        $res=$db->query($query, array(':idSeguro'=> $id));
-
-        return $res;
-    }
-
-    public static function getAll(){
-
-        $db=DB::getInstance();
-
-        $query = "SELECT * FROM Seguro";
-        $res=$db->query($query);
-        $res->setFetchMode( PDO::FETCH_CLASS, "Seguro");
-        return $res;
     }
 }
