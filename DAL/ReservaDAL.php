@@ -2,57 +2,60 @@
 /*
  * Apenas métodos estáticos
  */
+require_once dirname(__FILE__).'DBconnection.php';
+require_once dirname(__FILE__).'/../BL/Reserva.php';
 
 class ReservaDAL
 {
-    public static function create($Reserva){
-
-        $db=DB::getInstance();
-
-        $query = "INSERT INTO Reserva (DatadaReserva, DatadeDevolucao, LocalPickUp, LocalDropOff) 
-        VALUES (:DatadaReserva, :DatadeDevolucao, :LocalPickUp, :LocalDropOff)";
-        $res=$db->query($query, array(':DatadaReserva'=> $Reserva->DatadaReserva,
-            'DatadeDevolucao'=> $Reserva->DatadeDevolucao, 'LocalPickUp'=> $Reserva->LocalPickUp, 'LocalDropOff'=> $Reserva->LocalDropOff));
-
-        if($res){
-            $Reserva->idReserva=$db->lastInsertId();
-        }
-        return $res;
+    static public function create($e){
+        $conn= DBConnection::connect();
+        $sql= "INSERT INTO Reserva (idReserva,DatadaReserva,DatadeDevolucao,LocalPickUp,LocalDropOff,Cliente_idCliente,Promocao_idPromocao) values (?,?,?,?,?,?,?)";
+        $q=$conn->prepare($sql);
+        $q->execute(array($e->idReserva,$e->DatadaReserva,$e->DatadeDevolucao,$e->LocalPickUp,$e->LocalDropOff,$e->Cliente_idCliente,$e->Promocao_idPromocao));
+        if($q->rowCount()>0){
+            $sql= "Select * FROM Reserva WHERE idReserva=(SELECT MAX(idReserva) FROM Reserva)";
+            $q=$conn->prepare($sql);
+            $q->execute();
+            if($q->rowCount()>0){
+                $row=$q->fetch();
+                return $row['idReserva'];
+            }
+        }else
+            return -1;
+    }
+    static public function delete($e){
+        $conn= DBConnection::connect();
+        $sql="DELETE FROM RESERVA WHERE ID = ?";
+        $q=$conn->prepare($sql);
+        $q->execute(Array($e->id));
+        DBConnection::disconnect();
     }
 
-    public static function update($Reserva){
-
-        $db=DB::getInstance();
-
-        $query = "UPDATE Reserva SET DatadaReserva = :DatadaReserva, DatadeDevolucao = :DatadeDevolucao, 
-LocalPickUp=:LocalPickUp, LocalDropOff=:LocalDropOff";
-        $res=$db->query($query, array(':DatadaReserva'=> $Reserva->DatadaReserva,
-            'DatadeDevolucao'=> $Reserva->DatadeDevolucao, 'LocalPickUp'=> $Reserva->LocalPickUp, 'LocalDropOff'=> $Reserva->LocalDropOff));
-
-        if($res){
-            $Reserva->idReserva=$db->lastInsertId();
-        }
-        return $res;
+    static public function mostrarReservas(){
+        $conn= DBConnection::connect();
+        $sql="Select * FROM RESERVA WHERE Cliente_ID=?";
+        $result=$conn->prepare($sql);
+        $result->execute(Array($_SESSION['ID']));
+        if($result->rowCount()>0)
+            while($row=$result->fetch()){
+                $checkin=new DateTime($row["CheckOut"]);
+                $checkout=new DateTime($row["CheckIn"]);
+                echo "Data Checkin: " . $checkout->format('d-M-Y'). " - Data Checkout: " . $checkin->format('d-M-Y') .'<a href="index.php?page=ver_reservas&cancelreserva=' .$row['ID'] .'">Cancelar</a><br/>';
+            }
+        else
+            echo '0 results'. "<br>";
+        DBConnection::disconnect();
     }
+    public function update($e){
+        $conn= DBConnection::connect();
+        $sql='UPDATE RESERVA SET CustoTotal = ? WHERE ID= ?';
+        $result=$conn->prepare($sql);
+        $result->execute(Array($e->CustoTotal,$e->id));
+        if($result->rowCount()>0)
+            echo "Alteracao feita com sucesso!". "<br>";
+        else
+            echo "Erro" . "<br>";
 
-    public static function delete($id){
-
-        $db=DB::getInstance();
-
-        $query = "DELETE FROM Reserva WHERE idReserva = ':idReserva'";
-        $res=$db->query($query, array(':idReserva'=> $id));
-
-        return $res;
-    }
-
-    public static function getAll(){
-
-        $db=DB::getInstance();
-
-        $query = "SELECT * FROM Reserva";
-        $res=$db->query($query);
-        $res->setFetchMode( PDO::FETCH_CLASS, "Reserva");
-        return $res;
     }
 
 }

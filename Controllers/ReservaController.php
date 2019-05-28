@@ -23,17 +23,17 @@ class ReservaController
         }
     }
     static public function mostrarReservas(){
-        Promoção::mostrarReserva();
+        Reserva::mostrarReservas();
     }
 
     static public function criarReserva(){
-        $promo= new Promoção("",$_POST['DatadaReserva'], $_POST['DatadeDevolucao'],$_POST['LocalPickUp'], $_POST['LocalDropOff']);
-        $promo->create();
+        $reserva= new Reserva("",$_POST['DatadaReserva'], $_POST['DatadeDevolucao'],$_POST['LocalPickUp'], $_POST['LocalDropOff'], "", "");
+        $reserva->create();
         //unset($_POST['Nome']); unset($_POST['DataDeValidade']); unset($_POST['PercentagemDeDesconto']);
     }
 
     static public function deleteReserva(){
-        $promo = new reserva();
-        $promo->delete();
+        $reserva = new Reserva();
+        $reserva->delete();
     }
 }
