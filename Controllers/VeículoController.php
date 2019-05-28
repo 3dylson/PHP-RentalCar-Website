@@ -22,16 +22,21 @@ class VeículoController
         $Veiculo = new Veículo('', $_POST['NumeroDeRegistro'], $_POST['Disponibilidade']);
         $Veiculo->create();
     }
-    static public function getByDisponibilidade()
+    static public function getDisponibilidade()
     {
-        Quarto::getByDisponibilidade();
+        Veículo::getByDisponibilidade();
     }
     static public function checkDisponibilidade()
     {
-        return Quarto::checkDisponibilidade();
+        return Veículo::checkDisponibilidade();
     }
-    static public function mostrarQuartosDisponiveis()
+    static public function changeOcup()
     {
-        Quarto::mostrarQuartosDisponiveis();
+        return Veículo::changeOcup();
     }
+    static public function ChangeVeículoFree()
+    {
+        return Veículo::ChangeVeículoFree;
+    }
+
 }
