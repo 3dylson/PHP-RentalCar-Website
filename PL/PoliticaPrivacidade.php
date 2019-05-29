@@ -1,5 +1,3 @@
-<html>
-<body class="politc">
 <section id="navfixo">
     <div class="conteudo">
         <h1>Política de Privacidade e Proteção de Dados</h1>
@@ -42,5 +40,3 @@
 
     </div>
 </section>
-</body>
-</html>

@@ -1,6 +1,4 @@
-<html>
-<body class="contc">
-    <section>
+ <section>
         <div class="divcontc">
             <h1>Contactos</h1>
             <div class="card">
@@ -29,6 +27,5 @@
             <div class="card2">
                 <h4 class="card-title2"><p>AV SÁ Carneiro</p> <p>5300-252</p> <p>Bragança</p> <p>Portugal</p></h4>
             </div>
-    </section>
-</body>
-</html>
+ </section>
+

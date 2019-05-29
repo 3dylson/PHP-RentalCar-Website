@@ -1,6 +1,3 @@
-
-<body>
-
 <!------Content--------->
 <div class="container" style="margin-top:60px">
     <div class="row">
@@ -135,5 +132,3 @@
     </div>
 </div>
 <!----Content---------->
-</body>
-</html>

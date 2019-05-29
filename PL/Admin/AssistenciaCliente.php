@@ -1,6 +1,3 @@
-<html lang="en">
-
-<body>
 <!----Side Bar links----->
 <section class="sectionnavbarfixo">
     <div class="container-fluid text-lefth">
@@ -184,5 +181,3 @@
         </div>
     </div>
 </section>
-</body>
-</html>
