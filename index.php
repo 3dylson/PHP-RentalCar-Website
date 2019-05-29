@@ -1,14 +1,10 @@
 <?php
 
-/*index.php?page=home
-§home = $_GET['index']
-§page = "PL/".$Home".php"
 
-require_once $page*/
-
-
-require_once 'DAL/DBconnection.php';
-require_once 'Controllers/MainControllers.php';
+//
+//
+//require_once 'DAL/DBconnection.php';
+//require_once 'Controllers/MainControllers.php';
 
 MainControllers::process();
 ?>
@@ -43,7 +39,7 @@ MainControllers::process();
                     <br>
                     <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span> Login</button>
                     <div class="form-popup" id="myForm">
-                        <form action="/action_page.php" class="form-container">
+                        <form method="post" class="form-container">
                             <h1>Login</h1>
 
                             <label for="email"><b>Email</b></label>
@@ -75,37 +71,15 @@ MainControllers::process();
     </div>
 </div>
 
-<!--Main Quote Starts-->
-<div class="ph">
-
-    <h5>THE ROYAL ESSENCE OF JORNEY</h5>
-    <h2>RELAXED JORNEY EVER</h2>
-</div>
-<!--Main Quote Ends-->
-<!--Search Menu starts-->
-<div class="search">
-    <form>
-        <input class="local-levantamento" type="text" name="local_levantamento"
-               value="" placeholder="Local de levantamento" autocomplete="off">
-        &#160 &#160
-
-        <input class="local-levantamento" type="text" name="local_devolução" value=""
-               placeholder="Local de devolução" autocomplete="on"><br/><br/>
-        <input class="data-hora" type="date" name="data_levantamento"
-               value placeholder="Data" autocomplete="off">&#160 &#160
-        <input class="data-hora" type="number" name="hora_levantamento"
-               value placeholder="Hora" autocomplete="off">&#160 &#160 &#160
-        <input class="data-hora" type="date" name="data_devolução"
-               value placeholder="Data" autocomplete="off">&#160 &#160
-        <input class="data-hora" type="number" name="hora_devolução"
-               value placeholder="Hora" autocomplete="off"><br/><br/>
-        <a href="./index.php?page=EscolherVeículo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
-        <!---------<input  type="submit" value="PESQUISAR" class="submit"/>---->
-
-    </form>
-</div>
 <!--Search Menu Ends-->
+<?php
+$option = $_GET['page'];
+$page = "PL/".$option.".php";
+require_once $page;
 
+
+?>
+CONTEÚDO
 <!---Footer------->
 <footer class="container-fluid bg-grey py-5">
     <div class="container">
@@ -164,12 +138,3 @@ MainControllers::process();
 
 </body>
 </html>
-
-// index.php?page=paginax
-
-§option = $_GET['page']
-§page = "PL/".$option".php"
-
-require_once $page
-
-
