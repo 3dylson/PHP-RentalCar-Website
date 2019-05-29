@@ -11,9 +11,9 @@ class VeículoDAL
 {
     static public function create($e){
         $conn= DBConnection::connect();
-        $sql= "INSERT INTO Veículo (idVeiculo,NumeroDeRegistro,Disponibilidade,Categoria_Veiculo_idCategoria_Veiculo,Reserva_idReserva, Img) values (?,?,?,?,?,?)";
+        $sql= "INSERT INTO Veículo (idVeiculo,NumeroDeRegistro,Disponibilidade,Categoria_Veiculo_idCategoria_Veiculo,Reserva_idReserva, Img, Nome) values (?,?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
-        $q->execute(array($e->idVeículo,$e->NumeroDeRegistro,$e->Disponibilidade,$e->Categoria_Veiculo_idCategoria_Veiculo,$e->Reserva_idReserva, $e->Img));
+        $q->execute(array($e->idVeículo,$e->NumeroDeRegistro,$e->Disponibilidade,$e->Categoria_Veiculo_idCategoria_Veiculo,$e->Reserva_idReserva, $e->Img,$e->Nome));
         DBConnection::disconnect();
 
     }
@@ -90,6 +90,30 @@ class VeículoDAL
         }else
             return false;
 
+    }
+
+    static public function mostrarVeiculosDisponiveis(){
+        $conn= DBConnection::connect();
+        $sql="Select * FROM Veículos";
+        $result=$conn->prepare($sql);
+        $result->execute();
+        $aux=1;
+        if($result->rowCount()>0){
+            while($row=$result->fetch()){
+                if(!isset($row['Reserva_idReserva']) && $aux==1){
+                    if(isset($Veiculo)) echo '<img src="' . $Veiculo['Img'] . '" alt="card image cap" height="180" width="286""></img> <tr> <td class="lt">Nome</td> ';
+//                    echo '<tr> <td class="lt">Nome</td>';
+                    $aux=0;
+                }
+                if(!isset($row['Reserva_idReserva'])){
+                    echo  '<tr> <td>' .$row['Nome'] .' </td><td><a href=index.php?page=Descrição_Quarto&idquarto='.$row['idVeiculo'].'>Alugar!</a></td></tr>';
+                    $aux=-1;
+                }
+
+            }
+        }if($aux!=-1){
+            echo '<tr> <td>Sem Veículos Disponiveis!</td></tr>';
+        }
     }
 
 

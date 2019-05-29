@@ -1,5 +1,5 @@
-
 <!--Main Quote Starts-->
+<html>
 <div class="ph">
 
     <h5>THE ROYAL ESSENCE OF JORNEY</h5>
@@ -23,8 +23,13 @@
                value placeholder="Data" autocomplete="off">&#160 &#160
         <input class="data-hora" type="number" name="hora_devolução"
                value placeholder="Hora" autocomplete="off"><br/><br/>
-        <a href="./index.php?page=EscolherVeículo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
+        <a href="./index.php?page=EscolherVeiculo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
         <!---------<input  type="submit" value="PESQUISAR" class="submit"/>---->
-
+        <!--Search Menu Ends-->
     </form>
 </div>
+<br>
+<br>
+<br>
+<br>
+</html>

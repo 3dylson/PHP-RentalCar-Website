@@ -10,7 +10,10 @@ class VeículoController
                 $msg["estado"] = 'Insira o n_Registro';
             } elseif (!isset($_POST['Disponibilidade'])) {
                 $msg["estado"] = 'Insira a disponibilidade';
-            } else {
+            } elseif (!isset($_POST['Nome'])) {
+            $msg["estado"] = 'Insira o Nome do Veículo';
+        }
+            else {
                 self::criarVeiculo();
                 $msg["estado"] = 'Criado Com Sucesso!';
             }
@@ -19,7 +22,7 @@ class VeículoController
     }
     static public function criarVeiculo()
     {
-        $Veiculo = new Veículo('', $_POST['NumeroDeRegistro'], $_POST['Disponibilidade'], '', '', $_POST['Img'] );
+        $Veiculo = new Veículo('', $_POST['NumeroDeRegistro'], $_POST['Disponibilidade'], '', '', $_POST['Img'], $_POST['Nome'] );
         $Veiculo->create();
     }
     static public function mostrarVeiculos(){
@@ -36,6 +39,10 @@ class VeículoController
     }
     static public function ChangeVeicToFree(){
         return Veículo::ChangeVeicToFree();
+    }
+
+    static public function mostrarVeiculosDisponiveis(){
+        Veículo::mostrarVeiculosDisponiveis();
     }
 
 }

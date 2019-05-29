@@ -8,7 +8,7 @@ $msg=[
     "user"=>[]
 ];
 $msg= MainControllers::process();
-if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getUserInformation();
+if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 
 class DBconnection
 {

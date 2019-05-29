@@ -3,7 +3,7 @@
  * Apenas métodos estáticos
  */
 require_once dirname(__FILE__).'DBconnection.php';
-require_once dirname(__FILE__).'/../BL/Reserva.php';
+//require_once dirname(__FILE__).'/../BL/Reserva.php';
 
 class ReservaDAL
 {

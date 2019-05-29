@@ -15,14 +15,16 @@ class Veículo
     public $Categoria_Veiculo_idCategoria_Veiculo;
     public $Reserva_idReserva;
     public $Img;
+    public $Nome;
 
-    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6){
+    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6,$dado7){
         $this->idVeiculo=$dado1;
         $this->NumeroDeRegistro=$dado2;
         $this->Disponibilidede=$dado3;
         $this->Categoria_Veiculo_idCategoria_Veiculo=$dado4;
         $this->Reserva_idReserva=$dado5;
-        $this->Reserva_idReserva=$dado6;
+        $this->Img=$dado6;
+        $this->Nome=$dado7;
     }
     public function create(){
         VeículoDAL::create($this);
@@ -50,5 +52,8 @@ class Veículo
         return VeículoDAL::ChangeVeicToFree();
     }
 
+    static public function mostrarVeiculosDisponiveis(){
+        Veículo::mostrarVeiculosDisponiveis();
+    }
 
 }

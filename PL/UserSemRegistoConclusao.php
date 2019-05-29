@@ -1,14 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MELITOUR-PAGAMENTO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/StyleGE.css">
-    <link rel="stylesheet" href="../css/StyleAri.css">
-
-</head>
-
+<html>
 <body class="Profile">
 
 <section>
@@ -31,7 +21,7 @@
                 <input type="radio" name="exampleRadios" value="option1"> <span class="confirma">Confirmo que os meus dados estão correto
 
             </div>
-            <div><a href="../User/Pagamento-Efetuado.html"><input class="tamanho-inputXL" type="button" value="Pagar"></a></div>
+            <div><a href="/index.php?page=PagamentoConclusao"><input class="tamanho-inputXL" type="button" value="Pagar"></a></div>
         </form>
     </div>
 </section>

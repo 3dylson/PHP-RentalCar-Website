@@ -1,12 +1,13 @@
 <?php
 
 
+
 //
 //
 //require_once 'DAL/DBconnection.php';
 //require_once 'Controllers/MainControllers.php';
 
-MainControllers::process();
+//MainControllers::process();
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,10 +20,16 @@ MainControllers::process();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
     <link rel="stylesheet" href="./CSS/StyleAri.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <link rel="stylesheet" href="./CSS/StyleGE.css">
+
 
 </head>
 <body>
@@ -30,7 +37,7 @@ MainControllers::process();
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <a href="./index.php?page=Home.php">
+            <a href="./index.php?page=Home">
                 <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
@@ -71,15 +78,14 @@ MainControllers::process();
     </div>
 </div>
 
-<!--Search Menu Ends-->
+<!-----CONTEÚDO----->
 <?php
 $option = $_GET['page'];
 $page = "PL/".$option.".php";
 require_once $page;
 
-
 ?>
-CONTEÚDO
+<!-----CONTEÚDO----->
 <!---Footer------->
 <footer class="container-fluid bg-grey py-5">
     <div class="container">
@@ -97,8 +103,8 @@ CONTEÚDO
                     <div class="col-md-6 px-4">
                         <h6>Company</h6>
                         <p>"-Satisfação do cliente é a nossa motivação!"</p>
-                        <a href="./index.php?page=SobreNós.php" class="btn-footer"> About Us </a><br>
-                        <a href="./index.php?page=Contactos.php" class="btn-footer"> Contact Us</a>
+                        <a href="./index.php?page=SobreNos" class="btn-footer"> About Us </a><br>
+                        <a href="./index.php?page=Contactos" class="btn-footer"> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +115,7 @@ CONTEÚDO
                         <div class="row ">
                             <div class="col-md-6">
                                 <ul>
-                                    <li> <a href="./index.php?page=PolíticaDePrivacidade.php">
+                                    <li> <a href="./index.php?page=PolíticaDePrivacidade">
                                             Política de Privacidade</a> </li>
 
                                 </ul>
