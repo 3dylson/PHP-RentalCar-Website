@@ -1,13 +1,4 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Pagamento Efetuado</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/StyleGE.css">
-        <link rel="stylesheet" href="../css/Style.css">
-
-    </head>
+<html>
     <body CLASS="Pagam">
         <div class="Estato">
             <img src="../Imagens/Logo.png" class="logopagamento" />

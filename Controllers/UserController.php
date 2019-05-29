@@ -4,7 +4,7 @@ require_once dirname(__FILE__)."/../BL/User.php";
 class UserController
 {
     public static function process(){
-        if(isset($_POST['user-register'])){
+        if(isset($_POST['user-signup'])){
             $nome_login=$_POST['nome_login'];
             $nome=$_POST['nome'];
             $email=$_POST['email'];

@@ -11,47 +11,49 @@ class Veículo
 {
     public $idVeiculo;
     public $NumeroDeRegistro;
-    public $Disponibilidede;
+    public $Disponibilidade;
     public $Categoria_Veiculo_idCategoria_Veiculo;
     public $Reserva_idReserva;
+    public $Img;
+    public $Nome;
 
-    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5){
+    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6,$dado7){
         $this->idVeiculo=$dado1;
         $this->NumeroDeRegistro=$dado2;
         $this->Disponibilidede=$dado3;
         $this->Categoria_Veiculo_idCategoria_Veiculo=$dado4;
         $this->Reserva_idReserva=$dado5;
+        $this->Img=$dado6;
+        $this->Nome=$dado7;
     }
-    public function copy($objeto) {
-        foreach ($this as $key => $value) {
-            $this->$key=$objeto->$key;
-        }
-    }
-
     public function create(){
-
-        $res = VeículoDAL:: create($this);
-        return($res);
+        VeículoDAL::create($this);
+    }
+    public function delete(){
+        VeículoDAL::delete($this);
+    }
+    static public function mostrarVeiculos(){
+        VeículoDAL::mostrarVeiculos();
     }
 
-    public function update() {
-        $res = VeículoDAL::update($this);
-        return($res);
+    public function update(){
+        VeículoDAL::update($this);
+    }
+    static public function getVeiculoInfo(){
+        return VeículoDAL::getVeiculoInfo();
+    }
+    static public function verificarDisponibilidade(){
+        return VeículoDAL::verificarDisponibilidade();
+    }
+    static public function changeDisp($q){
+        VeículoDAL::changeDisp($q);
+    }
+    static public function ChangeVeicToFree(){
+        return VeículoDAL::ChangeVeicToFree();
     }
 
-    public function delete() {
-        $res = VeículoDAL::delete($this);
-        return($res);
-    }
-
-    public function getAll() {
-        $res = VeículoDAL::getAll($this);
-        return($res);
-    }
-
-    public function getByDisponibilidade($Disponibilidade) {
-        $res = VeículoDAL::getByDisponibilidade($Disponibilidade);
-        return($res);
+    static public function mostrarVeiculosDisponiveis(){
+        Veículo::mostrarVeiculosDisponiveis();
     }
 
 }

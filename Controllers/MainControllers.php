@@ -1,5 +1,5 @@
 <?php
-require_once 'Categoria_VeículoController.php';
+//require_once 'Categoria_VeículoController.php';
 require_once 'PromoçãoController.php';
 require_once 'ReservaController.php';
 require_once 'SeguroController.php';
@@ -59,17 +59,24 @@ class MainControllers
     }
 
 
-    static public function getUserInformation(){
+    static public function getInformUser(){
         return UserController::getInformUser();
     }
+
 
 
 
     public static function process(){
         self::firstCall();
         $estado['User']=UserController::Process();
+        $estado['Categoria']=Categoria_VeículoController::Process();
+        $estado['Promocao']=PromoçãoController::Process();
+        $estado['Reserva']=ReservaController::Process();
+        $estado['Seguro']=SeguroController::Process();
+        $estado['Veículo']=VeículoController::Process();
 
         return $estado;
 
     }
+
 }

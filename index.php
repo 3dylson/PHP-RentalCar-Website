@@ -1,16 +1,13 @@
 <?php
 
-/*index.php?page=home
-§home = $_GET['index']
-§page = "PL/".$Home".php"
-
-require_once $page*/
 
 
-require_once 'DAL/DBconnection.php';
-require_once 'Controllers/MainControllers.php';
+//
+//
+//require_once 'DAL/DBconnection.php';
+//require_once 'Controllers/MainControllers.php';
 
-MainControllers::process();
+//MainControllers::process();
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,10 +20,16 @@ MainControllers::process();
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
     <link rel="stylesheet" href="./CSS/StyleAri.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <link rel="stylesheet" href="./CSS/StyleGE.css">
+
 
 </head>
 <body>
@@ -34,7 +37,7 @@ MainControllers::process();
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <a href="./index.php?page=Home.php">
+            <a href="./index.php?page=Home">
                 <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
@@ -43,7 +46,7 @@ MainControllers::process();
                     <br>
                     <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span> Login</button>
                     <div class="form-popup" id="myForm">
-                        <form action="/action_page.php" class="form-container">
+                        <form method="post" class="form-container">
                             <h1>Login</h1>
 
                             <label for="email"><b>Email</b></label>
@@ -75,37 +78,14 @@ MainControllers::process();
     </div>
 </div>
 
-<!--Main Quote Starts-->
-<div class="ph">
+<!-----CONTEÚDO----->
+<?php
+$option = $_GET['page'];
+$page = "PL/".$option.".php";
+require_once $page;
 
-    <h5>THE ROYAL ESSENCE OF JORNEY</h5>
-    <h2>RELAXED JORNEY EVER</h2>
-</div>
-<!--Main Quote Ends-->
-<!--Search Menu starts-->
-<div class="search">
-    <form>
-        <input class="local-levantamento" type="text" name="local_levantamento"
-               value="" placeholder="Local de levantamento" autocomplete="off">
-        &#160 &#160
-
-        <input class="local-levantamento" type="text" name="local_devolução" value=""
-               placeholder="Local de devolução" autocomplete="on"><br/><br/>
-        <input class="data-hora" type="date" name="data_levantamento"
-               value placeholder="Data" autocomplete="off">&#160 &#160
-        <input class="data-hora" type="number" name="hora_levantamento"
-               value placeholder="Hora" autocomplete="off">&#160 &#160 &#160
-        <input class="data-hora" type="date" name="data_devolução"
-               value placeholder="Data" autocomplete="off">&#160 &#160
-        <input class="data-hora" type="number" name="hora_devolução"
-               value placeholder="Hora" autocomplete="off"><br/><br/>
-        <a href="./index.php?page=EscolherVeículo" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
-        <!---------<input  type="submit" value="PESQUISAR" class="submit"/>---->
-
-    </form>
-</div>
-<!--Search Menu Ends-->
-
+?>
+<!-----CONTEÚDO----->
 <!---Footer------->
 <footer class="container-fluid bg-grey py-5">
     <div class="container">
@@ -123,8 +103,8 @@ MainControllers::process();
                     <div class="col-md-6 px-4">
                         <h6>Company</h6>
                         <p>"-Satisfação do cliente é a nossa motivação!"</p>
-                        <a href="./index.php?page=SobreNós.php" class="btn-footer"> About Us </a><br>
-                        <a href="./index.php?page=Contactos.php" class="btn-footer"> Contact Us</a>
+                        <a href="./index.php?page=SobreNos" class="btn-footer"> About Us </a><br>
+                        <a href="./index.php?page=Contactos" class="btn-footer"> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +115,7 @@ MainControllers::process();
                         <div class="row ">
                             <div class="col-md-6">
                                 <ul>
-                                    <li> <a href="./index.php?page=PolíticaDePrivacidade.php">
+                                    <li> <a href="./index.php?page=PolíticaDePrivacidade">
                                             Política de Privacidade</a> </li>
 
                                 </ul>
@@ -164,12 +144,3 @@ MainControllers::process();
 
 </body>
 </html>
-
-// index.php?page=paginax
-
-§option = $_GET['page']
-§page = "PL/".$option".php"
-
-require_once $page
-
-
