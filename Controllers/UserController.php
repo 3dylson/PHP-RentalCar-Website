@@ -6,11 +6,11 @@ class UserController
     public static function process(){
         if(isset($_POST['user-signup'])){
             $nome_login=$_POST['nome_login'];
-            $nome=$_POST['nome'];
-            $email=$_POST['email'];
+            $nome=$_POST['userName'];
+            $email=$_POST['userEmail'];
             $dataNascimento=$_POST['dataNascimento'];
-            $password=$_POST['password'];
-            $passwordConfirmated=$_POST['passwordConfirmated'];
+            $password=$_POST['signUp-Password'];
+            $passwordConfirmated=$_POST['signUp-passwordConfirmated'];
             $nif=$_POST['nif'];
             if(!$nome_login){
                 $msg["estado"]='Insira o seu Username.';
@@ -53,8 +53,8 @@ class UserController
 
 
     public static function createUser(){
-        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],
-            $_POST['password'], "",$_POST['nif'],'');
+        $user= new User('',$_POST['nome_login'],$_POST['userName'],$_POST['userEmail'],$_POST['dataNascimento'],
+            $_POST['signUp-Password'],$_POST['signUp-passwordConfirmated'], "",$_POST['nif'],'');
         if(isset($_SESSION['idCliente']) && UserController::typeofuser()){$user->usertype=1;}
         else {$user->usertype=0;}
         $user->create();
@@ -62,8 +62,8 @@ class UserController
 
 
     public static function createAdmin(){
-        $user= new User('',$_POST['nome_login'],$_POST['nome'],$_POST['email'],$_POST['dataNascimento'],
-            $_POST['password'], "",$_POST['nif'],'');
+        $user= new User('',$_POST['nome_login'],$_POST['userName'],$_POST['userEmail'],$_POST['dataNascimento'],
+            $_POST['signUp-Password'], $_POST['signUp-passwordConfirmated'],"",$_POST['nif'],'');
         $user->usertype='1';
         $user->create();
     }
@@ -75,8 +75,8 @@ class UserController
     }
     public static function verificarlogin(){
         $user1= new User();
-        $user1->login=$_POST['nome_login1'];
-        $user1->password=$_POST['palavra_passe'];
+        $user1->login=$_POST['nome_login'];
+        $user1->password=$_POST['signUp-Password'];
         if(($aux=$user1->verificarlogin())>0 || $aux==-1)
             $_SESSION['idCliente']=$aux;
     }
@@ -105,10 +105,14 @@ class UserController
             //$_GET['page']='login';
             header('Location: ./Home.php');
         }
+    }
+
+    public static function updatePassword()
+    {
         if(isset($_POST['changepass'])){
             if(!$_POST['new_password']){
                 $msg["estado"]='Insira uma nova password.';
-            }elseif(self::verificarPass()!=$_POST['password_antigo']){
+            }elseif(self::verificarPass()!=$_POST['old_password']){
                 $msg["estado"]='Password antiga não coincide!';
             }elseif($_POST['repeatNewPass']!=$_POST['new_password']){
                 $msg["estado"]='Os Passwords não coincidem';
@@ -119,6 +123,7 @@ class UserController
             return $msg["estado"];
         }
     }
+
 
     public static function loginverification(){
         if(isset($_SESSION['idCliente']))

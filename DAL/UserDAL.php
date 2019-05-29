@@ -127,6 +127,7 @@ class UserDAL
          else
              return true;
      }
+
     public static function verificarPass(){
         $conn= DBconnection::connect();
         $sql="Select * FROM Utilizador WHERE ID=?";
