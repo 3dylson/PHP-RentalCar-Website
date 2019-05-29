@@ -1,38 +1,3 @@
-<html lang="en">
-<head>
-    <title>Gerenciar Promoções - Admin</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/Style.css">
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6">
-                <nav class="breadnav" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="Gestão%20de%20Veículos%20(Admin).html">Gestão de Veículos</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Gerenciar Promoções</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="col-sm">
-                <form class="navbar-form navbar-right" action="/action_page.php">
-                    <div class="input-group">
-                        <input id="searchb" type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</nav>
-<!-------Nav Bar---->
 
 <!----Side Bar links----->
 <section class="sectionnavbarfixo">
@@ -92,5 +57,3 @@
         </div>
     </div>
 </section>
-</body>
-</html>

@@ -1,6 +1,3 @@
-<html>
-<body class="Profile">
-
 <section>
     <p class="titile2">Os Seus Dados</p>
     <div class="divmain">
@@ -25,5 +22,3 @@
         </form>
     </div>
 </section>
-</body>
-</html>

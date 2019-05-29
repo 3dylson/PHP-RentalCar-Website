@@ -1,6 +1,3 @@
-<html>
-<body>
-
 <!------Content--------->
 <div class="container" style="margin-top: 80px">
     <h3>Escolha o seu Veículo:</h3>
@@ -30,6 +27,3 @@
     <!-- END PRODUCTS -->
 </div>
 </div><!-------container----->
-<!----Content---------->
-</body>
-</html>

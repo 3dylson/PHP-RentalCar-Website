@@ -1,5 +1,4 @@
 <!--Main Quote Starts-->
-<html>
 <div class="ph">
 
     <h5>THE ROYAL ESSENCE OF JORNEY</h5>
@@ -32,4 +31,3 @@
 <br>
 <br>
 <br>
-</html>

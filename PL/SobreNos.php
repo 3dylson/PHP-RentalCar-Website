@@ -1,5 +1,3 @@
-<html lang="en">
-<body class="about">
 <section id="navfixo">
     <div class="conteudo" >
 
@@ -38,5 +36,4 @@
         <p>Satisfação do cliente é a nossa motivação.</p>
     </div>
 </section>
-</body>
-</html>
+
