@@ -25,30 +25,22 @@ class ReservaDAL
     }
     static public function delete($e){
         $conn= DBConnection::connect();
-        $sql="DELETE FROM RESERVA WHERE ID = ?";
+        $sql="DELETE FROM Reserva WHERE idReserva = ?";
         $q=$conn->prepare($sql);
-        $q->execute(Array($e->id));
+        $q->execute(Array($e->idReserva));
         DBConnection::disconnect();
     }
 
     static public function mostrarReservas(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM RESERVA WHERE Cliente_ID=?";
+        $sql="Select * FROM Reserva WHERE idCliente=?";
         $result=$conn->prepare($sql);
-        $result->execute(Array($_SESSION['ID']));
-        if($result->rowCount()>0)
-            while($row=$result->fetch()){
-                $checkin=new DateTime($row["CheckOut"]);
-                $checkout=new DateTime($row["CheckIn"]);
-                echo "Data Checkin: " . $checkout->format('d-M-Y'). " - Data Checkout: " . $checkin->format('d-M-Y') .'<a href="index.php?page=ver_reservas&cancelreserva=' .$row['ID'] .'">Cancelar</a><br/>';
-            }
-        else
-            echo '0 results'. "<br>";
+        $result->execute(Array($_SESSION['idReserva']));
         DBConnection::disconnect();
     }
     public function update($e){
         $conn= DBConnection::connect();
-        $sql='UPDATE RESERVA SET CustoTotal = ? WHERE ID= ?';
+        $sql='UPDATE Reserva WHERE ID= ?';
         $result=$conn->prepare($sql);
         $result->execute(Array($e->CustoTotal,$e->id));
         if($result->rowCount()>0)

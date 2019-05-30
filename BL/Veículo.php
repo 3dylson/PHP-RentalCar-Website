@@ -53,7 +53,7 @@ class Veículo
     }
 
     static public function mostrarVeiculosDisponiveis(){
-        Veículo::mostrarVeiculosDisponiveis();
+        VeículoDAL::mostrarVeiculosDisponiveis();
     }
 
 }

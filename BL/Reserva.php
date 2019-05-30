@@ -25,17 +25,17 @@ class Reserva
 
 
     public function create(){
-        return ReservaDal::create($this);
+        return ReservaDAL::create($this);
     }
     public function delete(){
-        ReservaDal::delete($this);
+        ReservaDAL::delete($this);
     }
     static public function mostrarReservas(){
-        ReservaDal::mostrarReservas();
+        ReservaDAL::mostrarReservas();
     }
 
     public function update(){
-        ReservaDal::update($this);
+        ReservaDAL::update($this);
     }
 
 }
