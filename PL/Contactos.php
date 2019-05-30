@@ -10,7 +10,7 @@
                     <p class="card-text">Sábados: 09h-00-19h30</p>
                     <p class="card-text"> Domingos: 09h00-18h00</p>
                     <P  class="card-text">Feriados: Encerrado</p>
-                    <a href="https://www.gmail.com/html/"  id="sms">Envia-nos uma mensagem.</a>
+                    <a href=""  id="sms">Envia-nos uma mensagem.</a>
                 </div>
             </div>
             <div class="card">
@@ -22,7 +22,7 @@
                     <p class="card-text">Sábados:Encerrado</p>
                     <p class="card-text"> Domingos:Encerrado</p>
                     <P  class="card-text">Feriados:Encerrado</p>
-                    <a href="https://www.gmail.com/html/"  id="sms">Envia-nos uma mensagem.</a>
+                    <a href=""  id="sms">Envia-nos uma mensagem.</a>
                 </div>
             <div class="card2">
                 <h4 class="card-title2"><p>AV SÁ Carneiro</p> <p>5300-252</p> <p>Bragança</p> <p>Portugal</p></h4>

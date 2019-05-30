@@ -106,7 +106,7 @@ class VeículoDAL
                     $aux=0;
                 }
                 if(!isset($row['Reserva_idReserva'])){
-                    echo  '<tr> <td>' .$row['Nome'] .' </td><td><a href=index.php?page=Descrição_Quarto&idquarto='.$row['idVeiculo'].'>Alugar!</a></td></tr>';
+                    echo  '<tr> <td>' .$row['Nome'] .' </td><td><a href=index.php?page=EscolherSeguros='.$row['idVeiculo'].'>Alugar!</a></td></tr>';
                     $aux=-1;
                 }
 
