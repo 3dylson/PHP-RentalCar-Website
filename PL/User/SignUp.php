@@ -30,11 +30,9 @@
                             <br>
                             <input class="btn btn-primary" type="submit" value="Submit" name="user-signup" width="inherit" >
                             <div>
-
                             </div>
                         </div>
                         <div class="col-sm">
-
                         </div>
                     </div>
                 </div>
