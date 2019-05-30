@@ -14,7 +14,7 @@ class SeguroController
             }elseif(!$_POST['Custo']){
                 $msg["estado"]='Insira o custo do seguro.';
             }else{
-                self::criarSeguro();
+                self::criarSeguros();
                 $msg["estado"]='Seguro criado com sucesso.';
             }
             return $msg["estado"];
@@ -28,14 +28,14 @@ class SeguroController
     }
 
     static public function criarSeguros(){
-        $promo= new Promoção("",$_POST['Nome'], $_POST['TipoDeCobertura'],$_POST['Descricao'], $_POST['Custo']);
-        $promo->create();
+        $seguro= new Seguro("",$_POST['Nome'], $_POST['TipoDeCobertura'],$_POST['Descricao'], $_POST['Custo'], "");
+        $seguro->create();
         //unset($_POST['Nome']); unset($_POST['DataDeValidade']); unset($_POST['PercentagemDeDesconto']);
     }
 
     static public function deleteSeguro(){
-        $promo = new Seguro();
-        $promo->delete();
+        $seguro = new Seguro();
+        $seguro->delete();
     }
 
 }

@@ -1,22 +1,29 @@
+<?php
+$reserva_veiculo=Veículo::getVeiculoInfo();
+?>
+
 <!------Content--------->
 <div class="container" style="margin-top:60px">
     <div class="row">
         <div class="col-sm-4">
-            <h2>BMW X5</h2>
-            <img src="../Imagens/BMW-X5-Rent.png" height="170" width="238"/>
-            <p>SUV | Diesel | Manual | 5 Lugares | 5 Portas</p>
-            <a class="nav-link active" href="UserData-BeforePay.html">
-                <button class="btn btn-success"><span class="glyphicon glyphicon-euro"></span> Pagamento</button></a>
-            <strong style="margin-left: 10px"> Preço: 220.50€</strong>
+            <h2><?php echo $reserva_veiculo["Nome"];?></h2>
+            <?php echo '<img src="' . $reserva_veiculo['Img'] . '" height="170" width="238""></img> ';?>
+<!--            <p>SUV | Diesel | Manual | 5 Lugares | 5 Portas</p>-->
+            <form method="post">
+                <a class="nav-link active" href="/index.php?page=PagamentoConclusao">
+                    <button class="btn btn-success" type="submit" name="Reservar" value="Pagamento"><span class="glyphicon glyphicon-euro"></span></button></a>
+            </form>
+
+<!--            <strong style="margin-left: 10px"> Preço: 220.50€</strong>-->
             <br>
-            <a class="nav-link active" href="Select-Car.html">
+            <a class="nav-link active" href="./index.php?page=EscolherVeiculo">
                 <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Escolher outro Veículo.</button></a>
             <hr class="d-sm-none">
         </div>
-        <div class="col-sm-8">
-            <h2>Escolha o seu plano de seguro:</h2>
+        <!--<div class="col-sm-8">
+            <h2>Escolha o seu plano de seguro:</h2>-->
             <!------ Insurance Table----->
-            <div id="tabela-responsiva" class="table-responsive">
+           <!-- <div id="tabela-responsiva" class="table-responsive">
                 <div class="membership-pricing-table">
                     <table>
                         <tbody>
@@ -42,8 +49,8 @@
                             </th>
                             <th class="plan-header plan-header-standard">
                                 <div class="header-plan-inner">
-                                    <!--<span class="plan-head"> </span>-->
-                                    <span class="recommended-plan-ribbon">RECOMMENDED</span>
+                                    <!-<span class="plan-head"> </span>-->
+                                   <!-- <span class="recommended-plan-ribbon">RECOMMENDED</span>
                                     <div class="pricing-plan-name">STANDARD</div>
                                     <div class="pricing-plan-price">
                                         <sup>€</sup>395<span>.99</span>
@@ -126,8 +133,8 @@
                     </table>
                     <hr>
                 </div>
-            </div>
-            <!------ Insurance Table----->
+            </div>-->-->
+            <!------ Insurance Table--->
         </div>
     </div>
 </div>

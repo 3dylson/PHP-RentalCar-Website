@@ -17,35 +17,28 @@ class Seguro
     public $Reserva_idReserva;
 
 
-    public function copy($objeto) {
-        foreach ($this as $key => $value) {
-            $this->$key=$objeto->$key;
-        }
+    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6){
+        $this->idSeguro=$dado1;
+        $this->Nome=$dado2;
+        $this->TipoDeCobertura=$dado3;
+        $this->Descricao=$dado4;
+        $this->Custo=$dado5;
+        $this->Reserva_idReserva=$dado6;
+
     }
+
 
     public function create(){
-
-        $res = SeguroDAL::create($this);
-        return($res);
+        return SeguroDAL::create($this);
+    }
+    public function delete(){
+        SeguroDAL::delete($this);
+    }
+    static public function mostrarSeguros(){
+        SeguroDAL::mostrarSeguros();
     }
 
-    public function update() {
-        $res = SeguroDAL::update($this);
-        return($res);
-    }
-
-    public function delete() {
-        $res = SeguroDAL::delete($this);
-        return($res);
-    }
-
-    public function getAll() {
-        $res = SeguroDAL::getAll($this);
-        return($res);
-    }
-
-    public function getByID($idSeguro) {
-        $res = ReservaDAL::getByID($idSeguro);
-        return($res);
+    public function update(){
+        SeguroDAL::update($this);
     }
 }

@@ -39,7 +39,7 @@ class UserController
         }
 
 
-        if(isset($_POST['log'])){
+        if(isset($_POST['Login'])){
             self::verificarlogin();
             if(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0){
                 header('Location: ./Home.php');
@@ -75,7 +75,7 @@ class UserController
     }
     public static function verificarlogin(){
         $user1= new User();
-        $user1->login=$_POST['nome_login'];
+        $user1->email=$_POST['userEmail'];
         $user1->password=$_POST['signUp-Password'];
         if(($aux=$user1->verificarlogin())>0 || $aux==-1)
             $_SESSION['idCliente']=$aux;
@@ -126,10 +126,8 @@ class UserController
 
 
     public static function loginverification(){
-        if(isset($_SESSION['idCliente']))
-            return true;
-        else
-            return false;
+        return(isset($_SESSION['idCliente']));
+
     }
 
     public static function typeofuser(){
