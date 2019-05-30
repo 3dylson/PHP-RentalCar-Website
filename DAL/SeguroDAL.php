@@ -23,7 +23,7 @@ class SeguroDAL
         $conn= DBConnection::connect();
         $sql="DELETE FROM Seguro WHERE idSeguro = ?";
         $q=$conn->prepare($sql);
-        $q->execute(Array($e->id));
+        $q->execute(Array($e->idSeguro));
         DBConnection::disconnect();
     }
     static public function mostrarSeguros(){

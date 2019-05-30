@@ -40,9 +40,9 @@ class ReservaDAL
     }
     public function update($e){
         $conn= DBConnection::connect();
-        $sql='UPDATE Reserva WHERE ID= ?';
+        $sql='UPDATE Reserva SET DatadaReserva=? WHERE idReserva= ?';
         $result=$conn->prepare($sql);
-        $result->execute(Array($e->CustoTotal,$e->id));
+        $result->execute(Array($$e->DatadaReserva,$$e->idReserva));
         if($result->rowCount()>0)
             echo "Alteracao feita com sucesso!". "<br>";
         else
