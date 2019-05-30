@@ -16,7 +16,7 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
 
 <!--            <strong style="margin-left: 10px"> Preço: 220.50€</strong>-->
             <br>
-            <a class="nav-link active" href="/index.php?page=EscolherVeiculo">
+            <a class="nav-link active" href="./index.php?page=EscolherVeiculo">
                 <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Escolher outro Veículo.</button></a>
             <hr class="d-sm-none">
         </div>

@@ -1,6 +1,15 @@
 <?php
-
-
+/*if(session_status()==PHP_SESSION_NONE){
+    session_start();
+}
+require_once 'Controllers/MainControllers.php';
+$msg=[
+    "estado"=>[],
+    "user"=>[]
+];
+$msg= MainControllers::process();
+if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
+*/
 
 //
 //
@@ -37,44 +46,86 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <a href="./index.php?page=Home">
+            <a href="./index.php?page=Home" name="logo">
                 <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
+                <u class="nav navbar-nav navbar-right">
                     <br>
-                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span> Login</button>
-                    <div class="form-popup" id="myForm">
-                        <form method="post" class="form-container">
-                            <h1>Login</h1>
+                    <?php
 
-                            <label for="email"><b>Email</b></label>
-                            <br>
-                            <input id="log2" type="email" placeholder="Enter Email" name="email" required>
+                    if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
+                        $menu= MainControllers::getNavSemRegisto();
+                        foreach($menu as $k=>$v)
+                            echo $v;
+                    }elseif(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0 && UserController::typeofuser()){
+                        $menu= MainControllers::getNavAdmin();
+                        foreach ($menu as $k=>$v)
+                            echo $v;
+                    }else{
+                        $menu= MainControllers::getNavUser();
+                        foreach ($menu as $k=>$v)
+                            echo $v;
+                    }
 
-                            <label for="password"><b>Password</b></label>
-                            <input id="log" type="password" placeholder="Enter Password" name="psw" required>
-                            <br>
-                            <button type="submit" class="btn">Login</button>
+                    if(isset($userinfo))
+                        echo '
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-user"></span>' . $userinfo['Nome'] . '</button>
+                        <div class="form-popup" id="myForm">
+                            <form method="post" class="form-container">
+                                <h1>Welcome!</h1>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <a id="b2" class="btn btn-primary" name="reserva"
+                                               href="./index.php?page=User/Reservas" role="button">Ver Reserva</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary" name="definições"
+                                               href="./index.php?page=User/DefinicoesConta" role="button">Definições</a>
+                                            <br>
+                                            
+                                            <a id="b3" class="btn btn-primary" name="admin"
+                                               href="./index.php?page=Admin/Área_Admin" role="button">Admin</a>
+                                            <br>
+                                            <br>
+                                        <input id="log2" type="email" placeholder="Enter Email" name="userEmail" required>
+
+                          
+                                        <input id="log" type="password" placeholder="Enter Password" name="signUp-Password" required>
+                                            <br>
+                            <button type="submit" class="btn" name="Login" >Login</button>
                             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                        </form>
-                        <script>
-                            function openForm() {
-                                document.getElementById("myForm").style.display = "block";
-                            }
+                                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </form>
+                            <script>
+                                function openForm() {
+                                    document.getElementById("myForm").style.display = "block";
+                                }
 
-                            function closeForm() {
-                                document.getElementById("myForm").style.display = "none";
-                            }
-                        </script>
-                    </div>
-                    <a href="./index.php?page=User/SignUp">
-                        <button class="open-button"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
-                </ul>
+                                function closeForm() {
+                                    document.getElementById("myForm").style.display = "none";
+                                }
+                            </script>
+                        </div>
+                        <form method="post"></form>
+                        <a href="./index.php?=SignUp">
+                        <button class="open-button" name="SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
+                        <a href="">
+                        <button class="open-button" name="Logout" ><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                            </form>
+                
+            </div>
+        </div>';
+?>
+
+                </u>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -83,6 +134,12 @@
 $option = $_GET['page'];
 $page = "PL/".$option.".php";
 require_once $page;
+
+/*if(isset($_GET['page'])){
+MainController::mensagem($msg);
+if(($_GET['page']=='EscolherSeguros') && isset($msg)) echo'<br />' . $msg['Seguro'];
+$valor ='PL/'. $_GET['page'] . '.php';
+require_once $valor;*/
 
 ?>
 <!-----CONTEÚDO----->

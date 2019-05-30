@@ -1,14 +1,5 @@
 <?php
-if(session_status()==PHP_SESSION_NONE){
-    session_start();
-}
-require_once 'Controllers/MainControllers.php';
-$msg=[
-    "estado"=>[],
-    "user"=>[]
-];
-$msg= MainControllers::process();
-if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
+
 
 class DBconnection
 {
