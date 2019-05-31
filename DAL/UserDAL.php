@@ -13,10 +13,10 @@ class UserDAL
 {
     static public function create($e){
         $conn= DBconnection::connect();
-        $sql= "INSERT INTO Utilizador (idCliente, nome, nome_login, email, dataNascimento, password, nif, admin)
+        $sql= "INSERT INTO Utilizador (idCliente, nome, nome_login, email, dataNascimento, password, passwordConfirmated, nif, admin)
                 values (?,?,?,?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
-        $q->execute(array($e->idCliente,$e->nome,$e->nome_login,$e->email,$e->dataNascimento,$e->password,$e->nif, $e->usertype));
+        $q->execute(array($e->idCliente,$e->nome,$e->nome_login,$e->email,$e->dataNascimento,$e->password, $e->passwordConfirmated, $e->nif, $e->usertype));
         DBconnection::disconnect();
 
     }

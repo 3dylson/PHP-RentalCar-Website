@@ -5,11 +5,11 @@
         <div class="row content">
             <div class="col-sm-2 sidenav">
                 <h4>ADMIN</h4>
-                <p><a href="Assistência%20ao%20Cliente.html">Assistência ao Cliente</a></p>
-                <p><a href="Gerenciar%20Categorias.html">Gerenciar Categorias</a></p>
-                <p><a href="Gerenciar%20Seguros.html">Gerenciar Seguros</a></p>
-                <p><a href="Gerenciar%20Reserva.html">Gerenciar Reservas</a></p>
-                <p><a href="Gestão%20de%20Veículos%20(Admin).html">Gestão de Veículos</a></p>
+                <p><a href="../../index.php?page=GestaoVeiculos">Gestão de Veículos</a></p>
+                <p><a href="../../index.php?page=GerenciarCategorias">Gerenciar Categorias</a></p>
+                <p><a href="../../index.php?page=GerenciarPromocoes">Gerenciar Promoções</a></p>
+                <p><a href="../../index.php?page=GerenciarSeguros">Gerenciar Seguros</a></p>
+                <p><a href="../../index.php?page=GerenciarReserva">Gerenciar Reservas</a></p>
             </div>
             <!----Side Bar links----->
             <!----Sale Table----->

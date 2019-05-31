@@ -1,5 +1,5 @@
 <?php
-/*if(session_status()==PHP_SESSION_NONE){
+if(session_status()==PHP_SESSION_NONE){
     session_start();
 }
 require_once 'Controllers/MainControllers.php';
@@ -9,7 +9,7 @@ $msg=[
 ];
 $msg= MainControllers::process();
 if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
-*/
+
 
 //
 //
@@ -55,7 +55,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                     <br>
                     <?php
 
-                    if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
+                    /*if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
                         $menu= MainControllers::getNavSemRegisto();
                         foreach($menu as $k=>$v)
                             echo $v;
@@ -67,7 +67,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                         $menu= MainControllers::getNavUser();
                         foreach ($menu as $k=>$v)
                             echo $v;
-                    }
+                    }*/
 
                     if(isset($userinfo))
                         echo '
