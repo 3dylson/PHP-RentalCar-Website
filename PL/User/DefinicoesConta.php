@@ -6,7 +6,7 @@
         <form method="post">
             <!--begin display user account information-->
             <div>  <input type="text" placeholder="Email" name="userEmail"></div>
-            <div>  <input type="text" placeholder="Password" name="old_password"> </div>
+            <div>  <input type="password" placeholder="Password" name="old_password"> </div>
             <!--end display user account information-->
             <!--Criar 1 drop down, botao editar-->
             <div>  <input type="text" placeholder="Nova Password" name="new_password"> </div>
