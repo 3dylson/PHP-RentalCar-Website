@@ -1,5 +1,5 @@
 <?php
-//require_once 'Categoria_VeículoController.php';
+require_once 'Categoria_VeículoController.php';
 require_once 'PromoçãoController.php';
 require_once 'ReservaController.php';
 require_once 'SeguroController.php';
@@ -48,7 +48,7 @@ class MainControllers
 
     static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
-            $c=new User("1","root","GrupoSete","gruposete@example.com","01/01/2019",
+            $c=new User("1","root","GrupoSete","gruposete@example.com","2019/01/01",
                 "admin","admin", "282685489", "1" );
             $c->create();
         }
