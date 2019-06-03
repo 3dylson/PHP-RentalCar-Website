@@ -121,7 +121,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                 
             </div>
         </div>';
-?>
+                    ?>
 
                 </u>
             </div>
@@ -201,3 +201,4 @@ require_once $valor;*/
 
 </body>
 </html>
+    
