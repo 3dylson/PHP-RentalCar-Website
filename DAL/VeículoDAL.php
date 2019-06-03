@@ -32,6 +32,16 @@ class VeículoDAL
         DBConnection::disconnect();
     }
 
+    static public function mostrarNomeVeiculos(){
+        $conn= DBConnection::connect();
+        $sql="Select Nome FROM Veículos";
+        $result=$conn->prepare($sql);
+        $result->execute();
+        DBConnection::disconnect();
+        $row=$result->fetch();
+        return $row;
+    }
+
     public function update($e){
         $conn= DBConnection::connect();
         $sql='UPDATE Veículo SET NumeroDeRegistro = ? WHERE idVeiculo= ?';
@@ -115,6 +125,4 @@ class VeículoDAL
             echo '<tr> <td>Sem Veículos Disponiveis!</td></tr>';
         }
     }
-
-
 }

@@ -45,4 +45,7 @@ class VeículoController
         Veículo::mostrarVeiculosDisponiveis();
     }
 
+    static public function mostrarNomeVeiculos(){
+        Veículo::mostrarNomeVeiculos();
+    }
 }
