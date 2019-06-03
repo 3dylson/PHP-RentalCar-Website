@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'../BL/Seguro.php';
 class SeguroController
 {
     static public function Process(){
-        if(isset($_POST['Guardar'])){
+        if(isset($_POST['Reservar'])){
             if(!$_POST['$Nome']){
                 $msg["estado"]='Insira nome do seguro.';
             }elseif(!$_POST['TipoDeCobertura']){

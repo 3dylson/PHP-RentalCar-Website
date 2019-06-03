@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6399414b-a2f9-40de-85de-76ed33580bc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PL/User/DefinicoesConta.php" beforeDir="false" afterPath="$PROJECT_DIR$/PL/User/DefinicoesConta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/SeguroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/SeguroController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,19 +28,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/UserController.php">
+        <entry file="file://$PROJECT_DIR$/PL/User/DefinicoesConta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="289">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PL/User/DefinicoesConta.php">
+        <entry file="file://$PROJECT_DIR$/PL/EscolherSeguros.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="442">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DAL/SeguroDAL.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -49,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/PL/User/Login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -64,55 +73,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controllers/VeículoController.php">
+        <entry file="file://$PROJECT_DIR$/Controllers/SeguroController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+            <state relative-caret-position="119">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BL/Veículo.php">
+        <entry file="file://$PROJECT_DIR$/PL/SobreNos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="646">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAL/VeículoDAL.php">
+        <entry file="file://$PROJECT_DIR$/PL/PoliticaPrivacidade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="94" column="27" selection-start-line="94" selection-start-column="27" selection-end-line="94" selection-end-column="27" />
+            <state relative-caret-position="697">
+              <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PL/Home.php">
+        <entry file="file://$PROJECT_DIR$/PL/Admin/GerenciarPromocoes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="103" lean-forward="true" selection-start-line="26" selection-start-column="103" selection-end-line="26" selection-end-column="103" />
+            <state relative-caret-position="272">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/BL/Seguro.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-425">
-              <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PL/User/SignUp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="544">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -137,14 +137,12 @@
         <option value="$PROJECT_DIR$/DAL/PromoçãoDAL.php" />
         <option value="$PROJECT_DIR$/Controllers/VeículoController.php" />
         <option value="$PROJECT_DIR$/Controllers/PromoçãoController.php" />
-        <option value="$PROJECT_DIR$/Controllers/SeguroController.php" />
         <option value="$PROJECT_DIR$/PL/EscolherVeiculo.php" />
         <option value="$PROJECT_DIR$/PL/UserSemRegistoConclusao.php" />
         <option value="$PROJECT_DIR$/PL/SobreNos.php" />
         <option value="$PROJECT_DIR$/PL/PoliticaPrivacidade.php" />
         <option value="$PROJECT_DIR$/PL/PagamentoConclusao.php" />
         <option value="$PROJECT_DIR$/PL/Home.php" />
-        <option value="$PROJECT_DIR$/PL/EscolherSeguros.php" />
         <option value="$PROJECT_DIR$/PL/Contactos.php" />
         <option value="$PROJECT_DIR$/PL/User/Reservas.php" />
         <option value="$PROJECT_DIR$/PL/Admin/GestaoVeiculos.php" />
@@ -157,6 +155,8 @@
         <option value="$PROJECT_DIR$/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/DAL/UserDAL.php" />
         <option value="$PROJECT_DIR$/PL/User/DefinicoesConta.php" />
+        <option value="$PROJECT_DIR$/PL/EscolherSeguros.php" />
+        <option value="$PROJECT_DIR$/Controllers/SeguroController.php" />
       </list>
     </option>
   </component>
@@ -197,6 +197,12 @@
               <item name="rental_carphp" type="b2602c69:ProjectViewProjectNode" />
               <item name="rental_carphp" type="462c0819:PsiDirectoryNode" />
               <item name="PL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rental_carphp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rental_carphp" type="462c0819:PsiDirectoryNode" />
+              <item name="PL" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rental_carphp" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +275,8 @@
       <workItem from="1558983401922" duration="638000" />
       <workItem from="1559118237851" duration="595000" />
       <workItem from="1559162525836" duration="10942000" />
-      <workItem from="1559333801132" duration="2414000" />
+      <workItem from="1559333801132" duration="4690000" />
+      <workItem from="1559597061004" duration="621000" />
     </task>
     <task id="LOCAL-00001" summary="crud">
       <created>1556018162210</created>
@@ -404,11 +411,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559173378505</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="pagina.">
+      <created>1559341789479</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1559341789479</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58567000" />
+    <option name="totallyTimeSpent" value="61464000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -421,9 +435,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20045386" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20347957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -438,6 +451,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" weight="0.3420622" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.3420622" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -525,7 +539,8 @@
     <MESSAGE value="Retirei todo os tags que não precisava dos files que contem o codigo HTML." />
     <MESSAGE value="upadates na pagina php." />
     <MESSAGE value="coloquei uns comentadorios neste file." />
-    <option name="LAST_COMMIT_MESSAGE" value="coloquei uns comentadorios neste file." />
+    <MESSAGE value="pagina." />
+    <option name="LAST_COMMIT_MESSAGE" value="pagina." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -539,13 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="55" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAL/SeguroDAL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="44" column="67" lean-forward="true" selection-start-line="44" selection-start-column="67" selection-end-line="44" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -584,20 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BL/Seguro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/SeguroController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAL/Categoria_VeículoDAL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -616,20 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PL/SobreNos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PL/PoliticaPrivacidade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -667,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PL/Admin/GerenciarPromocoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PL/Admin/GerenciarCategorias.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -681,13 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PL/Admin/AssistenciaCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="182" column="10" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PL/Admin/AssistenciaCliente.php" />
     <entry file="file://$PROJECT_DIR$/Controllers/MainControllers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -749,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PL/EscolherSeguros.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="80" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PL/EscolherVeiculo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -812,10 +772,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PL/User/DefinicoesConta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL/SeguroDAL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PL/User/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -826,10 +800,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PL/User/DefinicoesConta.php">
+    <entry file="file://$PROJECT_DIR$/Controllers/SeguroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PL/SobreNos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PL/PoliticaPrivacidade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PL/Admin/GerenciarPromocoes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BL/Seguro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PL/EscolherSeguros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
         </state>
       </provider>
     </entry>
