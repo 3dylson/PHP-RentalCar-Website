@@ -1,5 +1,5 @@
 <?php
-require_once '../BL/Promoção.php';
+require_once dirname(__FILE__).'/../BL/Promoção.php';
 
 
 
