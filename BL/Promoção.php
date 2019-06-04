@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'/../DAL/PromoçãoDAL.php';
+require_once dirname(__FILE__).'../DAL/PromoçãoDAL.php';
 
 
 class Promoção

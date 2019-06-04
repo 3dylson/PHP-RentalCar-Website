@@ -59,31 +59,31 @@
                             <td></td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1"
                                            value="option1">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2"
                                            value="option2">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                    <input class="form-check-input" type="radio" name="exampleRadios3"
                                            id="exampleRadios3" value="option3">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                    <input class="form-check-input" type="radio" name="exampleRadios4"
                                            id="exampleRadios4" value="option4" checked>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                    <input class="form-check-input" type="radio" name="exampleRadios5"
                                            id="exampleRadios5" value="option5">
                                 </div>
                             </td>
@@ -123,8 +123,8 @@
                         </tbody>
                     </table>
                     <hr>
-                    <button type="button" class="btn btn-dark">Editar</button>
-                    <button type="button" class="btn btn-outline-success">Guardar</button>
+                    <button type="button" class="btn btn-dark" name="editarSeguros">Editar</button>
+                    <button type="button" class="btn btn-outline-success" name="guardarSeguros">Guardar</button>
                 </div>
             </div>
             <!------ Insurance Table----->
