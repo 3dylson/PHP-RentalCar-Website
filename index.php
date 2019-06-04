@@ -13,12 +13,6 @@ $msg= MainControllers::process();
 if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 
 
-//
-//
-//require_once 'DAL/DBconnection.php';
-//require_once 'Controllers/MainControllers.php';
-
-//MainControllers::process();
 ?>
 <!doctype html>
 <html lang="en">
@@ -43,73 +37,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 
 
 </head>
-
-<!--<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <a href="./index.php?page=Home" name="logo">
-                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
-        </div>
-        <div class="col-sm-6">
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <u class="nav navbar-nav navbar-right"/>
-                    <br>-->
-                    <!--<button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-user"></span>' . $userinfo['Nome'] . '</button>
-                        <div class="form-popup" id="myForm">
-                            <form method="post" class="form-container">
-                                <h1>Welcome!</h1>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-1">
-                                            <a id="b2" class="btn btn-primary" name="reserva"
-                                               href="./index.php?page=User/Reservas" role="button">Ver Reserva</a>
-                                            <br>
-                                            <a id="b3" class="btn btn-primary" name="definições"
-                                               href="./index.php?page=User/DefinicoesConta" role="button">Definições</a>
-                                            <br>
-                                            
-                                            <a id="b3" class="btn btn-primary" name="admin"
-                                               href="./index.php?page=Admin/Área_Admin" role="button">Admin</a>
-                                            <br>
-                                            <br>
-                                        <input id="log2" type="email" placeholder="Enter Email" name="userEmail" required>
-
-                          
-                                        <input id="log" type="password" placeholder="Enter Password" name="signUp-Password" required>
-                                            <br>
-                            <button type="submit" class="btn" name="Login" >Login</button>
-                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                            </form>
-                            <script>
-                                function openForm() {
-                                    document.getElementById("myForm").style.display = "block";
-                                }
-
-                                function closeForm() {
-                                    document.getElementById("myForm").style.display = "none";
-                                }
-                            </script>
-                        </div>
-                        <form method="post"></form>
-                        <a href="./index.php?=SignUp">
-                        <button class="open-button" name="SignUp"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
-                        <a href="">
-                        <button class="open-button" name="Logout" ><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
-                            </form>
-                
-            </div>
-        </div>
-
-                </u>
-            </div>
-        </div>
-    </div>
-</div>-->
-
+<!-----NAV BAR-------->
 <?php
 
 if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
@@ -127,21 +55,21 @@ if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
 }
 
 ?>
-
+<!-----NAV BAR-------->
 <!-----CONTEÚDO----->
 <?php
-/*$option = $_GET['page'];
+$option = $_GET['page'];
 $page = "PL/".$option.".php";
-require_once $page;*/
+require_once $page;
 
 
-if(isset($_GET['page'])) {
+/*if(isset($_GET['page'])) {
     MainControllers::mensagem($msg);
     if (($_GET['page'] == 'EscolherVeiculo') && isset($msg)) echo '<br />' . $msg['Reserva'];
 //    if (($_GET['page'] == 'SignUp') && isset($msg)) echo '<br />' . $msg['User'];
     $valor = 'PL/' . $_GET['page'] . '.php';
     require_once $valor;
-}
+}*/
 ?>
 <!-----CONTEÚDO----->
 <!---Footer------->
@@ -173,7 +101,7 @@ if(isset($_GET['page'])) {
                         <div class="row ">
                             <div class="col-md-6">
                                 <ul>
-                                    <li> <a href="./index.php?page=PolíticaDePrivacidade">
+                                    <li> <a href="./index.php?page=PoliticaPrivacidade">
                                             Política de Privacidade</a> </li>
 
                                 </ul>
@@ -202,4 +130,3 @@ if(isset($_GET['page'])) {
 
 
 </html>
-    

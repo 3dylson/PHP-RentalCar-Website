@@ -5,13 +5,17 @@ class SeguroController
 {
     static public function Process(){
         if(isset($_POST['Reservar'])){
-            if(!$_POST['$Nome']){
+            $Nome=$_POST['Nome'];
+            $TipoDeCobertura=$_POST['TipoDeCobertura'];
+            $Descricao=$_POST['Descricao'];
+            $Custo=$_POST['Custo'];
+            if(!$Nome){
                 $msg["estado"]='Insira nome do seguro.';
-            }elseif(!$_POST['TipoDeCobertura']){
+            }elseif(!$TipoDeCobertura){
                 $msg["estado"]='Insira o tipo de cobertura';
-            }elseif(!$_POST['Descricao']){
+            }elseif(!$Descricao){
                 $msg["estado"]='Insira a descrição do seguro.';
-            }elseif(!$_POST['Custo']){
+            }elseif(!$Custo){
                 $msg["estado"]='Insira o custo do seguro.';
             }else{
                 self::criarSeguros();

@@ -20,7 +20,7 @@ class User
     public $nif;
     public $admin;
 
-    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6,$dado7,$dado8,$dado9){
+    public function __construct($dado1=null,$dado2=null,$dado3=null,$dado4=null,$dado5=null,$dado6=null,$dado7=null,$dado8=null,$dado9=null){
         $this->idCliente=$dado1;
         $this->nome_login=$dado2;
         $this->nome=$dado3;
