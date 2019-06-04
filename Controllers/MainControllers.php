@@ -1,39 +1,170 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/Categoria_VeículoController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/PromoçãoController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/ReservaController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/SeguroController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/UserController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/VeículoController.php';
+require_once dirname(__FILE__). '/Categoria_VeículoController.php';
+require_once dirname(__FILE__). '/PromoçãoController.php';
+require_once dirname(__FILE__). '/ReservaController.php';
+require_once dirname(__FILE__). '/SeguroController.php';
+require_once dirname(__FILE__). '/UserController.php';
+require_once dirname(__FILE__). '/VeículoController.php';
 
 
 class MainControllers
 {
     public static function getNavAdmin(){
         $aux=[
-            'logo'=> '<li><a href="../PL/Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
-            'admin'=>'<li><a href="../index.php?page=Área_Admin">Admin&nbsp;&nbsp;&nbsp;</a></li>',
-            'reserva'=>'<li><a href="../index.php?page=Reservas">Reservas&nbsp;&nbsp;&nbsp;</a></li>',
-            'definições'=>'<li><a href="../index.php?page=DefinicoesConta">Definições&nbsp;&nbsp;&nbsp;</a></li>',
-            'Logout'=> '<li><a href="../PL/Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+
+            'NavAdmin'=>'<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="./index.php?page=Home" name="Logo">
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
+        </div>
+        <div class="col-sm-6">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <u class="nav navbar-nav navbar-right"/>
+                    <br>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
+                    <div class="form-popup" id="myForm">
+                        <form method="post" class="form-container">
+                            <h1>Welcome!</h1>
+                            <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <a id="b2" class="btn btn-primary"
+                                               href="./index.php?page=Reservas" role="button">Ver Reserva</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary"
+                                               href="./index.php?page=DefinicoesConta" role="button">Definições</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary"
+                                               href="./index.php?page=Área_Admin" role="button">Admin</a>
+                                            <br>
+                                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        <script>
+                            function openForm() {
+                                document.getElementById("myForm").style.display = "block";
+                            }
+
+                            function closeForm() {
+                                document.getElementById("myForm").style.display = "none";
+                            }
+                        </script>
+                    </div>
+                    <a href="">
+                       <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>',
 
         ];
         return $aux;
     }
     public static function getNavSemRegisto(){
         $aux=[
-            'logo'=> '<li><a href="../PL/Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
-            'Login'=>'<li><a href="">Login&nbsp;&nbsp;&nbsp;</a></li>',
-            'SignUp'=>'<li><a href="">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+            'Nav'=>'<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="./index.php?page=Home" name="Logo">
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
+        </div>
+        <div class="col-sm-6">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <u class="nav navbar-nav navbar-right"/>
+                    <br>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                    <div class="form-popup" id="myForm">
+                        <form method="post" class="form-container">
+                            <h1>Login</h1>
+
+                            <label for="email"><b>Email</b></label>
+                            <br>
+                            <input id="log2" type="email" placeholder="Enter Email" name="userEmail" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input id="log" type="password" placeholder="Enter Password" name="signUp-Password" required>
+                            <br>
+                            <button type="submit" name="Login" class="btn">Login</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        </form>
+                        <script>
+                            function openForm() {
+                                document.getElementById("myForm").style.display = "block";
+                            }
+
+                            function closeForm() {
+                                document.getElementById("myForm").style.display = "none";
+                            }
+                        </script>
+                    </div>
+                    <a href="./index.php?page=SignUp">
+                        <button class="open-button"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>',
+            /*'Login'=>'<li><a href="">Login&nbsp;&nbsp;&nbsp;</a></li>',
+            'SignUp'=>'<li><a href="">Logout&nbsp;&nbsp;&nbsp;</a></li>',*/
         ];
         return $aux;
     }
     public static function getNavUser(){
         $aux=[
-            'logo'=> '<li><a href="../PL/Home.php">Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>',
-            'reserva'=>'<li><a href="../index.php?page=Reservas">Reservas&nbsp;&nbsp;&nbsp;</a></li>',
-            'definições'=>'<li><a href="../index.php?page=Definições_da_Conta">Definições&nbsp;&nbsp;&nbsp;</a></li>',
-            'Logout'=> '<li><a href="../PL/Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+
+            'NavUser'=>'<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="./index.php?page=Home" name="Logo">
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
+        </div>
+        <div class="col-sm-6">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <u class="nav navbar-nav navbar-right"/>
+                    <br>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
+                    <div class="form-popup" id="myForm">
+                        <form method="post" class="form-container">
+                            <h1>Welcome!</h1>
+                            <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <a id="b2" class="btn btn-primary"
+                                               href="./index.php?page=Reservas" role="button">Ver Reserva</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary"
+                                               href="./index.php?page=DefinicoesConta" role="button">Definições</a>
+                                            <br>
+                                           
+                                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        <script>
+                            function openForm() {
+                                document.getElementById("myForm").style.display = "block";
+                            }
+
+                            function closeForm() {
+                                document.getElementById("myForm").style.display = "none";
+                            }
+                        </script>
+                    </div>
+                    <a href="">
+                       <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>',
         ];
         return $aux;
     }
@@ -44,13 +175,13 @@ class MainControllers
             return '<a href="../index.php?Logout">Logout</a>';
     }
 
-    static public function firstCall(){
+   /* static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
-            $c=new User("1","root","GrupoSete","gruposete@example.com","2019/01/01",
+            $c=new Utilizador("1","root","GrupoSete","gruposete@example.com","2019/01/01",
                 "admin","admin", "282685489", "1" );
             $c->create();
         }
-    }
+    }*/
 
     static public function mensagem($msg){
         if(($_GET['page']=='EscolherSeguros') && isset($msg)){ echo '<br />' . $msg['Seguro']; unset($msg['Seguro']);}
@@ -71,7 +202,7 @@ class MainControllers
     }
 
     public static function process(){
-        self::firstCall();
+//        self::firstCall();
         $estado['User']=UserController::Process();
         $estado['Categoria_Veículo']=Categoria_VeículoController::Process();
         $estado['Promoção']=PromoçãoController::Process();
