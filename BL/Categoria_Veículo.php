@@ -38,8 +38,6 @@ class Categoria_Veículo
         $this->capacidade=$dado6;
         $this->numeroPortas=$dado7;
         $this->precoDia=$dado8;
-
-
     }
 
     public function create()

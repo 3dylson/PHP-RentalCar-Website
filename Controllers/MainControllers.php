@@ -44,8 +44,6 @@ class MainControllers
             return '<a href="../index.php?Logout">Logout</a>';
     }
 
-
-
     static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
             $c=new User("1","root","GrupoSete","gruposete@example.com","2019/01/01",
@@ -53,7 +51,6 @@ class MainControllers
             $c->create();
         }
     }
-
 
     static public function mensagem($msg){
         if(($_GET['page']=='EscolherSeguros') && isset($msg)){ echo '<br />' . $msg['Seguro']; unset($msg['Seguro']);}
@@ -73,9 +70,6 @@ class MainControllers
         return UserController::getInformUser();
     }
 
-
-
-
     public static function process(){
         self::firstCall();
         $estado['User']=UserController::Process();
@@ -86,7 +80,5 @@ class MainControllers
         $estado['Veículo']=VeículoController::Process();
 
         return $estado;
-
     }
-
 }
