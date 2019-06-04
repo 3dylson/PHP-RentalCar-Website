@@ -1,28 +1,32 @@
 <?php
-require_once dirname(__FILE__).'../BL/Categoria_Veículo.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'BL/Categoria_Veículo.php';
+
 
 class Categoria_VeículoController
 {
-    static public function Process()
+    static public function process()
     {
         if (isset($_POST['SubmitCategoria'])) {
-            if (!isset($_POST['Veículo'])) {
+            $marca=$_POST['marca'];
+            $modelo=$_POST['modelo'];
+            $combustivel=$_POST['combustivel'];
+            $transmissao=$_POST['transmissao'];
+            $capacidade=$_POST['capacidade'];
+            $numeroPortas=$_POST['numeroPortas'];
+            $precoDia=$_POST['precoDia'];
+            if (!$marca) {
                 $msg["estado"] = '';
-            } elseif (!isset($_POST['Categoria'])) {
+            } elseif (!$modelo) {
                 $msg["estado"] = '';
-            } elseif (!isset($_POST['marca'])) {
+            } elseif (!$combustivel) {
                 $msg["estado"] = '';
-            } elseif (!isset($_POST['Modelo'])) {
+            } elseif (!$transmissao) {
                 $msg["estado"] = '';
-            } elseif (!isset($_POST['Combustível'])) {
+            } elseif (!$capacidade) {
                 $msg["estado"] = '';
-            } elseif (!isset($_POST['Transmissão'])) {
+            } elseif (!$numeroPortas) {
                 $msg["estado"] = '';
-            } elseif (!isset($_POST['Capacidade'])) {
-                $msg["estado"] = '';
-            } elseif (!isset($_POST['NumerosPortas'])) {
-                $msg["estado"] = '';
-            } elseif (!isset($_POST['Preço'])) {
+            } elseif (!$precoDia) {
                 $msg["estado"] = '';
             }
             else {
@@ -36,7 +40,7 @@ class Categoria_VeículoController
     static public function submitcategoria()
     {
         $submit = new Categoria_Veículo('', $_POST['marca'], $_POST['modelo'], $_POST['combustivel'],
-            $_POST['transmissao'], $_POST['capacidade'], $_POST['NumerosPortas'], $_POST['precoDia']);
+            $_POST['transmissao'], $_POST['capacidade'], $_POST['numeroPortas'], $_POST['precoDia']);
         $submit->create();
     }
 }

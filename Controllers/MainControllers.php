@@ -1,10 +1,10 @@
 <?php
-require_once 'Categoria_VeículoController.php';
-require_once 'PromoçãoController.php';
-require_once 'ReservaController.php';
-require_once 'SeguroController.php';
-require_once 'UserController.php';
-require_once 'VeículoController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/Categoria_VeículoController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/PromoçãoController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/ReservaController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/SeguroController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/UserController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/VeículoController.php';
 
 
 class MainControllers
@@ -44,8 +44,6 @@ class MainControllers
             return '<a href="../index.php?Logout">Logout</a>';
     }
 
-
-
     static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
             $c=new User("1","root","GrupoSete","gruposete@example.com","2019/01/01",
@@ -53,7 +51,6 @@ class MainControllers
             $c->create();
         }
     }
-
 
     static public function mensagem($msg){
         if(($_GET['page']=='EscolherSeguros') && isset($msg)){ echo '<br />' . $msg['Seguro']; unset($msg['Seguro']);}
@@ -73,9 +70,6 @@ class MainControllers
         return UserController::getInformUser();
     }
 
-
-
-
     public static function process(){
         self::firstCall();
         $estado['User']=UserController::Process();
@@ -86,7 +80,5 @@ class MainControllers
         $estado['Veículo']=VeículoController::Process();
 
         return $estado;
-
     }
-
 }

@@ -1,15 +1,17 @@
 <?php
-/*if(session_status()==PHP_SESSION_NONE){
+if(session_status()==PHP_SESSION_NONE){
     session_start();
 }
-require_once 'Controllers/MainControllers.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/MainControllers.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/DBconnection.php';
+
 $msg=[
     "estado"=>[],
     "user"=>[]
 ];
 $msg= MainControllers::process();
 if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
-*/?>
+?>
 <!--Main Quote Starts-->
 <div class="ph">
 
