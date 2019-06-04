@@ -1,6 +1,6 @@
 <?php
-require_once dirname(__FILE__).'DBconnection.php';
-require_once dirname(__FILE__).'/../BL/User.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/DBconnection.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'BL/User.php';
 
 /**
  * Created by PhpStorm.

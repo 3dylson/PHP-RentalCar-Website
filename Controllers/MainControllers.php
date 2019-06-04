@@ -1,10 +1,10 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/Categoria_VeículoController.php';
+/*require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/Categoria_VeículoController.php';
 require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/PromoçãoController.php';
 require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/ReservaController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/SeguroController.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/SeguroController.php';*/
 require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/UserController.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/VeículoController.php';
+//require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/VeículoController.php';
 
 
 class MainControllers
