@@ -1,6 +1,6 @@
 <?php
-require_once dirname(__FILE__).'../BL/Seguro.php';
 
+require_once dirname(__FILE__).'/../BL/Seguro.php';
 class SeguroController
 {
     static public function Process(){

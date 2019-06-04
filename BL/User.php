@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/UserDAL.php';
+require_once dirname(__FILE__).'/../DAL/UserDAL.php';
 
 /**
  * Created by PhpStorm.

@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. 'BL/User.php';
+require_once dirname(__FILE__).'/../BL/User.php';
 
 class UserController
 {
@@ -42,7 +42,7 @@ class UserController
         if(isset($_POST['Login'])){
             self::verificarlogin();
             if(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0){
-                header('Location: ./Home.php');
+                header('Location: ../index.php');
                 //unset($_GET['page']);
             }
         }
@@ -85,9 +85,9 @@ class UserController
         $user->nome_login=$logaux;
         return $user->verificarlogin1();
     }
-    public static function verificarPrimeiroUtilizador(){
+    /*public static function verificarPrimeiroUtilizador(){
         return User::verificarPrimeiroUtilizador();
-    }
+    }*/
     public static function getInformUser(){
         return User::getInformUser();
     }

@@ -1,5 +1,5 @@
 <?php
-
+require_once dirname(__FILE__).'/../DAL/ReservaDAL.php';
 
 class Reserva
 {

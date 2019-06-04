@@ -2,8 +2,8 @@
 if(session_status()==PHP_SESSION_NONE){
     session_start();
 }
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/MainControllers.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/DBconnection.php';
+require_once (dirname(__FILE__).'/../Controllers/MainControllers.php');
+require_once (dirname(__FILE__). '/../DAL/DBconnection.php');
 
 $msg=[
     "estado"=>[],
@@ -13,6 +13,7 @@ $msg= MainControllers::process();
 if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 ?>
 <!--Main Quote Starts-->
+<body class="bgHome">
 <div class="ph">
 
     <h5>THE ROYAL ESSENCE OF JORNEY</h5>
@@ -42,6 +43,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
         <!--Search Menu Ends-->
     </form>
 </div>
+</body>
 <br>
 <br>
 <br>
