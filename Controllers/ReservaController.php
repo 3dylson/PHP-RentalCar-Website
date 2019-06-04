@@ -6,13 +6,17 @@ class ReservaController
 
     static public function Process(){
         if(isset($_POST['Reservar'])){
-            if(!$_POST['$DatadaReserva']){
+            $DatadaReserva=$_POST['DatadaReserva'];
+            $DatadeDevolucao=$_POST['DatadeDevolucao'];
+            $LocalPickUp=$_POST['LocalPickUp'];
+            $LocalDropOff=$_POST['LocalDropOff'];
+            if(!$DatadaReserva){
                 $msg["estado"]='Insira data de Reserva.';
-            }elseif(!$_POST['DatadeDevolucao']){
+            }elseif(!$DatadeDevolucao){
                 $msg["estado"]='Insira uma Data de devolução';
-            }elseif(!$_POST['LocalPickUp']){
+            }elseif(!$LocalPickUp){
                 $msg["estado"]='Insira o local de PickUp.';
-            }elseif(!$_POST['LocalDropOff']){
+            }elseif(!$LocalDropOff){
                 $msg["estado"]='Insira o local de DropOff.';
             }else{
                 self::criarReserva();

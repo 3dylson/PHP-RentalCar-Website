@@ -54,23 +54,6 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
             <div class="collapse navbar-collapse" id="myNavbar">
                 <u class="nav navbar-nav navbar-right"/>
                     <br>-->
-                    <?php
-
-                    if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
-                        $menu= MainControllers::getNavSemRegisto();
-                        foreach($menu as $k=>$v)
-                            echo $v;
-                    }elseif(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0 && UserController::typeofuser()){
-                        $menu= MainControllers::getNavAdmin();
-                        foreach ($menu as $k=>$v)
-                            echo $v;
-                    }else{
-                        $menu= MainControllers::getNavUser();
-                        foreach ($menu as $k=>$v)
-                            echo $v;
-                    }
-
-                    ?>
                     <!--<button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-user"></span>' . $userinfo['Nome'] . '</button>
                         <div class="form-popup" id="myForm">
                             <form method="post" class="form-container">
@@ -126,6 +109,24 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
         </div>
     </div>
 </div>-->
+
+<?php
+
+if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
+    $menu= MainControllers::getNavSemRegisto();
+    foreach($menu as $k=>$v)
+        echo $v;
+}elseif(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0 && UserController::typeofuser()){
+    $menu= MainControllers::getNavAdmin();
+    foreach ($menu as $k=>$v)
+        echo $v;
+}else{
+    $menu= MainControllers::getNavUser();
+    foreach ($menu as $k=>$v)
+        echo $v;
+}
+
+?>
 
 <!-----CONTEÚDO----->
 <?php
