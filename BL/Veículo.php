@@ -56,4 +56,8 @@ class Veículo
         VeículoDAL::mostrarVeiculosDisponiveis();
     }
 
+    static public function mostrarNomeVeiculos(){
+        VeículoDAL::mostrarNomeVeiculos();
+    }
+
 }

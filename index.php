@@ -1,8 +1,10 @@
 <?php
-if(session_status()==PHP_SESSION_NONE){
+if(session_status()==PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'Controllers/MainControllers.php';
+
+require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/MainControllers.php';
+require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/DBconnection.php';
 $msg=[
     "estado"=>[],
     "user"=>[]
@@ -55,7 +57,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                     <br>
                     <?php
 
-                    /*if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
+                    if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
                         $menu= MainControllers::getNavSemRegisto();
                         foreach($menu as $k=>$v)
                             echo $v;
@@ -67,7 +69,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                         $menu= MainControllers::getNavUser();
                         foreach ($menu as $k=>$v)
                             echo $v;
-                    }*/
+                    }
 
                     if(isset($userinfo))
                         echo '
@@ -95,8 +97,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                                         <input id="log" type="password" placeholder="Enter Password" name="signUp-Password" required>
                                             <br>
                             <button type="submit" class="btn" name="Login" >Login</button>
-                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +122,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                 
             </div>
         </div>';
-?>
+                    ?>
 
                 </u>
             </div>
@@ -135,12 +136,13 @@ $option = $_GET['page'];
 $page = "PL/".$option.".php";
 require_once $page;
 
-/*if(isset($_GET['page'])){
-MainController::mensagem($msg);
-if(($_GET['page']=='EscolherSeguros') && isset($msg)) echo'<br />' . $msg['Seguro'];
-$valor ='PL/'. $_GET['page'] . '.php';
-require_once $valor;*/
-
+/*if(isset($_GET['page'])) {
+    MainControllers::mensagem($msg);
+    if (($_GET['page'] == 'EscolherVeiculo') && isset($msg)) echo '<br />' . $msg['Reserva'];
+//    if (($_GET['page'] == 'SignUp') && isset($msg)) echo '<br />' . $msg['User'];
+    $page = 'PL/' . $_GET['page'] . '.php';
+    require_once $page;
+}*/
 ?>
 <!-----CONTEÚDO----->
 <!---Footer------->
@@ -201,3 +203,4 @@ require_once $valor;*/
 
 </body>
 </html>
+    
