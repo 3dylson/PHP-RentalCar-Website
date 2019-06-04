@@ -25,7 +25,7 @@ class MainControllers
             'Nav'=>'<div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <a href="./index.php?page=Home" name="logo">
+            <a href="../index.php?page=Home" name="logo">
                 <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
