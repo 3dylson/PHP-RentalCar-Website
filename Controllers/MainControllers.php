@@ -12,10 +12,55 @@ class MainControllers
     public static function getNavAdmin(){
         $aux=[
 
-            'admin'=>'<li><a href="../index.php?page=Área_Admin">Admin&nbsp;&nbsp;&nbsp;</a></li>',
-            'reserva'=>'<li><a href="../index.php?page=Reservas">Reservas&nbsp;&nbsp;&nbsp;</a></li>',
-            'definições'=>'<li><a href="../index.php?page=DefinicoesConta">Definições&nbsp;&nbsp;&nbsp;</a></li>',
-            'Logout'=> '<li><a href="../PL/Home.php">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+            'NavAdmin'=>'<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="./index.php?page=Home" name="Logo">
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
+        </div>
+        <div class="col-sm-6">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <u class="nav navbar-nav navbar-right"/>
+                    <br>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
+                    <div class="form-popup" id="myForm">
+                        <form method="post" class="form-container">
+                            <h1>Welcome!</h1>
+                            <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <a id="b2" class="btn btn-primary"
+                                               href="./index.php?page=Reservas" role="button">Ver Reserva</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary"
+                                               href="./index.php?page=DefinicoesConta" role="button">Definições</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary"
+                                               href="./index.php?page=Área_Admin" role="button">Admin</a>
+                                            <br>
+                                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        <script>
+                            function openForm() {
+                                document.getElementById("myForm").style.display = "block";
+                            }
+
+                            function closeForm() {
+                                document.getElementById("myForm").style.display = "none";
+                            }
+                        </script>
+                    </div>
+                    <a href="">
+                       <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>',
 
         ];
         return $aux;
@@ -25,8 +70,8 @@ class MainControllers
             'Nav'=>'<div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <a href="../index.php?page=Home" name="logo">
-                <img id="logosize" src="../Imagens/Logo.png" height="115" width="218"/></a>
+            <a href="./index.php?page=Home" name="Logo">
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
         </div>
         <div class="col-sm-6">
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -57,7 +102,7 @@ class MainControllers
                             }
                         </script>
                     </div>
-                    <a href="../index.php?page=SignUp">
+                    <a href="./index.php?page=SignUp">
                         <button class="open-button"><span class="glyphicon glyphicon-user"></span> Sign Up</button></a>
                 </ul>
             </div>
@@ -73,9 +118,53 @@ class MainControllers
     public static function getNavUser(){
         $aux=[
 
-            'reserva'=>'<li><a href="../index.php?page=Reservas">Reservas&nbsp;&nbsp;&nbsp;</a></li>',
-            'definições'=>'<li><a href="../index.php?page=Definições_da_Conta">Definições&nbsp;&nbsp;&nbsp;</a></li>',
-            'Logout'=> '<li><a href="">Logout&nbsp;&nbsp;&nbsp;</a></li>',
+            'NavUser'=>'<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="./index.php?page=Home" name="Logo">
+                <img id="logosize" src="./Imagens/Logo.png" height="115" width="218"/></a>
+        </div>
+        <div class="col-sm-6">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <u class="nav navbar-nav navbar-right"/>
+                    <br>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
+                    <div class="form-popup" id="myForm">
+                        <form method="post" class="form-container">
+                            <h1>Welcome!</h1>
+                            <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <a id="b2" class="btn btn-primary"
+                                               href="./index.php?page=Reservas" role="button">Ver Reserva</a>
+                                            <br>
+                                            <a id="b3" class="btn btn-primary"
+                                               href="./index.php?page=DefinicoesConta" role="button">Definições</a>
+                                            <br>
+                                           
+                                            <button id="b4" type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        <script>
+                            function openForm() {
+                                document.getElementById("myForm").style.display = "block";
+                            }
+
+                            function closeForm() {
+                                document.getElementById("myForm").style.display = "none";
+                            }
+                        </script>
+                    </div>
+                    <a href="">
+                       <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>',
         ];
         return $aux;
     }
