@@ -1,4 +1,6 @@
 <?php
+
+require_once dirname(__FILE__).'/../DAL/SeguroDAL.php';
 /**
  * Created by PhpStorm.
  * User: ASUS F555B

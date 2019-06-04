@@ -1,6 +1,6 @@
 <?php
-require_once dirname(__FILE__).'DBconnection.php';
-require_once dirname(__FILE__).'../BL/Categoria_Veículo.php';
+require_once dirname(__FILE__).'/DBconnection.php';
+require_once dirname(__FILE__).'/../BL/Categoria_Veículo.php';
 
 
 /**

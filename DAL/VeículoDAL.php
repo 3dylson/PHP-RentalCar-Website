@@ -1,5 +1,6 @@
 <?php
 require_once dirname(__FILE__).'/DBConnection.php';
+require_once dirname(__FILE__).'/../BL/Veículo.php';
 /*
  * Created by PhpStorm.
  * User: ASUS F555B

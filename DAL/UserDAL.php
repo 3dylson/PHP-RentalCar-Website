@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'DBconnection.php';
+require_once dirname(__FILE__).'/DBconnection.php';
 require_once dirname(__FILE__).'/../BL/User.php';
 
 /**
@@ -107,7 +107,7 @@ class UserDAL
     }
     public static function getInformUser(){
         $conn= DBconnection::connect();
-        $sql='SELECT * FROM Utilizadpr WHERE idCliente= ?';
+        $sql='SELECT * FROM Utilizador WHERE idCliente= ?';
         $result=$conn->prepare($sql);
         $result->execute(Array($_SESSION['idCliente']));
         if($result->rowCount()>0){
@@ -116,9 +116,9 @@ class UserDAL
         }
     }
 
-     public static function verificarPrimeiroUtilizador(){
+     /*public static function verificarPrimeiroUtilizador(){
          $conn= DBconnection::connect();
-         $sql="Select * FROM Utilizador";
+         $sql="SELECT * FROM Utilizador";
          $result=$conn->prepare($sql);
          $result->execute();
          DBconnection::disconnect();
@@ -126,7 +126,7 @@ class UserDAL
              return false;
          else
              return true;
-     }
+     }*/
 
     public static function verificarPass(){
         $conn= DBconnection::connect();

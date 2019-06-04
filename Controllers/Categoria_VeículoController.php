@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. 'BL/Categoria_Veículo.php';
+require_once dirname(__FILE__).'/../BL/Categoria_Veículo.php';
 
 
 class Categoria_VeículoController

@@ -3,8 +3,8 @@ if(session_status()==PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/MainControllers.php';
-require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/DBconnection.php';
+require_once (dirname(__FILE__).'/Controllers/MainControllers.php');
+require_once (dirname(__FILE__). '/DAL/DBconnection.php');
 $msg=[
     "estado"=>[],
     "user"=>[]
@@ -43,9 +43,8 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 
 
 </head>
-<body>
-<body class="bgHome">
-<div class="container">
+
+<!--<div class="container">
     <div class="row">
         <div class="col-sm-6">
             <a href="./index.php?page=Home" name="logo">
@@ -53,8 +52,8 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
         </div>
         <div class="col-sm-6">
             <div class="collapse navbar-collapse" id="myNavbar">
-                <u class="nav navbar-nav navbar-right">
-                    <br>
+                <u class="nav navbar-nav navbar-right"/>
+                    <br>-->
                     <?php
 
                     if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
@@ -71,9 +70,8 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                             echo $v;
                     }
 
-                    if(isset($userinfo))
-                        echo '
-                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-user"></span>' . $userinfo['Nome'] . '</button>
+                    ?>
+                    <!--<button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-user"></span>' . $userinfo['Nome'] . '</button>
                         <div class="form-popup" id="myForm">
                             <form method="post" class="form-container">
                                 <h1>Welcome!</h1>
@@ -121,28 +119,28 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
                             </form>
                 
             </div>
-        </div>';
-                    ?>
+        </div>
 
                 </u>
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
 <!-----CONTEÚDO----->
 <?php
-$option = $_GET['page'];
+/*$option = $_GET['page'];
 $page = "PL/".$option.".php";
-require_once $page;
+require_once $page;*/
 
-/*if(isset($_GET['page'])) {
+
+if(isset($_GET['page'])) {
     MainControllers::mensagem($msg);
     if (($_GET['page'] == 'EscolherVeiculo') && isset($msg)) echo '<br />' . $msg['Reserva'];
 //    if (($_GET['page'] == 'SignUp') && isset($msg)) echo '<br />' . $msg['User'];
-    $page = 'PL/' . $_GET['page'] . '.php';
-    require_once $page;
-}*/
+    $valor = 'PL/' . $_GET['page'] . '.php';
+    require_once $valor;
+}
 ?>
 <!-----CONTEÚDO----->
 <!---Footer------->
@@ -201,6 +199,6 @@ require_once $page;
     <!---Footer------->
 </footer>
 
-</body>
+
 </html>
     

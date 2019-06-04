@@ -6,7 +6,7 @@
  * Time: 4:05 PM
  */
 
-require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/Categoria_VeículoDAL.php';
+require_once dirname(__FILE__).'/../DAL/Categoria_VeículoDAL.php';
 
 class Categoria_Veículo
 {
@@ -38,8 +38,6 @@ class Categoria_Veículo
         $this->capacidade=$dado6;
         $this->numeroPortas=$dado7;
         $this->precoDia=$dado8;
-
-
     }
 
     public function create()
