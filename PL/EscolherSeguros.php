@@ -20,10 +20,11 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
                 <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Escolher outro Veículo.</button></a>
             <hr class="d-sm-none">
         </div>
-        <!--<div class="col-sm-8">
-            <h2>Escolha o seu plano de seguro:</h2>-->
-            <!------ Insurance Table----->
-           <!-- <div id="tabela-responsiva" class="table-responsive">
+
+        <div class="col-sm-8">
+            <h2>Escolha o seu plano de seguro:</h2>
+            Insurance Table
+           <div id="tabela-responsiva" class="table-responsive">
                 <div class="membership-pricing-table">
                     <table>
                         <tbody>
@@ -49,8 +50,8 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
                             </th>
                             <th class="plan-header plan-header-standard">
                                 <div class="header-plan-inner">
-                                    <!-<span class="plan-head"> </span>-->
-                                   <!-- <span class="recommended-plan-ribbon">RECOMMENDED</span>
+                                    <span class="plan-head"> </span>
+                                   <span class="recommended-plan-ribbon">RECOMMENDED</span>
                                     <div class="pricing-plan-name">STANDARD</div>
                                     <div class="pricing-plan-price">
                                         <sup>€</sup>395<span>.99</span>
@@ -68,31 +69,31 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
                             <td></td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                    <input class="form-check-input" type="radio" name="UserFreeRadios" id="exampleRadios1"
                                            value="option1">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                    <input class="form-check-input" type="radio" name="UserBasicRadios" id="exampleRadios2"
                                            value="option2">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                    <input class="form-check-input" type="radio" name="UserPlusRadios"
                                            id="exampleRadios3" value="option3">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                    <input class="form-check-input" type="radio" name="UserStandardRadios"
                                            id="exampleRadios4" value="option4" checked>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                    <input class="form-check-input" type="radio" name="UserPremiumRadios"
                                            id="exampleRadios5" value="option5">
                                 </div>
                             </td>
@@ -110,7 +111,7 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
                             <td><span class="icon-no glyphicon glyphicon-remove-circle"></span></td>
                             <td><span class="icon-no glyphicon glyphicon-remove-circle"></span></td>
                             <td><span class="icon-no glyphicon glyphicon-remove-circle"></span></td>
-                            <td><span class="icon-yes glyphicon glyphicon-ok-circle"></span></td>
+                            <td><span class="icon-no glyphicon glyphicon-remove-circle"></span></td>
                             <td><span class="icon-yes glyphicon glyphicon-ok-circle"></span></td>
                         </tr>
                         <tr>

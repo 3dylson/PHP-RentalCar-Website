@@ -13,9 +13,7 @@ class Seguro
     public $TipoDeCobertura;
     public $Descricao;
     public $Custo;
-
     public $Reserva_idReserva;
-
 
     public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6){
         $this->idSeguro=$dado1;
@@ -26,7 +24,6 @@ class Seguro
         $this->Reserva_idReserva=$dado6;
 
     }
-
 
     public function create(){
         return SeguroDAL::create($this);
