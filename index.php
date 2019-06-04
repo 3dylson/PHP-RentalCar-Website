@@ -2,8 +2,9 @@
 if(session_status()==PHP_SESSION_NONE) {
     session_start();
 }
+require_once (__DIR__. 'Controllers/MainControllers.php');
 
-require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/MainControllers.php';
+//require_once $_SERVER['DOCUMENT_ROOT']. 'Controllers/MainControllers.php';
 require_once $_SERVER['DOCUMENT_ROOT']. 'DAL/DBconnection.php';
 $msg=[
     "estado"=>[],
@@ -135,6 +136,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 $option = $_GET['page'];
 $page = "PL/".$option.".php";
 require_once $page;
+
 
 /*if(isset($_GET['page'])) {
     MainControllers::mensagem($msg);

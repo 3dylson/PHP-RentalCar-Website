@@ -36,7 +36,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
         <!--</div>
     </div>-->
 <br>
-        <a href="./index.php?page=EscolherVeiculo" type="submit" name="Reservar" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
+        <a href="../index.php?page=EscolherVeiculo" type="submit" name="Reservar" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Pesquisar</a>
 
         <!---------<input  type="submit" value="PESQUISAR" class="submit"/>---->
         <!--Search Menu Ends-->
