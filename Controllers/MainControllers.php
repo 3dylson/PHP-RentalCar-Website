@@ -25,7 +25,7 @@ class MainControllers
                 <u class="nav navbar-nav navbar-right"/>
                     <br>
                     
-                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['nome'] . ' </button>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>'  .  $userinfo['nome'] . ' </button>
                     <div class="form-popup" id="myForm">
                         <form class="form-container" method="post" >
                             <h1></h1>
@@ -134,7 +134,7 @@ class MainControllers
             <div class="collapse navbar-collapse" id="myNavbar">
                 <u class="nav navbar-nav navbar-right"/>
                     <br>
-                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>'  .  $userinfo['nome'] . ' </button>
                     <div class="form-popup" id="myForm">
                         <form method="post" class="form-container">
                             <h1></h1>

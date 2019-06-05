@@ -16,7 +16,7 @@ class UserDAL
         $sql= "INSERT INTO Utilizador (idCliente, nome, nome_login, email, dataNascimento, password, passwordConfirmated, nif, admin)
                 values (?,?,?,?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
-        $q->execute(array($e->idCliente,$e->nome,$e->nome_login,$e->email,$e->dataNascimento,$e->signUp_Password, $e->signUp_passwordConfirmated, $e->nif, $e->usertype));
+        $q->execute(array($e->idCliente,$e->nome,$e->nome_login,$e->email,$e->dataNascimento,$e->password, $e->passwordConfirmated, $e->nif, $e->usertype));
         DBconnection::disconnect();
 
     }
@@ -102,6 +102,7 @@ class UserDAL
             $row=$result->fetch();
             return $row["idCliente"];
         }else{
+            echo 'User não Encontrado!';
             return -1;
         }
     }
