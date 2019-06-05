@@ -10,6 +10,7 @@ require_once dirname(__FILE__). '/VeículoController.php';
 class MainControllers
 {
     public static function getNavAdmin(){
+        if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
         $aux=[
 
             'NavAdmin'=>'
@@ -23,7 +24,8 @@ class MainControllers
             <div class="collapse navbar-collapse" id="myNavbar">
                 <u class="nav navbar-nav navbar-right"/>
                     <br>
-                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
+                    
+                    <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['nome'] . ' </button>
                     <div class="form-popup" id="myForm">
                         <form class="form-container" method="post" >
                             <h1></h1>
@@ -54,8 +56,9 @@ class MainControllers
                             }
                         </script>
                     </div>
-                    <a href="">
-                       <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                     <form method="post">
+                       <button name="Logout" type="submit" value="" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                       </form>
                 </ul>
             </div>
         </div>
@@ -67,6 +70,7 @@ class MainControllers
         return $aux;
     }
     public static function getNavSemRegisto(){
+
         $aux=[
             'Nav'=>'
 <div class="container">
@@ -89,7 +93,7 @@ class MainControllers
                             <input id="log2" type="email" placeholder="Enter Email" name="userEmail" required>
 
                             <label for="psw"><b>Password</b></label>
-                            <input id="log" type="password" placeholder="Enter Password" name="signUp-Password" required>
+                            <input id="log" type="password" placeholder="Enter Password" name="signUp_Password" required>
                             <br>
                             <button type="submit" name="Login" class="btn">Login</button>
                             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
@@ -118,8 +122,8 @@ class MainControllers
         return $aux;
     }
     public static function getNavUser(){
+        if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
         $aux=[
-
             'NavUser'=>'<div class="container">
     <div class="row">
         <div class="col-sm-6">
@@ -159,7 +163,7 @@ class MainControllers
                             }
                         </script>
                     </div>
-                    <a href="">
+                    
                        <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
                 </ul>
             </div>
@@ -172,14 +176,14 @@ class MainControllers
     }
     public static function logout(){
         if(UserController::typeofuser())
-            return '<a href="../index.php?Logout">Logout</a>' ;
+            return '<a href="./index.php?Logout"></a>' ;
         else
-            return '<a href="../index.php?Logout">Logout</a>';
+            return '<a href="./index.php?Logout"></a>';
     }
 
     static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
-            $c=new Utilizador("1","root","GrupoSete","gruposete@example.com","2019/01/01",
+            $c=new User("1","root","GrupoSete","gruposete@example.com","2019/01/01",
                 "admin","admin", "999999999", "1" );
             $c->create();
         }

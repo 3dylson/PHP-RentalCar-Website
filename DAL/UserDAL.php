@@ -24,7 +24,7 @@ class UserDAL
         $conn= DBconnection::connect();
         $sql="DELETE FROM Utilizador WHERE idCliente = ?";
         $q=$conn->prepare($sql);
-        $q->execute(Array($e->id));
+        $q->execute(Array($e->idCliente));
         DBconnection::disconnect();
     }
     static public function mostrarUsers(){
@@ -67,9 +67,9 @@ class UserDAL
     }
     public static function verificarlogin1($e){
         $conn= DBconnection::connect();
-        $sql='SELECT idCliente FROM Utilizador WHERE nome_login=?';
+        $sql='SELECT idCliente FROM Utilizador WHERE email=?';
         $result=$conn->prepare($sql);
-        $result->execute(Array($e->nome_login));
+        $result->execute(Array($e->email));
         DBconnection::disconnect();
         if($result->rowCount()>0){
             return true;
@@ -85,7 +85,7 @@ class UserDAL
         $result->execute(Array($e->idCliente));
         $type=$result->fetch();
         DBconnection::disconnect();
-        if($type['Admin']==1){
+        if($type['admin']==1){
             return true;
         }else{
             return false;
@@ -95,9 +95,9 @@ class UserDAL
 
     public static function verificarlogin($e){
         $conn= DBconnection::connect();
-        $sql='SELECT idCliente FROM Utilizador WHERE nome_login= ? AND password= ?';
+        $sql='SELECT idCliente FROM Utilizador WHERE email= ? AND password= ?';
         $result=$conn->prepare($sql);
-        $result->execute(Array($e->nome_login,$e->password));
+        $result->execute(Array($e->email,$e->password));
         if($result->rowCount()>0){
             $row=$result->fetch();
             return $row["idCliente"];
@@ -130,7 +130,7 @@ class UserDAL
 
     public static function verificarPass(){
         $conn= DBconnection::connect();
-        $sql="Select * FROM Utilizador WHERE ID=?";
+        $sql="Select * FROM Utilizador WHERE idCliente=?";
         $result=$conn->prepare($sql);
         $result->execute(Array($_SESSION['idCliente']));
         $row=$result->fetch();
