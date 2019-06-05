@@ -16,7 +16,7 @@ class UserDAL
         $sql= "INSERT INTO Utilizador (idCliente, nome, nome_login, email, dataNascimento, password, passwordConfirmated, nif, admin)
                 values (?,?,?,?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
-        $q->execute(array($e->idCliente,$e->nome,$e->nome_login,$e->email,$e->dataNascimento,$e->password, $e->passwordConfirmated, $e->nif, $e->usertype));
+        $q->execute(array($e->idCliente,$e->nome,$e->nome_login,$e->email,$e->dataNascimento,$e->signUp_Password, $e->signUp_passwordConfirmated, $e->nif, $e->usertype));
         DBconnection::disconnect();
 
     }
@@ -45,7 +45,7 @@ class UserDAL
         $conn= DBconnection::connect();
         $sql='UPDATE Utilizador SET nome = ?, email = ?, dataNascimento = ?, password=?, nif=?  WHERE idCliente= ?';
         $result=$conn->prepare($sql);
-        $result->execute(Array($e->nome,$e->email,$e->dataNascimento, $e->password, $e->nif));
+        $result->execute(Array($e->nome,$e->email,$e->dataNascimento, $e->signUp_Password, $e->nif));
         if($result->rowCount()>0)
             echo "Alteração feita com sucesso!". "<br>";
         else

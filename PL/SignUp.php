@@ -24,9 +24,9 @@
                             <br>
                             <input type="text" class="form-control" id="validationDefault04" name="nif" placeholder="NIF" required>
                             <br>
-                            <input type="password" class="form-control" id="col- col-form-label" name="signUp-Password" placeholder="PassWord"  required>
+                            <input type="password" class="form-control" id="col- col-form-label" name="signUp_Password" placeholder="PassWord"  required>
                            <br>
-                            <input type="password" class="form-control" id="col- col-form-label" name="signUp-passwordConfirmated" placeholder="Confirmar PassWord"  required>
+                            <input type="password" class="form-control" id="col- col-form-label" name="signUp_passwordConfirmated" placeholder="Confirmar PassWord"  required>
                             <br>
                             <input class="btn btn-primary" type="submit" value="Submit" name="user-signup" width="inherit" >
                             <div>

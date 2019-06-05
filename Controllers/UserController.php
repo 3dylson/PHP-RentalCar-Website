@@ -9,8 +9,8 @@ class UserController
             $nome=$_POST['userName'];
             $email=$_POST['userEmail'];
             $dataNascimento=$_POST['dataNascimento'];
-            $password=$_POST['signUp-Password'];
-            $passwordConfirmated=$_POST['signUp-passwordConfirmated'];
+            $password=$_POST['signUp_Password'];
+            $passwordConfirmated=$_POST['signUp_passwordConfirmated'];
             $nif=$_POST['nif'];
             if(!$nome_login){
                 $msg["estado"]='Insira o seu Username.';
@@ -54,7 +54,7 @@ class UserController
 
     public static function createUser(){
         $user= new User('',$_POST['nome_login'],$_POST['userName'],$_POST['userEmail'],$_POST['dataNascimento'],
-            $_POST['signUp-Password'],$_POST['signUp-passwordConfirmated'], $_POST['nif'], '');
+            $_POST['signUp_Password'],$_POST['signUp_passwordConfirmated'], $_POST['nif'], '');
         if(isset($_SESSION['idCliente']) && UserController::typeofuser()){$user->usertype=1;}
         else {$user->usertype=0;}
         $user->create();
@@ -63,7 +63,7 @@ class UserController
 
     public static function createAdmin(){
         $user= new User('',$_POST['nome_login'],$_POST['userName'],$_POST['userEmail'],$_POST['dataNascimento'],
-            $_POST['signUp-Password'], $_POST['signUp-passwordConfirmated'], $_POST['nif'],'');
+            $_POST['signUp_Password'], $_POST['signUp_passwordConfirmated'], $_POST['nif'],'');
         $user->usertype='1';
         $user->create();
     }
@@ -76,7 +76,7 @@ class UserController
     public static function verificarlogin(){
         $user1= new User();
         $user1->email=$_POST['userEmail'];
-        $user1->password=$_POST['signUp-Password'];
+        $user1->password=$_POST['signUp_Password'];
         if(($aux=$user1->verificarlogin())>0 || $aux==-1)
             $_SESSION['idCliente']=$aux;
     }
