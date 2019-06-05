@@ -180,7 +180,7 @@ class MainControllers
     static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
             $c=new Utilizador("1","root","GrupoSete","gruposete@example.com","2019/01/01",
-                "admin","admin", "282685489", "1" );
+                "admin","admin", "999999999", "1" );
             $c->create();
         }
     }
