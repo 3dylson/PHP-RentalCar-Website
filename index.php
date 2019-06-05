@@ -15,7 +15,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en"
 <head>
     <title>Rental Car - </title>
     <!-- Required meta tags -->
@@ -37,6 +37,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 
 
 </head>
+<body class="bgHome">
 <!-----NAV BAR-------->
 <?php
 
@@ -127,6 +128,5 @@ require_once $page;
     </div>
     <!---Footer------->
 </footer>
-
-
+</body>
 </html>

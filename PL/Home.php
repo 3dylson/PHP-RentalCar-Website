@@ -1,5 +1,5 @@
 <?php
-if(session_status()==PHP_SESSION_NONE){
+/*if(session_status()==PHP_SESSION_NONE){
     session_start();
 }
 require_once (dirname(__FILE__).'/../Controllers/MainControllers.php');
@@ -11,7 +11,7 @@ $msg=[
 ];
 $msg= MainControllers::process();
 if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
-?>
+*/?>
 <!--Main Quote Starts-->
 <body class="bgHome">
 <div class="ph">
