@@ -14,7 +14,7 @@
                         <form  method="post" class="col-md-6">
 
                             <br>
-                            <input type="text" class="form-control" id="validationDefaultUsername" name="UserName" aria-describedby="inputGroupPrepend2" placeholder="UserNAme" required>
+                            <input type="text" class="form-control" id="validationDefaultUsername" name="nome_login" aria-describedby="inputGroupPrepend2" placeholder="UserNAme" required>
                             <br>
                             <input type="text" class="form-control" id="validationDefault01" name="Name" placeholder=" Nome do User"  required>
                            <br>
