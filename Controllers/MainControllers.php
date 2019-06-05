@@ -25,8 +25,8 @@ class MainControllers
                     <br>
                     <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
                     <div class="form-popup" id="myForm">
-                        <form method="post" class="form-container">
-                            <h1>Welcome!</h1>
+                        <form class="form-container" method="post" >
+                            <h1></h1>
                             <div class="container">
                                     <div class="row">
                                         <div class="col-sm-1">
@@ -81,8 +81,8 @@ class MainControllers
                     <br>
                     <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span> Login</button>
                     <div class="form-popup" id="myForm">
-                        <form method="post" class="form-container">
-                            <h1>Login</h1>
+                        <form method="post" class="form-container" >
+                            <h1></h1>
 
                             <label for="email"><b>Email</b></label>
                             <br>
@@ -133,7 +133,7 @@ class MainControllers
                     <button class="open-button" onclick="openForm()"><span class="glyphicon glyphicon-log-in"></span>' . $userinfo['Nome'] . ' </button>
                     <div class="form-popup" id="myForm">
                         <form method="post" class="form-container">
-                            <h1>Welcome!</h1>
+                            <h1></h1>
                             <div class="container">
                                     <div class="row">
                                         <div class="col-sm-1">

@@ -307,8 +307,11 @@ h6{
  .form-container {
      max-width: 300px;
      padding: 10px;
-     background-color: transparent;
+     background-color: white;
+     margin-block-start: 70px;
  }
+
+
 
  /* Full-width input fields */
  .form-container input[type=text], .form-container input[type=password] {
