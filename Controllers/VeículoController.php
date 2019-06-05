@@ -40,6 +40,13 @@ class VeículoController
         $Veiculo = new Veículo('', $_POST['NumeroDeRegistro'], $_POST['Disponibilidade'], '', '', $_POST['Img'], $_POST['Nome'] );
         $Veiculo->create();
     }
+
+    static public function deleteVeiculo()
+    {
+        $Veiculo = new Veículo();
+        $Veiculo->delete();
+    }
+
     static public function mostrarVeiculos(){
         Veículo::mostrarVeiculos();
     }

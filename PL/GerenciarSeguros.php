@@ -13,6 +13,7 @@
             <!----Side Bar links----->
 
             <!------ Insurance Table----->
+            <div class="col-sm-8 text-left">
             <div class="table-responsive">
                 <div class="membership-pricing-table">
                     <table>
@@ -129,7 +130,7 @@
             </div>
             <!------ Insurance Table----->
         </div>
+        </div>
     </div>
 </section>
-</body>
-</html>
+
