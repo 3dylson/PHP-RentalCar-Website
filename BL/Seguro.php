@@ -19,7 +19,7 @@ class Seguro
     public $Reserva_idReserva;
 
 
-    public function __construct($dado1,$dado2,$dado3,$dado4,$dado5,$dado6){
+    public function __construct($dado1=null,$dado2=null,$dado3=null,$dado4=null,$dado5=null,$dado6=null){
         $this->idSeguro=$dado1;
         $this->Nome=$dado2;
         $this->TipoDeCobertura=$dado3;
