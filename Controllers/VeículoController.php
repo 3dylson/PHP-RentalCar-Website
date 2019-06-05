@@ -6,14 +6,29 @@ class VeículoController
     static public function Process()
     {
         if (isset($_POST['Add'])) {
-            if (!isset($_POST['NumeroDeRegistro'])) {
+            $idVeiculo=$_POST['idVeiculo'];
+            $NumeroDeRegistro=$_POST['NumeroDeRegistro'];
+            $Disponibilidade=$_POST['Disponibilidade'];
+            $Categoria_Veiculo_idCategoria_Veiculo=$_POST['Categoria_Veiculo_idCategoria_Veiculo'];
+            $Reserva_idReserva=$_POST['Reserva_idReserva'];
+            $Img=$_POST['Img'];
+            $Nome=$_POST['Nome'];
+            if (!$idVeiculo) {
+                $msg["estado"] = 'Insira o ID de veiculo';
+            }elseif (!$NumeroDeRegistro) {
                 $msg["estado"] = 'Insira o n_Registro';
-            } elseif (!isset($_POST['Disponibilidade'])) {
+            }elseif (!$Disponibilidade) {
                 $msg["estado"] = 'Insira a disponibilidade';
-            } elseif (!isset($_POST['Nome'])) {
-            $msg["estado"] = 'Insira o Nome do Veículo';
-        }
-            else {
+            } elseif (!$Categoria_Veiculo_idCategoria_Veiculo) {
+                $msg["estado"] = 'Insira a Caegoria do Veículo';
+            } elseif (!$Reserva_idReserva) {
+                $msg["estado"] = 'Insira o ID Reserva';
+            } elseif (!$Img) {
+            $msg["estado"] = 'Insira a Imagem';
+            } elseif (!$Nome) {
+                $msg["estado"] = 'Insira o Nome do Veículo';
+            }else {
+
                 self::criarVeiculo();
                 $msg["estado"] = 'Criado Com Sucesso!';
             }
