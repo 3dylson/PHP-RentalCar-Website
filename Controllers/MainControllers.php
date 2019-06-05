@@ -12,7 +12,8 @@ class MainControllers
     public static function getNavAdmin(){
         $aux=[
 
-            'NavAdmin'=>'<div class="container">
+            'NavAdmin'=>'
+<div class="container">
     <div class="row">
         <div class="col-sm-6">
             <a href="./index.php?page=Home" name="Logo">
@@ -67,7 +68,8 @@ class MainControllers
     }
     public static function getNavSemRegisto(){
         $aux=[
-            'Nav'=>'<div class="container">
+            'Nav'=>'
+<div class="container">
     <div class="row">
         <div class="col-sm-6">
             <a href="./index.php?page=Home" name="Logo">
