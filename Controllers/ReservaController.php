@@ -5,7 +5,7 @@ class ReservaController
 {
 
     static public function Process(){
-        if(isset($_POST['Reservar'])){
+        if(isset($_POST['Pesquisar'])){
             $DatadaReserva=$_POST['DatadaReserva'];
             $DatadeDevolucao=$_POST['DatadeDevolucao'];
             $LocalPickUp=$_POST['LocalPickUp'];
