@@ -42,7 +42,7 @@ class UserController
         if(isset($_POST['Login'])){
             self::verificarlogin();
             if(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0){
-                header('Location: ./index.php?=Home');
+                header('Location: ./index.php?page=Home');
                 //unset($_GET['page']);
             }
         }
@@ -93,7 +93,7 @@ class UserController
     }
 
     public static function ProcessLogout(){
-        if(isset($_GET['Logout'])){
+        if(isset($_POST['Logout'])){
             $_SESSION = array();
             if (ini_get("session.use_cookies")) {
                 $params = session_get_cookie_params();
@@ -103,8 +103,9 @@ class UserController
                 );}
             session_destroy();
             //$_GET['page']='login';
-            header('Location: ./index.php?=Home');
+            header('Location: ./index.php?page=Home');
         }
+        exit;
     }
 
     public static function updatePassword()

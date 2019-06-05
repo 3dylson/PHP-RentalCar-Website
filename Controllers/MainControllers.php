@@ -56,9 +56,9 @@ class MainControllers
                             }
                         </script>
                     </div>
-                     <form method="post">
-                       <button name="Logout" type="submit" value="" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
-                       </form>
+                     <a href="./index.php?page=Logout">
+                       <button class="open-button" name="Logout"><span class="glyphicon glyphicon-log-out"></span>Logout</button></a>
+                       
                 </ul>
             </div>
         </div>
@@ -163,8 +163,8 @@ class MainControllers
                             }
                         </script>
                     </div>
-                    
-                       <button name="Logout" type="submit" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
+                    <a href="./index.php?page=Logout">
+                       <button name="Logout" class="open-button"><span class="glyphicon glyphicon-log-out"></span> Logout</button></a>
                 </ul>
             </div>
         </div>
@@ -174,11 +174,11 @@ class MainControllers
         ];
         return $aux;
     }
-    public static function logout(){
+    public static function Logout(){
         if(UserController::typeofuser())
-            return '<a href="./index.php?Logout"></a>' ;
+            return '<a href="./index.php?page=Logout"></a>' ;
         else
-            return '<a href="./index.php?Logout"></a>';
+            return '<a href="./index.php?page=Logout"></a>';
     }
 
     static public function firstCall(){

@@ -77,6 +77,7 @@ if(isset($_GET['page'])) {
     require_once $valor;
 }
 ?>
+
 <!-----CONTEÚDO----->
 <!---Footer------->
 <footer class="container-fluid bg-grey py-5">
