@@ -13,20 +13,20 @@
 
                         <form  method="post" class="col-md-6">
 
-                            <label for="validationDefaultUsername">Username</label>
-                            <input type="text" class="form-control" id="validationDefaultUsername" name="nome_login" aria-describedby="inputGroupPrepend2" required>
-                            <label for="validationDefault01">Nome</label>
-                            <input type="text" class="form-control" id="validationDefault01" name="userName" placeholder=" Nome&Apelido"  required>
-                            <label for="validationDefault02">Email</label>
-                            <input type="text" class="form-control" id="validationDefault02" name="userEmail" placeholder="ex: gel@gmail.com"  required>
-                            <label for="validationDefault03">Data de Nascimento</label>
-                            <input type="text" class="form-control" id="validationDefault03" name="dataNascimento" placeholder=" [YYYY/MM/DD]" required>
-                            <label for="validationDefault04">NIF</label>
-                            <input type="text" class="form-control" id="validationDefault04" name="nif" placeholder="ex: 999999999" required>
-                            <label for="inputPassword3" class="col- col-form-label">Password</label>
-                            <input type="password" class="form-control" id="col- col-form-label" name="signUp-Password"  required>
-                            <label for="inputPassword3" class="col- col-form-label">Confirmar Password</label>
-                            <input type="password" class="form-control" id="col- col-form-label" name="signUp-passwordConfirmated"  required>
+                            <br>
+                            <input type="text" class="form-control" id="validationDefaultUsername" name="UserName" aria-describedby="inputGroupPrepend2" placeholder="UserNAme" required>
+                            <br>
+                            <input type="text" class="form-control" id="validationDefault01" name="Name" placeholder=" Nome do User"  required>
+                           <br>
+                            <input type="text" class="form-control" id="validationDefault02" name="userEmail" placeholder="Email"  required>
+                           <br>
+                            <input type="text" class="form-control" id="validationDefault03" name="dataNascimento" placeholder="Data Nascimento AAAA/MM/DD" required>
+                            <br>
+                            <input type="text" class="form-control" id="validationDefault04" name="nif" placeholder="NIF" required>
+                            <br>
+                            <input type="password" class="form-control" id="col- col-form-label" name="signUp-Password" placeholder="PassWord"  required>
+                           <br>
+                            <input type="password" class="form-control" id="col- col-form-label" name="signUp-passwordConfirmated" placeholder="Confirmar PassWord"  required>
                             <br>
                             <input class="btn btn-primary" type="submit" value="Submit" name="user-signup" width="inherit" >
                             <div>
