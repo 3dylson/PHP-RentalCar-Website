@@ -35,7 +35,13 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
     <link rel="stylesheet" href="./CSS/Style.css">
     <link rel="stylesheet" href="./CSS/StyleGE.css">
 
-
+   <style> .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+    margin-block-start: 90px;
+    }
+</style>
 </head>
 <body class="bgHome">
 <!-----NAV BAR-------->
