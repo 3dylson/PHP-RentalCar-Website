@@ -16,7 +16,7 @@
                             <br>
                             <input type="text" class="form-control" id="validationDefaultUsername" name="nome_login" aria-describedby="inputGroupPrepend2" placeholder="UserNAme" required>
                             <br>
-                            <input type="text" class="form-control" id="validationDefault01" name="Name" placeholder=" Nome do User"  required>
+                            <input type="text" class="form-control" id="validationDefault01" name="userName" placeholder=" Insira o seu Nome&Apelido"  required>
                            <br>
                             <input type="text" class="form-control" id="validationDefault02" name="userEmail" placeholder="Email"  required>
                            <br>
