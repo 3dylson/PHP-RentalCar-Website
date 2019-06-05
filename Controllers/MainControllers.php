@@ -177,13 +177,13 @@ class MainControllers
             return '<a href="../index.php?Logout">Logout</a>';
     }
 
-   /* static public function firstCall(){
+    static public function firstCall(){
         if(UserController::verificarPrimeiroUtilizador()){
             $c=new Utilizador("1","root","GrupoSete","gruposete@example.com","2019/01/01",
                 "admin","admin", "282685489", "1" );
             $c->create();
         }
-    }*/
+    }
 
     static public function mensagem($msg){
         if(($_GET['page']=='EscolherSeguros') && isset($msg)){ echo '<br />' . $msg['Seguro']; unset($msg['Seguro']);}
@@ -204,7 +204,7 @@ class MainControllers
     }
 
     public static function process(){
-//        self::firstCall();
+        self::firstCall();
         $estado['User']=UserController::Process();
         $estado['Categoria_Veículo']=Categoria_VeículoController::Process();
         $estado['Promoção']=PromoçãoController::Process();

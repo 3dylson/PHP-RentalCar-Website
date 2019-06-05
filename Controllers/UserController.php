@@ -42,7 +42,7 @@ class UserController
         if(isset($_POST['Login'])){
             self::verificarlogin();
             if(isset($_SESSION['idCliente']) && $_SESSION['idCliente']>0){
-                header('Location: ../index.php');
+                header('Location: ./index.php?=Home');
                 //unset($_GET['page']);
             }
         }
@@ -85,9 +85,9 @@ class UserController
         $user->nome_login=$logaux;
         return $user->verificarlogin1();
     }
-    /*public static function verificarPrimeiroUtilizador(){
+    public static function verificarPrimeiroUtilizador(){
         return User::verificarPrimeiroUtilizador();
-    }*/
+    }
     public static function getInformUser(){
         return User::getInformUser();
     }
@@ -103,7 +103,7 @@ class UserController
                 );}
             session_destroy();
             //$_GET['page']='login';
-            header('Location: ./Home.php');
+            header('Location: ./index.php?=Home');
         }
     }
 

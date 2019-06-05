@@ -116,7 +116,7 @@ class UserDAL
         }
     }
 
-     /*public static function verificarPrimeiroUtilizador(){
+     public static function verificarPrimeiroUtilizador(){
          $conn= DBconnection::connect();
          $sql="SELECT * FROM Utilizador";
          $result=$conn->prepare($sql);
@@ -126,7 +126,7 @@ class UserDAL
              return false;
          else
              return true;
-     }*/
+     }
 
     public static function verificarPass(){
         $conn= DBconnection::connect();

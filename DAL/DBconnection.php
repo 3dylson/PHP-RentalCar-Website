@@ -7,7 +7,7 @@ class DBconnection
     public function __construct(){}
     public static function connect() {
         try {
-            self::$dbconnection = new PDO("mysql:host=localhost;dbname=mydb;charset=UTF8","root","admin");
+            self::$dbconnection = new PDO("mysql:host=localhost;dbname=mydb;charset=UTF8","root","");
             self::$dbconnection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
 
         } catch (Exception $e) {
