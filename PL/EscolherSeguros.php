@@ -10,7 +10,7 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
             <?php echo '<img src="' . $reserva_veiculo['Img'] . '" height="170" width="238""></img> ';?>
 <!--            <p>SUV | Diesel | Manual | 5 Lugares | 5 Portas</p>-->
             <form method="post">
-                <a class="nav-link active" href="/index.php?page=PagamentoConclusao">
+                <a class="nav-link active" href="./index.php?page=PagamentoConclusao">
                     <button class="btn btn-success" type="submit" name="Reservar" value="Pagamento"><span class="glyphicon glyphicon-euro"></span></button></a>
             </form>
 

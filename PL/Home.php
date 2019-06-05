@@ -14,14 +14,14 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 */?>
 <!--Main Quote Starts-->
 <body class="bgHome">
-<div class="ph">
+<div class="ph" style="margin-left: -200px">
 
     <h5>THE ROYAL ESSENCE OF JORNEY</h5>
     <h2>RELAXED JORNEY EVER</h2>
 </div>
 <!--Main Quote Ends-->
 <!--Search Menu starts-->
-<div class="search">
+<div class="search" style="margin-left: 190px">
     <form method="post">
         <!--<div class="container">
             <div class="row">-->
