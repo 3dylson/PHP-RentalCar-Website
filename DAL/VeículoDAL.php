@@ -30,6 +30,19 @@ class VeículoDAL
         $sql="Select * FROM Veículos";
         $result=$conn->prepare($sql);
         $result->execute();
+        while($row=$result->fetch()){
+            echo
+                '<div class="col-6 col-sm-4"><div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../Imagens/BMW-X5-Rent.png" height="180" width="286" alt="Card image cap">
+                    <div class="card-body">
+                        <strong class="card-title">'.$row["coluna BD"].'</strong>
+                        <p class="card-text">'.$row["coluna BD"].' | '.$row["coluna BD"].' | '.$row["coluna BD"].' | '.$row["coluna BD"].' Lugares | '.$row["coluna BD"].' Portas</p>
+                        <button type="button" class="btn btn-danger">Remover</button>
+                        <button type="button" class="btn btn-warning">Indisponível</button>
+                    </div>
+                </div></div>';
+        }
+
         DBConnection::disconnect();
     }
 
@@ -105,7 +118,7 @@ class VeículoDAL
 
     static public function mostrarVeiculosDisponiveis(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Veículos";
+        $sql="Select v.* FROM Veículos v LEFT JOIN reserva r ON v.idVeiculo=r.ReservaIdVeiculo WHERE r.id IS NULL;";
         $result=$conn->prepare($sql);
         $result->execute();
         $aux=1;
