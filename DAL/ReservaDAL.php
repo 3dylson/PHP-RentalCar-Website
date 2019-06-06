@@ -11,7 +11,7 @@ class ReservaDAL
         $conn= DBConnection::connect();
         $sql= "INSERT INTO Reserva (idReserva,DatadaReserva,DatadeDevolucao,LocalPickUp,LocalDropOff,Cliente_idCliente,Promocao_idPromocao) values (?,?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
-        $q->execute(array($e->idReserva,$e->DatadaReserva,$e->DatadeDevolucao,$e->LocalPickUp,$e->LocalDropOff,$e->Cliente_idCliente,$e->Promocao_idPromocao));
+        $q->execute(array($e->idReserva,$e->DatadaReserva,$e->DatadeDevolucao,$e->LocalPickUp,$e->LocalDropOff,$e->Cliente_idCliente=$_SESSION['idCliente'],$e->Promocao_idPromocao));
         if($q->rowCount()>0){
             $sql= "Select * FROM Reserva WHERE idReserva=(SELECT MAX(idReserva) FROM Reserva)";
             $q=$conn->prepare($sql);

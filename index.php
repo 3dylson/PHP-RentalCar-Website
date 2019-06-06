@@ -64,18 +64,18 @@ if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
 <!-----NAV BAR-------->
 <!-----CONTEÚDO----->
 <?php
-/*$option = $_GET['page'];
+$option = $_GET['page'];
 $page = "PL/".$option.".php";
-require_once $page;*/
+require_once $page;
 
 
-if(isset($_GET['page'])) {
+/*if(isset($_GET['page'])) {
     MainControllers::mensagem($msg);
     if (($_GET['page'] == 'EscolherVeiculo') && isset($msg)) echo '<br />' . $msg['Reserva'];
 //    if (($_GET['page'] == 'SignUp') && isset($msg)) echo '<br />' . $msg['User'];
     $valor = 'PL/' . $_GET['page'] . '.php';
     require_once $valor;
-}
+}*/
 ?>
 
 <!-----CONTEÚDO----->

@@ -52,4 +52,12 @@ class Categoria_VeículoDAL
         $q->execute(Array($e->idCategoria_Veiculo));
         DBConnection::disconnect();
     }
+
+    static public function mostrarCategorias(){
+        $conn= DBConnection::connect();
+        $sql="Select * FROM Categoria_Veículo WHERE idVeiculo=?";
+        $result=$conn->prepare($sql);
+        $result->execute(Array($_SESSION['idVeiculo']));
+        DBConnection::disconnect();
+    }
 }

@@ -43,4 +43,9 @@ class Categoria_VeículoController
             $_POST['transmissao'], $_POST['capacidade'], $_POST['numeroPortas'], $_POST['precoDia']);
         $submit->create();
     }
+
+    static public function mostrarCategorias()
+    {
+        Categoria_Veículo::mostrarCategorias();
+    }
 }

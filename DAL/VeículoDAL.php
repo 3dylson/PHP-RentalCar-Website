@@ -27,9 +27,26 @@ class VeículoDAL
     }
     static public function mostrarVeiculos(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Veículos";
+        $sql="Select * FROM Veículo";
         $result=$conn->prepare($sql);
         $result->execute();
+        while($row=$result->fetch()){
+            echo
+                '  <div class="col-md-3 col-sm-6">
+    		<span class="thumbnail">
+            <img src="' . $row['Img'] . '" alt="card image cap" height="180" width="286"">
+            <h4>'.$row["Nome"].'</h4>
+            	<hr class="line">
+      			<div class="row">
+      				<div class="col-md-6 col-sm-6">
+      				 <a href="./index.php?page=EscolherSeguros" target="_blank" > <button type="submit" name="" class="btn btn-info right" > Alugar!</button></a>
+      				</div>
+      			</div>
+      		</span>
+        </div>';
+
+        }
+
         DBConnection::disconnect();
     }
 
@@ -105,7 +122,7 @@ class VeículoDAL
 
     static public function mostrarVeiculosDisponiveis(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Veículos";
+        $sql="Select v.* FROM Veículos v LEFT JOIN reserva r ON v.idVeiculo=r.ReservaIdVeiculo WHERE r.id IS NULL;";
         $result=$conn->prepare($sql);
         $result->execute();
         $aux=1;
@@ -117,7 +134,7 @@ class VeículoDAL
                     $aux=0;
                 }
                 if(!isset($row['Reserva_idReserva'])){
-                    echo  '<tr> <td>' .$row['Nome'] .' </td><td><a href=./index.php?page=EscolherSeguros='.$row['idVeiculo'].'>Alugar!</a></td></tr>';
+                    echo  '<tr> <td>' .$row['Nome'] .' </td><td><a href=./index.php?page=EscolherSeguros'.$row['idVeiculo'].'>Alugar!</a></td></tr>';
                     $aux=-1;
                 }
 

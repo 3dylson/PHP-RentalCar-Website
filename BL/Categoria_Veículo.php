@@ -54,4 +54,9 @@ class Categoria_Veículo
     {
         Categoria_VeículoDAL::delete($this);
     }
+
+    static public function mostrarCategorias()
+    {
+        Categoria_VeículoDAL::mostrarCategorias();
+    }
 }

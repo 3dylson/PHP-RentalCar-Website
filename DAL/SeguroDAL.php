@@ -15,7 +15,7 @@ class SeguroDAL
         $conn= DBConnection::connect();
         $sql= "INSERT INTO Seguro (idSeguro,Nome,TipoDeCobertura,Descricao,Custo,Reserva_idReserva) values (?,?,?,?,?,?)";
         $q=$conn->prepare($sql);
-        $q->execute(array($e->idSeguro,$e->Nome,$e->TipoDeCobertura,$e->Descricao,$e->Custo,$e->Reserva_idReserva));
+        $q->execute(array($e->idSeguro,$e->Nome,$e->TipoDeCobertura,$e->Descricao,$e->Custo,$e->Reserva_idReserva=$_SESSION['idReserva']));
         DBConnection::disconnect();
 
     }
