@@ -20,13 +20,15 @@ class ReservaController
                 $msg["estado"]='Insira o local de DropOff.';
             }else{
                 self::criarReserva();
-                $msg["estado"]='Reserva criado com sucesso.';
+                $msg["estado"]='';
+
             }
             return $msg["estado"];
         }
         if(isset($_GET['deletReserva']) && isset($_SESSION['idReserva'])){
             self::deleteReserva();
         }
+
     }
     static public function mostrarReservas(){
         Reserva::mostrarReservas();
