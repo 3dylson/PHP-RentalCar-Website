@@ -8,7 +8,6 @@ class Reserva
     public $DatadeDevolucao;
     public $LocalPickUp;
     public $LocalDropOff;
-
     public $Cliente_idCliente;
     public $Promocao_idPromocao;
 
