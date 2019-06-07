@@ -139,9 +139,9 @@ class UserDAL
     }
     public static function alterarPass(){
         $conn= DBconnection::connect();
-        $sql="UPDATE Utilizador SET password=? WHERE idCliente=?";
+        $sql="UPDATE Utilizador SET password=?, passwordConfirmated=? WHERE idCliente=?";
         $result=$conn->prepare($sql);
-        $result->execute(Array($_POST['new_password'],$_SESSION['idCliente']));
+        $result->execute(Array($_POST['new_password'],$_POST['repeatNewPass'],$_SESSION['idCliente']));
     }
 
 

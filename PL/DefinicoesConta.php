@@ -50,6 +50,7 @@
                         </div>
                             <!--end display user account information-->
                             <!--Alterar Password-->
+                        <form method="post">
                         <div class="divmain">
                             <h3><b>Alterar Password</b></h3>
                             </br>
@@ -61,6 +62,7 @@
                             <br>
                             <input class="btn btn-primary" type="submit" value="Atualizar Password" name="changepass" width="inherit">
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
