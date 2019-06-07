@@ -41,7 +41,7 @@ class VeículoDAL
     		<span class="thumbnail">
             <img src="data:image/jpeg;base64,' . base64_encode($row['Img']) . '" alt="card image cap" height="180" width="286"">
             <h4>' . $row["Nome"] . '</h4>
-            <h4>' . $row["capacidade"] . '</h4>
+            <p style="color: black">' . $row["modelo"] . ' | ' . $row["combustivel"] . ' | ' . $row["transmissao"] . '</p>
             	<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">

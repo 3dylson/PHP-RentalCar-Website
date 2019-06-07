@@ -28,9 +28,28 @@ class SeguroDAL
     }
     static public function mostrarSeguros(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Seguro";
+        $sql="Select * FROM  Seguro, Veículo, Categoria_Veículo  WHERE Reserva_idReserva=?";
         $result=$conn->prepare($sql);
-        $result->execute();
+        $result->execute(Array($_SESSION['idReserva']));
+        while ($row = $result->fetch()) {
+
+            echo'
+
+            <h2> '.$row["Nome"].'</h2>
+            <img src="data:image/jpeg;base64,' . base64_encode($row['Img']) . '" alt="card image cap" height="180" width="286"">
+            <p style="color: black">' . $row["modelo"] . ' | ' . $row["combustivel"] . ' | ' . $row["transmissao"] . '</p>
+            <form method="post">
+                <a class="nav-link active" href="./index.php?page=PagamentoConclusao">
+                    <button class="btn btn-success" type="submit" name="Reservar" ><span class="glyphicon glyphicon-euro"> Pagamento! </span></button></a>
+            </form>
+
+         <strong style="margin-left: 10px"> Preço: '.$row["precoDia"].'</strong>
+            <br>
+            <a class="nav-link active" href="./index.php?page=EscolherVeiculo">
+                <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Escolher outro Veículo.</button></a>
+            <hr class="d-sm-none">
+        </div>';
+        }
         DBConnection::disconnect();
     }
 
