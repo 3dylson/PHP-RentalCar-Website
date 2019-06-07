@@ -46,8 +46,10 @@
 
 }
 p{
-   color: white;
+   color: black;
 }
+.p{
+    color: #000;}
 
 .search
 {
@@ -78,6 +80,13 @@ form, label
     outline: none;
     margin: 0;
     font-weight: bold;
+}
+
+
+
+.PASS
+{
+    color: white;
 }
 
 .local-levantamento
