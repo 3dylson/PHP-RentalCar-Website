@@ -53,7 +53,6 @@ class VeículoDAL
         }
         DBConnection::disconnect();
     }
-
     static public function mostrarNomeVeiculos(){
         $conn= DBConnection::connect();
         $sql="Select Nome FROM Veículos";
