@@ -37,7 +37,7 @@ class VeículoDAL
         $result1->execute();
         while($row=$result->fetch() && $row1=$result1->fetch()){
             echo
-                '  <div class="col-md-3 col-sm-6">
+                ' <div class="col-md-3 col-sm-6">
     		<span class="thumbnail">
             <img src="' . $row['Img'] . '" alt="card image cap" height="180" width="286"">
             <h4>'.$row["Nome"].'</h4>
