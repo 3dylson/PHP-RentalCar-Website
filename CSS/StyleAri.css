@@ -46,8 +46,10 @@
 
 }
 p{
-   color: white;
+   color: black;
 }
+.p{
+    color: #000;}
 
 .search
 {

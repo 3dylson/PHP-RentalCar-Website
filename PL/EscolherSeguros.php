@@ -1,25 +1,13 @@
 <?php
-if(isset($_GET['idVeiculo'])) $reserva_veiculo=Veículo::getVeiculoInfo();
+
 ?>
 
 <!------Content--------->
 <div class="container" style="margin-top:60px">
     <div class="row">
         <div class="col-sm-4">
-            <h2><?php echo $reserva_veiculo["Nome"];?></h2>
-            <?php echo '<img src="' . $reserva_veiculo['Img'] . '" height="170" width="238""></img> ';?>
-<!--            <p>SUV | Diesel | Manual | 5 Lugares | 5 Portas</p>-->
-            <form method="post">
-                <a class="nav-link active" href="./index.php?page=PagamentoConclusao">
-                    <button class="btn btn-success" type="submit" name="Reservar" ><span class="glyphicon glyphicon-euro"> Pagamento! </span></button></a>
-            </form>
 
-<!--            <strong style="margin-left: 10px"> Preço: 220.50€</strong>-->
-            <br>
-            <a class="nav-link active" href="./index.php?page=EscolherVeiculo">
-                <button class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Escolher outro Veículo.</button></a>
-            <hr class="d-sm-none">
-        </div>
+            <?php SeguroController::mostrarSeguros()?>
         <!--<div class="col-sm-8">
             <h2>Escolha o seu plano de seguro:</h2>-->
             <!------ Insurance Table----->

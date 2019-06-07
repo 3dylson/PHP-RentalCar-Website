@@ -1,4 +1,6 @@
 <?php
+
+
 ?>
 <!------Content--------->
 <div class="container" style="margin-top: 80px">
@@ -7,5 +9,7 @@
 
         <!-- BEGIN PRODUCTS -->
 
-      			<?php VeículoController::mostrarVeiculos();?>
+      			<?php VeículoController::mostrarVeiculos()?>
 
+    </div>
+</div>
