@@ -30,9 +30,9 @@ class VeículoDAL
         $sql="Select * FROM Veículo";
         $result=$conn->prepare($sql);
         $result->execute();
-        $sql1="Select marca, modelo, combustivel, transmissao, capacidade, numeroPortas, precodia 
-              FROM categoria_veículo cv
-              WHERE (cv.idCategoria_Veiculo = veículo.Categoria_Veiculo_idCategoria_Veiculo)";
+        $sql1='Select marca, modelo, combustivel, transmissao, capacidade, numeroPortas, precodia 
+              FROM categoria_veículo
+              WHERE (categoria_veículo.idCategoria_Veiculo = veículo.Categoria_Veiculo_idCategoria_Veiculo)';
         $result1=$conn->prepare($sql1);
         $result1->execute();
         while($row=$result->fetch() && $row1=$result1->fetch()){
