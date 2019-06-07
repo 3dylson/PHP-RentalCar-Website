@@ -59,7 +59,6 @@ if(!isset($_SESSION['idCliente']) || $_SESSION['idCliente']==-1){
     foreach ($menu as $k=>$v)
         echo $v;
 }
-
 ?>
 <!-----NAV BAR-------->
 <!-----CONTEÚDO----->

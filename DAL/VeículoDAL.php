@@ -45,7 +45,6 @@ class VeículoDAL
       			</div>
       		</span>
         </div>';
-
         }
 
         DBConnection::disconnect();
