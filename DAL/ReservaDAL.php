@@ -36,23 +36,21 @@ class ReservaDAL
         $sql="Select * FROM Reserva, Veículo, Utilizador WHERE Cliente_idCliente=?";
         $result=$conn->prepare($sql);
         $result->execute(Array($_SESSION['idCliente']));
-        DBConnection::disconnect();
-        $row = $result->fetch();
-        echo  '<div class="container">
+
+        while ($row = $result->fetch()) {
+            echo '<div class="container">
                 <div class="row">
-                    <div class="col-sm">
                     <img src="data:image/jpeg;base64,' . base64_encode($row['Img']) . '" alt="card image cap" height="180" width="286"">
                         <div class="col-sm">
-                            <p>Nome Cliente: '. $row["nome"].' </p>
-                            <p>Modelo: '. $row["Nome"].'</p>
-                            <p>Levantamento: '. $row["LocalPickUp"].', '. $row["DatadaReserva"].'</p>
-                            <p>Devolução: '. $row["LocalDropOff"].','. $row["DatadeDevolucao"].' </p>
-                        </div>
-                    </div>
-
+                            <p id="Ady">Nome Cliente: &#160 ' . $row["nome"] . ' </pid>
+                            <p id="Ady">Modelo: &#160     ' . $row["Nome"] . '</p>
+                            <p id="Ady">Levantamento:  &#160 ' . $row["LocalPickUp"] . ',&#160 ' . $row["DatadaReserva"] . '</p>
+                            <p id="Ady">Devolução:  &#160   ' . $row["LocalDropOff"] . ',&#160 ' . $row["DatadeDevolucao"] . ' </p>
+                 </div>
                 </div>
             </div>';
-
+        }
+        DBConnection::disconnect();
     }
     public function update($e){
         $conn= DBConnection::connect();

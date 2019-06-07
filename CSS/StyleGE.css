@@ -481,7 +481,7 @@ h6{
 .titilecar{
     font-family:"Arial Black";
     color: black;
-    padding: 10px;
+    padding: 10px 200px;
     margin-top: 100px;
     text-align: left;
 }
@@ -508,5 +508,9 @@ divcarp{
     margin-top: 80px;
     /*text-align: center;*/
     height: auto;
-    padding: 0px 40px 80px;
+    padding: 0px 40px 80px ;
+}
+#Ady{
+    font-family: "Arial Black";
+    color: black;
 }
