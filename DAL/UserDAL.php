@@ -131,11 +131,11 @@ class UserDAL
 
     public static function verificarPass(){
         $conn= DBconnection::connect();
-        $sql="Select * FROM Utilizador WHERE idCliente=?";
+        $sql="Select password FROM Utilizador WHERE idCliente=?";
         $result=$conn->prepare($sql);
         $result->execute(Array($_SESSION['idCliente']));
         $row=$result->fetch();
-        return $row['Password'];
+        return $row['password'];
     }
     public static function alterarPass(){
         $conn= DBconnection::connect();

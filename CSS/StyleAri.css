@@ -80,6 +80,13 @@ form, label
     font-weight: bold;
 }
 
+
+
+.PASS
+{
+    color: white;
+}
+
 .local-levantamento
 {
     width: 220px;
