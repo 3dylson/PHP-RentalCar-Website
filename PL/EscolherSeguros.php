@@ -11,7 +11,7 @@ $reserva_veiculo=Veículo::getVeiculoInfo();
 <!--            <p>SUV | Diesel | Manual | 5 Lugares | 5 Portas</p>-->
             <form method="post">
                 <a class="nav-link active" href="./index.php?page=PagamentoConclusao">
-                    <button class="btn btn-success" type="submit" name="Reservar" value="Pagamento"><span class="glyphicon glyphicon-euro"></span></button></a>
+                    <button class="btn btn-success" type="submit" name="Reservar" ><span class="glyphicon glyphicon-euro"> Pagamento! </span></button></a>
             </form>
 
 <!--            <strong style="margin-left: 10px"> Preço: 220.50€</strong>-->
