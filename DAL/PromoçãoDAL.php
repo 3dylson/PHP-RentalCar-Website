@@ -39,7 +39,7 @@ class PromoçãoDAL
 //                $DataDeValidade=new DateTime($row["DataDeValidade"]);
                echo' <tr>
                                     <td>'. $row["Nome"].'</td>
-//                                    <td>'. $row["DataDeValidade."].'</td>
+                                    <td>'. $row["DataDeValidade"].'</td>
                                     <td>'. $row["PercentagemDeDesconto"].'</td>
                                 </tr>';
         }
