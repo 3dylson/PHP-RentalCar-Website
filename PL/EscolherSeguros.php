@@ -1,5 +1,5 @@
 <?php
-$reserva_veiculo=Veículo::getVeiculoInfo();
+if(isset($_GET['idVeiculo'])) $reserva_veiculo=Veículo::getVeiculoInfo();
 ?>
 
 <!------Content--------->
