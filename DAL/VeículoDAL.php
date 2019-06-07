@@ -27,21 +27,16 @@ class VeículoDAL
     }
     static public function mostrarVeiculos(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Veículo";
+        $sql="Select * FROM Veículo, Categoria_Veículo WHERE Categoria_Veículo.idCategoria_Veiculo = Veículo.Categoria_Veiculo_idCategoria_Veiculo";
         $result=$conn->prepare($sql);
         $result->execute();
-        $sql1='Select marca, modelo, combustivel, transmissao, capacidade, numeroPortas, precodia 
-              FROM categoria_veículo
-              WHERE (categoria_veículo.idCategoria_Veiculo = veículo.Categoria_Veiculo_idCategoria_Veiculo)';
-        $result1=$conn->prepare($sql1);
-        $result1->execute();
-        while($row=$result->fetch() && $row1=$result1->fetch()){
+        while($row=$result->fetch()){
             echo
                 '  <div class="col-md-3 col-sm-6">
     		<span class="thumbnail">
             <img src="data:image/jpeg;base64,'.base64_encode( $row['Img'] ).'" alt="card image cap" height="180" width="286"">
             <h4>'.$row["Nome"].'</h4>
-            <h4>'.$row1["capacidade"].'</h4>
+            <h4>'.$row["capacidade"].'</h4>
             	<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">
