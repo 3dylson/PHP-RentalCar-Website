@@ -32,7 +32,7 @@ class VeículoDAL
         $result->execute();
         while($row=$result->fetch()){
             echo
-                '  <div class="col-md-3 col-sm-6">
+                ' <div class="col-md-3 col-sm-6">
     		<span class="thumbnail">
             <img src="data:image/jpeg;base64,'.base64_encode( $row['Img'] ).'" alt="card image cap" height="180" width="286"">
             <h4>'.$row["Nome"].'</h4>
