@@ -33,7 +33,7 @@ class ReservaDAL
 
     static public function mostrarReservas(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Reserva, Veículo WHERE Cliente_idCliente=?";
+        $sql="Select * FROM Reserva, Veículo, Utilizador WHERE Cliente_idCliente=?";
         $result=$conn->prepare($sql);
         $result->execute(Array($_SESSION['idCliente']));
         DBConnection::disconnect();
@@ -43,12 +43,11 @@ class ReservaDAL
                     <div class="col-sm">
                     <img src="data:image/jpeg;base64,' . base64_encode($row['Img']) . '" alt="card image cap" height="180" width="286"">
                         <div class="col-sm">
-                            
+                            <p>Nome Cliente: '. $row["nome"].' </p>
                             <p>Modelo: '. $row["Nome"].'</p>
                             <p>Levantamento: '. $row["LocalPickUp"].', '. $row["DatadaReserva"].'</p>
                             <p>Devolução: '. $row["LocalDropOff"].','. $row["DatadeDevolucao"].' </p>
                         </div>
-
                     </div>
 
                 </div>
