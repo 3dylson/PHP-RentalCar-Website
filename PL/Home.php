@@ -22,7 +22,7 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
 <!--Main Quote Ends-->
 <!--Search Menu starts-->
 <div class="search" style="margin-left: 190px">
-    <form method="post">
+    <input method="post">
         <!--<div class="container">
             <div class="row">-->
         <input class="" type="text" name="LocalPickUp" value="<?php if(isset($_POST['LocalPickUp']))
@@ -34,10 +34,10 @@ if(isset($_SESSION['idCliente'])) $userinfo= MainControllers::getInformUser();
             echo $_POST['LocalDropOff'];?>" placeholder="DropOff" autocomplete="on">
         <input class="" type="date" name="DatadeDevolucao" value="<?php if(isset($_POST['DatadeDevolucao']))
             echo $_POST['DatadeDevolucao'];?>" placeholder="Devolução" autocomplete="off">
-        <!--</div>
-    </div>-->
+        </div>
+
 <br>
-        <input href="./index.php?page=EscolherVeiculo" type="submit" name="Pesquisar" value="Search" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"></input>
+        <input  type="submit" name="Pesquisar" value="Save Info" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"></input>
 
         <!---------<input  type="submit" value="PESQUISAR" class="submit"/>---->
         <!--Search Menu Ends-->
