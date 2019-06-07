@@ -31,14 +31,19 @@ class PromoçãoDAL
 
     static public function mostrarPromocoes(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM Promoção";
+        $sql='Select * FROM Promoção';
         $result=$conn->prepare($sql);
         $result->execute();
         if($result->rowCount()>0)
             while($row=$result->fetch()){
-                $DataDeValidade=new DateTime($row["DataDeValidade"]);
-                echo "Nome: " . $row["Nome"]. "  Data De Validade: " . $DataDeValidade->format('d-M-Y') . "Percentagem: " . $row["Percentagem"]. "<br>";
-            }
+//                $DataDeValidade=new DateTime($row["DataDeValidade"]);
+               echo' <tr>
+                                    <td>'. $row["Nome"].'</td>
+//                                    <td>'. $row["DataDeValidade."].'</td>
+                                    <td>'. $row["PercentagemDeDesconto"].'</td>
+                                </tr>';
+        }
+
         else
             echo '0 results'. "<br>";
         DBConnection::disconnect();
