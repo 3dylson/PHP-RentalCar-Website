@@ -52,7 +52,7 @@
                             <!--Alterar Password-->
                         <form method="post">
                         <div class="divmain">
-                            <h3><b>Alterar Password</b></h3>
+                            <h3><b class="PASS">Alterar Password</b></h3>
                             </br>
                             <input type="password" class="form-control" id="col- col-form-label"  placeholder="Password Antiga" name="old_password" required>
                             </br>

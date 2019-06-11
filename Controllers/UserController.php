@@ -9,8 +9,8 @@ class UserController
             $nome=$_POST['userName'];
             $email=$_POST['userEmail'];
             $dataNascimento=$_POST['dataNascimento'];
-            $password=$_POST['signUp_Password'];
             $passwordConfirmated=$_POST['signUp_passwordConfirmated'];
+            $password=$_POST['signUp_Password'];
             $nif=$_POST['nif'];
             if(!$nome_login){
                 $msg["estado"]='Insira o seu Username.';
@@ -111,6 +111,8 @@ class UserController
     public static function updatePassword()
     {
         if(isset($_POST['changepass'])){
+            $password=$_POST['new_password'];
+            $passwordConfirmated=$_POST['repeatNewPass'];
             if(!$_POST['new_password']){
                 $msg["estado"]='Insira uma nova password.';
             }elseif(self::verificarPass()!=$_POST['old_password']){
@@ -118,7 +120,7 @@ class UserController
             }elseif($_POST['repeatNewPass']!=$_POST['new_password']){
                 $msg["estado"]='Os Passwords não coincidem';
             }else{
-                self::alterarPass();
+                self::alterarPass($password, $passwordConfirmated);
                 $msg["estado"]='Password alterado Com sucesso!';
             }
             return $msg["estado"];
@@ -140,7 +142,7 @@ class UserController
     static public function verificarPass(){
         return User::verificarPass();
     }
-    static public function alterarPass(){
-        User::alterarPass();
+    static public function alterarPass($P1, $P2){
+        User::alterarPass($P1, $P2);
     }
 }

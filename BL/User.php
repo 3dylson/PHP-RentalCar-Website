@@ -30,10 +30,8 @@ class User
         $this->passwordConfirmated=$dado7;
         $this->nif=$dado8;
         $this->admin=$dado9;
-
-
-
     }
+
     public function create(){
         UserDAL::create($this);
 
@@ -71,8 +69,8 @@ class User
     static public function verificarPass(){
         return UserDAL::verificarPass();
     }
-    static public function alterarPass(){
-        UserDAL::alterarPass();
+    static public function alterarPass($P1, $P2){
+        UserDAL::alterarPass($P1, $P2);
     }
 
    /* public function readByLoginAndPassword(){

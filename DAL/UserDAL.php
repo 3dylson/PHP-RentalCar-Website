@@ -137,11 +137,11 @@ class UserDAL
         $row=$result->fetch();
         return $row['password'];
     }
-    public static function alterarPass(){
+    public static function alterarPass($P1, $P2){
         $conn= DBconnection::connect();
-        $sql="UPDATE Utilizador SET password=?, passwordConfirmated=? WHERE idCliente=?";
+        $sql="UPDATE Utilizador SET password=$P1, passwordConfirmated=$P2 WHERE idCliente=?";
         $result=$conn->prepare($sql);
-        $result->execute(Array($_POST['new_password'],$_POST['repeatNewPass'],$_SESSION['idCliente']));
+        $result->execute(Array(/*$_POST['new_password'],$_POST['repeatNewPass'],*/$_SESSION['idCliente']));
     }
 
 
