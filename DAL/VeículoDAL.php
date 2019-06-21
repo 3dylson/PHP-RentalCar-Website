@@ -83,9 +83,9 @@ class VeículoDAL
     {
 
         $conn = DBConnection::connect();
-        $sql = "Select * FROM Veículo /*WHERE idVeiculo=?*/";
+        $sql = "Select * FROM Veículo WHERE idVeiculo=?";
         $result = $conn->prepare($sql);
-        $result->execute(/*Array($_GET['idVeiculo'])*/);
+        $result->execute(Array($_GET['idVeiculo']));
         DBConnection::disconnect();
         $row = $result->fetch();
         return $row;
@@ -141,22 +141,34 @@ class VeículoDAL
         $result = $conn->prepare($sql);
         $result->execute();
         /*$aux = 1;*/
+
+        echo '<div class="card" style="width: 18rem;">
+                        <form method="post" enctype="multipart/form-data"></form>
+                        <input type="file" name="Img" />
+                            <div class="card-body">
+                                <input style="color: black" class="card-title" type="number" name="NumeroDeRegistro" placeholder="NumeroDeRegistro">
+                                <input style="padding: inherit " style="color: black"  class="card-title" type="text" name="Disponibilidade" placeholder="Disponibilidade">
+                                <input style="padding: inherit" style="color: black"  class="card-title" type="text" name="Nome" placeholder="Nome">
+                                                             
+                                <input style="padding: 10px" type="submit" name="Add" class="btn" value="Add">
+                                </form>
+                            </div>  
+                      </div>
+                      ';
         if ($result->rowCount() > 0) {
             while ($row = $result->fetch()) {
-
                echo '<div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($row['Img']) .' "height="180" width="286" alt="Card image cap"">
                             <div class="card-body">
                                 <strong  class="card-title">'.$row["Nome"].'</strong>
                                 <p class="card-text">'.$row["modelo"].' | '.$row["marca"].' | '.$row["combustivel"].' 
                                 | '.$row["transmissao"].' | '.$row["capacidade"].' Lugares | '.$row["numeroPortas"].' Portas | '.$row["precodia"].'€</p>
-                                <form method="post">
-                               
+                                <form method="post"> 
                                 <input style="padding: 10px" type="submit" name="deleteVeiculo" class="btn btn-danger" value="Remover"></input>
-                                <!--<button type="submit" name="" class="btn btn-warning" value=""></button>-->
                                 </form>
                             </div>  
-                      </div>';
+                      </div>
+                      ';
 
 
 

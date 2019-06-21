@@ -11,7 +11,9 @@ class VeículoController
             $Disponibilidade=$_POST['Disponibilidade'];
             $Categoria_Veiculo_idCategoria_Veiculo=$_POST['Categoria_Veiculo_idCategoria_Veiculo'];
             $Reserva_idReserva=$_POST['Reserva_idReserva'];
-            $Img=$_POST['Img'];
+
+            $image = $_FILES['image']['tmp_name'];
+            $Img = addslashes(file_get_contents($image));
             $Nome=$_POST['Nome'];
             if (!$idVeiculo) {
                 $msg["estado"] = 'Insira o ID de veiculo';
@@ -34,8 +36,9 @@ class VeículoController
             }
             return $msg["estado"];
         }
-        if(isset($_POST['deleteVeiculo']) && isset($_SESSION['idVeiculo'])){
+        if(isset($_GET['deleteVeiculo']) && isset($_SESSION['idVeiculo'])){
             self::deleteVeiculo();
+            $msg["estado"]='Eliminado!';
         }
     }
     static public function criarVeiculo()
@@ -46,7 +49,7 @@ class VeículoController
 
     static public function deleteVeiculo()
     {
-        $Veiculo = new Veículo();
+        $Veiculo = new Veículo($_GET['deleteVeiculo'],'','','','','','');
         $Veiculo->delete();
     }
 
