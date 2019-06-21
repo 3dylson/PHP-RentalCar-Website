@@ -34,6 +34,9 @@ class VeículoController
             }
             return $msg["estado"];
         }
+        if(isset($_POST['deleteVeiculo']) && isset($_SESSION['idVeiculo'])){
+            self::deleteVeiculo();
+        }
     }
     static public function criarVeiculo()
     {

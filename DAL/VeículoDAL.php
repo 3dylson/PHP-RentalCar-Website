@@ -83,9 +83,9 @@ class VeículoDAL
     {
 
         $conn = DBConnection::connect();
-        $sql = "Select * FROM Veículo WHERE idVeiculo=?";
+        $sql = "Select * FROM Veículo /*WHERE idVeiculo=?*/";
         $result = $conn->prepare($sql);
-        $result->execute(Array($_GET['idVeiculo']));
+        $result->execute(/*Array($_GET['idVeiculo'])*/);
         DBConnection::disconnect();
         $row = $result->fetch();
         return $row;
@@ -140,18 +140,21 @@ class VeículoDAL
         $sql = "Select * FROM Veículo, Categoria_Veículo  /*LEFT JOIN reserva r ON v.idVeiculo=r.ReservaIdVeiculo WHERE r.id IS NULL;*/";
         $result = $conn->prepare($sql);
         $result->execute();
-        $aux = 1;
+        /*$aux = 1;*/
         if ($result->rowCount() > 0) {
             while ($row = $result->fetch()) {
-               // <img src="data:image/jpeg;base64,' . base64_encode($row['Img']) . '" alt="card image cap" height="180" width="286"">
+
                echo '<div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="data:image/jpeg;base64,' . base64_encode($row['Img']) .' "height="180" width="286" alt="Card image cap"">
                             <div class="card-body">
                                 <strong  class="card-title">'.$row["Nome"].'</strong>
                                 <p class="card-text">'.$row["modelo"].' | '.$row["marca"].' | '.$row["combustivel"].' 
                                 | '.$row["transmissao"].' | '.$row["capacidade"].' Lugares | '.$row["numeroPortas"].' Portas | '.$row["precodia"].'€</p>
-                                <button type="button" class="btn btn-danger">Remover</button>
-                                <button type="button" class="btn btn-warning">Indisponível</button>
+                                <form method="post">
+                               
+                                <input style="padding: 10px" type="submit" name="deleteVeiculo" class="btn btn-danger" value="Remover"></input>
+                                <!--<button type="submit" name="" class="btn btn-warning" value=""></button>-->
+                                </form>
                             </div>  
                       </div>';
 
