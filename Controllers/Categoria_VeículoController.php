@@ -14,6 +14,7 @@ class Categoria_VeículoController
             $capacidade=$_POST['capacidade'];
             $numeroPortas=$_POST['numeroPortas'];
             $precoDia=$_POST['precoDia'];
+            $Nome=$_POST['Nome'];
             if (!$marca) {
                 $msg["estado"] = '';
             } elseif (!$modelo) {
@@ -27,6 +28,8 @@ class Categoria_VeículoController
             } elseif (!$numeroPortas) {
                 $msg["estado"] = '';
             } elseif (!$precoDia) {
+                $msg["estado"] = '';
+            } elseif (!$Nome) {
                 $msg["estado"] = '';
             }
             else {

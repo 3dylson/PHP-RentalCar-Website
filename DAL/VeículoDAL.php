@@ -57,12 +57,13 @@ class VeículoDAL
     static public function mostrarNomeVeiculos()
     {
         $conn = DBConnection::connect();
-        $sql = "Select Nome FROM Veículos";
+        $sql = "Select Nome FROM Veículo";
         $result = $conn->prepare($sql);
         $result->execute();
-        DBConnection::disconnect();
-        $row = $result->fetch();
-        return $row;
+        if($result->rowCount()>0){
+            $row=$result->fetch();
+            return $row;
+        }
     }
 
     public function update($e)
@@ -141,20 +142,6 @@ class VeículoDAL
         $result = $conn->prepare($sql);
         $result->execute();
         /*$aux = 1;*/
-
-        echo '<div class="card" style="width: 18rem;">
-                        <form method="post" enctype="multipart/form-data"></form>
-                        <input type="file" name="Img" />
-                            <div class="card-body">
-                                <input style="color: black" class="card-title" type="number" name="NumeroDeRegistro" placeholder="NumeroDeRegistro">
-                                <input style="padding: inherit " style="color: black"  class="card-title" type="text" name="Disponibilidade" placeholder="Disponibilidade">
-                                <input style="padding: inherit" style="color: black"  class="card-title" type="text" name="Nome" placeholder="Nome">
-                                                             
-                                <input style="padding: 10px" type="submit" name="Add" class="btn" value="Add">
-                                </form>
-                            </div>  
-                      </div>
-                      ';
         if ($result->rowCount() > 0) {
             while ($row = $result->fetch()) {
                echo '<div class="card" style="width: 18rem;">
