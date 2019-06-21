@@ -4,7 +4,7 @@ require_once dirname(__FILE__).'/../BL/Seguro.php';
 class SeguroController
 {
     static public function Process(){
-        if(isset($_POST['Pesquisar'])){
+        if(isset($_POST['Reservar'])){
             $Nome=$_POST['Nome'];
             $TipoDeCobertura=$_POST['TipoDeCobertura'];
             $Descricao=$_POST['Descricao'];

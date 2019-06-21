@@ -21,7 +21,7 @@ class ReservaController
             }else{
                 self::criarReserva();
                 $msg["estado"]='';
-
+                header('Location: ./index.php?page=EscolherVeiculo');
             }
             return $msg["estado"];
         }
