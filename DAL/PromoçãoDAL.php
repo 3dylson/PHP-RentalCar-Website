@@ -38,10 +38,22 @@ class PromoçãoDAL
             while($row=$result->fetch()){
 //                $DataDeValidade=new DateTime($row["DataDeValidade"]);
                echo' <tr>
+                                <form method="post"></form>
                                     <td>'. $row["Nome"].'</td>
                                     <td>'. $row["DataDeValidade"].'</td>
                                     <td>'. $row["PercentagemDeDesconto"].'</td>
-                                </tr>';
+                                    
+                                </tr>
+                                <input type="submit"  name="Guardar" class="btn btn-dark" value="Save" ></input>
+                                </tbody>
+                                </form>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+              
+            </div>';
         }
 
         else

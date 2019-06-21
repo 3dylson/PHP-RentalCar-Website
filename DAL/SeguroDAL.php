@@ -28,9 +28,9 @@ class SeguroDAL
     }
     static public function mostrarSeguros(){
         $conn= DBConnection::connect();
-        $sql="Select * FROM  Seguro, Veículo, Categoria_Veículo  WHERE Reserva_idReserva=?";
+        $sql="Select * FROM  Seguro, Veículo, Categoria_Veículo, Reserva  WHERE Resreva.Reserva_idReserva= Seguro.Reserva_idReserva ";
         $result=$conn->prepare($sql);
-        $result->execute(Array($_SESSION['idReserva']));
+        $result->execute(Array($_GET['Reserva_idReserva']));
         while ($row = $result->fetch()) {
 
             echo'
