@@ -145,4 +145,27 @@ class UserController
     static public function alterarPass($P1, $P2){
         User::alterarPass($P1, $P2);
     }
+
+    public static function getLoggedUser(){
+        $userid = isset($_SESSION['idCliente']) ? $_SESSION['idCliente'] : null;
+        if($userid !=null){
+            $user = new User();
+            $user->idCliente = $userid;
+            if(!$user->$_SESSION['idCliente']){
+                $user = null;
+            } //Verificar se esta na BD, se ñ devolver null
+
+        }
+        return($user);
+    }
+
+    public static function isUserLoggedAdmin(){
+        $res = false;
+        $user = self::getLoggedUser();
+        if($user != null && $user->admin == 1){
+            $res = true;
+        }
+        return($res);
+    }
+
 }
